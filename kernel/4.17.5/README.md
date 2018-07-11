@@ -18,15 +18,15 @@ To cross-compile a kernel using the provided .config file follow this procedure 
 
 6) load the configuration file and check if it against your kernel
 
-make ARCH=powerpc SUBARCH=ppc64 CROSS_COMPILE=powerpc64-linux-gnu- oldconfig
+`make ARCH=powerpc SUBARCH=ppc64 CROSS_COMPILE=powerpc64-linux-gnu- oldconfig`
 
 7) you may check the kernel configuration using the kernel buil-in gui
 
-make ARCH=powerpc SUBARCH=ppc64 CROSS_COMPILE=powerpc64-linux-gnu- menuconfig
+`make ARCH=powerpc SUBARCH=ppc64 CROSS_COMPILE=powerpc64-linux-gnu- menuconfig`
 
 8) cross-compile the kernel entering
 
-make ARCH=powerpc SUBARCH=ppc64 CROSS_COMPILE=powerpc64-linux-gnu- uImage
+`make ARCH=powerpc SUBARCH=ppc64 CROSS_COMPILE=powerpc64-linux-gnu- uImage`
 
 9) cross-compile the required kernel modules entering
 
@@ -36,19 +36,19 @@ make ARCH=powerpc SUBARCH=ppc64 CROSS_COMPILE=powerpc64-linux-gnu- modules
 
 11) grab the kernel modules placing them in a custom folder entering
 
-make ARCH=powerpc SUBARCH=ppc64 CROSS_COMPILE=powerpc64-linux-gnu- modules_install INSTALL_MOD_PATH=/myCustomPath/kernel/modules/
+`make ARCH=powerpc SUBARCH=ppc64 CROSS_COMPILE=powerpc64-linux-gnu- modules_install INSTALL_MOD_PATH=/myCustomPath/kernel/modules/`
 
 
 If you alreadey cross-compiled a kernel and then you want to cross-compile another one (for example after changing the configuration file), you should clean your building environment entering
 
-make ARCH=powerpc SUBARCH=ppc64 CROSS_COMPILE=powerpc64-linux-gnu- clean
+`make ARCH=powerpc SUBARCH=ppc64 CROSS_COMPILE=powerpc64-linux-gnu- clean`
 
 
 You may want to compile the dtb file (a flattened device-tree block with header in one binary blob) for the T2080rdb using the dts file (a text file containing a "source" for a device-tree) coming with the kernel you should install the device tree compiler by entering
 
-sudo apt install device-tree-compiler
+`sudo apt install device-tree-compiler`
 
 To compile a dtb file from the T2080rdb dts file
 
-dtc -O dtb -o /myCustomPath/t2080rdb.dtb /kernel/arch/powerpc/boot/dts/fsl/t2080rdb.dts
+`dtc -O dtb -o /myCustomPath/t2080rdb.dtb /kernel/arch/powerpc/boot/dts/fsl/t2080rdb.dts`
 
