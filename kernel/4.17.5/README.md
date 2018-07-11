@@ -30,7 +30,7 @@ To cross-compile a kernel using the provided .config file follow this procedure 
 
 9) cross-compile the required kernel modules entering
 
-make ARCH=powerpc SUBARCH=ppc64 CROSS_COMPILE=powerpc64-linux-gnu- modules
+`make ARCH=powerpc SUBARCH=ppc64 CROSS_COMPILE=powerpc64-linux-gnu- modules`
 
 10) grab the generated kernel image for U-Boot, you will find it in "arch/powerpc/boot/uImage"
 
