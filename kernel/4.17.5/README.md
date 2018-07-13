@@ -52,3 +52,7 @@ To compile a dtb file from the T2080rdb dts file
 
 `dtc -O dtb -o /myCustomPath/t2080rdb.dtb /kernel/arch/powerpc/boot/dts/fsl/t2080rdb.dts`
 
+Please note that you MUST customize the default t2080rdb.dts (and related dtsi) files to enable video card support on the T2080rdb devkit.
+
+
+
