@@ -1,7 +1,7 @@
 You may download the compiled 4.17.5 PPC64 book3e kernel and related modules from my Google Drive here
 
 
-https://drive.google.com/file/d/14ikR98MEMBFpLDCE86Gf6tuC8MB2-45S/view?usp=sharing
+https://drive.google.com/file/d/13sjNHjTlvgad490O4s9qRPsFR4Ury65y/view?usp=sharing
 
 
 To cross-compile a kernel using the provided .config file follow this procedure (tested on Ubuntu 18.04 amd64).
