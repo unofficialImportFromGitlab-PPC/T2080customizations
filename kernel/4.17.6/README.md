@@ -1,4 +1,4 @@
-You may download the compiled 4.17.6 PPC64 book3e kernel and related modules from my Google Drive here
+You may download the compiled 4.17.6 kernel for PPC64 book3e e6500 and related modules from my Google Drive here
 
 
 https://drive.google.com/file/d/1p6V71U73KoeCgHyFOuVv3L8Q0Eg44XuY/view?usp=sharing
