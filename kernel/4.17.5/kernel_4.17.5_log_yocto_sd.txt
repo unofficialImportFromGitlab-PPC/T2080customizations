@@ -1,0 +1,579 @@
+=> boot
+Device: FSL_SDHC
+Manufacturer ID: 3
+OEM: 5344
+Name: SU08G 
+Tran Speed: 50000000
+Rd Block Len: 512
+SD version 3.0
+High Capacity: Yes
+Capacity: 7.4 GiB
+Bus Width: 4-bit
+Erase Group Size: 512 Bytes
+12076480 bytes read in 663 ms (17.4 MiB/s)
+36545 bytes read in 144 ms (247.1 KiB/s)
+WARNING: adjusting available memory to 30000000
+## Booting kernel from Legacy Image at 02000000 ...
+   Image Name:   Linux-4.17.5
+   Image Type:   PowerPC Linux Kernel Image (gzip compressed)
+   Data Size:    12076416 Bytes = 11.5 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 04000000
+   Booting using the fdt blob at 0x4000000
+   Uncompressing Kernel Image ... OK
+   Loading Device Tree to 03fe4000, end 03fffec0 ... OK
+OF: reserved mem: initialized node qman-fqd, compatible id fsl,qman-fqd
+OF: reserved mem: initialized node qman-pfdr, compatible id fsl,qman-pfdr
+OF: reserved mem: initialized node bman-fbpr, compatible id fsl,bman-fbpr
+MMU: Supported page sizes
+         4 KB as direct
+      2048 KB as direct & indirect
+      4096 KB as direct
+     16384 KB as direct
+     65536 KB as direct
+    262144 KB as direct
+   1048576 KB as direct
+MMU: Book3E HW tablewalk enabled
+Linux version 4.17.5 (mario@mario-HP-EliteBook-840-G1) (gcc version 7.3.0 (Ubuntu 7.3.0-16ubuntu3)) #2 SMP PREEMPT Wed Jul 11 18:50:02 CEST 2018
+Using CoreNet Generic machine description
+bootconsole [udbg0] enabled
+CPU maps initialized for 2 threads per core
+-----------------------------------------------------
+phys_mem_size     = 0x100000000
+dcache_bsize      = 0x40
+icache_bsize      = 0x40
+cpu_features      = 0x00000003009003b6
+  possible        = 0x00000003009003b6
+  always          = 0x00000003008003b4
+cpu_user_features = 0xdc008000 0x08000000
+mmu_features      = 0x000a0010
+firmware_features = 0x0000000000000000
+-----------------------------------------------------
+CoreNet Generic board
+Zone ranges:
+  DMA      [mem 0x0000000000000000-0x000000007fffffff]
+  DMA32    empty
+  Normal   [mem 0x0000000080000000-0x00000000ffffffff]
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000000000000-0x00000000ffffffff]
+Initmem setup node 0 [mem 0x0000000000000000-0x00000000ffffffff]
+MMU: Allocated 2112 bytes of context maps for 255 contexts
+percpu: Embedded 22 pages/cpu @        (ptrval) s53080 r0 d37032 u131072
+Built 1 zonelists, mobility grouping on.  Total pages: 1034240
+Kernel command line: root=/dev/mmcblk0p2 rw rootdelay=5 console=ttyS0,115200
+log_buf_len individual max cpu contribution: 4096 bytes
+log_buf_len total cpu_extra contributions: 28672 bytes
+log_buf_len min size: 16384 bytes
+log_buf_len: 65536 bytes
+early log buf free: 12532(76%)
+Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+Memory: 3948420K/4194304K available (19240K kernel code, 3044K rwdata, 5992K rodata, 668K init, 1671K bss, 245884K reserved, 0K cma-reserved)
+Preemptible hierarchical RCU implementation.
+	RCU event tracing is enabled.
+	RCU restricting CPUs from NR_CPUS=24 to nr_cpu_ids=8.
+	Tasks RCU enabled.
+RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+NR_IRQS: 512, nr_irqs: 512, preallocated irqs: 16
+mpic: Setting up MPIC " OpenPIC  " version 1.2 at ffe040000, max 8 CPUs
+mpic: ISU size: 512, shift: 9, mask: 1ff
+mpic: Initializing for 512 sources
+clocksource: timebase: mask: 0xffffffffffffffff max_cycles: 0x8a5d528ca, max_idle_ns: 440795203517 ns
+clocksource: timebase mult[1aab5972] shift[24] registered
+Console: colour dummy device 80x25
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+e6500 family performance monitor hardware support registered
+Hierarchical SRCU implementation.
+smp: Bringing up secondary CPUs ...
+smp: Brought up 1 node, 8 CPUs
+Using shared cache scheduler topology
+devtmpfs: initialized
+random: get_random_u32 called from .bucket_table_alloc+0x9c/0x210 with crng_init=0
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+futex hash table entries: 2048 (order: 5, 131072 bytes)
+xor: measuring software checksum speed
+   8regs     :  3506.000 MB/sec
+   8regs_prefetch:  3190.000 MB/sec
+   32regs    :  2850.000 MB/sec
+   32regs_prefetch:  2660.000 MB/sec
+   altivec   :  5448.000 MB/sec
+xor: using function: altivec (5448.000 MB/sec)
+NET: Registered protocol family 16
+audit: initializing netlink subsys (disabled)
+audit: type=2000 audit(0.412:1): state=initialized audit_enabled=0 res=1
+Machine: fsl,T2080RDB
+SoC family: QorIQ T2080
+SoC ID: svr:0x85380011, Revision: 1.1
+Found FSL PCI host bridge at 0x0000000ffe250000. Firmware bus number: 0->1
+PCI host bridge /pcie@ffe250000  ranges:
+ MEM 0x0000000c20000000..0x0000000c2fffffff -> 0x00000000e0000000 
+  IO 0x0000000ff8010000..0x0000000ff801ffff -> 0x0000000000000000
+/pcie@ffe250000: PCICSRBAR @ 0xff000007
+setup_pci_atmu: end of DRAM 100000000
+/pcie@ffe250000: Setup 64-bit PCI DMA window
+/pcie@ffe250000: WARNING: Outbound window cfg leaves gaps in memory map. Adjusting the memory map could reduce unnecessary bounce buffering.
+/pcie@ffe250000: DMA window size is 0xe0000000
+Found FSL PCI host bridge at 0x0000000ffe270000. Firmware bus number: 0->1
+PCI host bridge /pcie@ffe270000  ranges:
+ MEM 0x0000000c40000000..0x0000000c5fffffff -> 0x00000000e0000000 
+  IO 0x0000000ff8030000..0x0000000ff803ffff -> 0x0000000000000000
+/pcie@ffe270000: PCICSRBAR @ 0xdf000007
+setup_pci_atmu: end of DRAM 100000000
+/pcie@ffe270000: Setup 64-bit PCI DMA window
+/pcie@ffe270000: DMA window size is 0xdf000007
+iommu: Adding device ff6000000.qman-portal to group 0
+iommu: Adding device ff6004000.qman-portal to group 1
+iommu: Adding device ff6008000.qman-portal to group 2
+iommu: Adding device ff600c000.qman-portal to group 3
+iommu: Adding device ff6010000.qman-portal to group 4
+iommu: Adding device ff6014000.qman-portal to group 5
+iommu: Adding device ff6018000.qman-portal to group 6
+iommu: Adding device ff601c000.qman-portal to group 7
+iommu: Adding device ff6020000.qman-portal to group 8
+iommu: Adding device ff6024000.qman-portal to group 9
+iommu: Adding device ff6028000.qman-portal to group 10
+iommu: Adding device ff602c000.qman-portal to group 11
+iommu: Adding device ff6030000.qman-portal to group 12
+iommu: Adding device ff6034000.qman-portal to group 13
+iommu: Adding device ff6038000.qman-portal to group 14
+iommu: Adding device ff603c000.qman-portal to group 15
+iommu: Adding device ff6040000.qman-portal to group 16
+iommu: Adding device ff6044000.qman-portal to group 17
+iommu: Adding device ffe114000.sdhc to group 18
+iommu: Adding device ffe488000.port to group 19
+iommu: Adding device ffe489000.port to group 20
+iommu: Adding device ffe48a000.port to group 21
+iommu: Adding device ffe48b000.port to group 22
+iommu: Adding device ffe48c000.port to group 23
+iommu: Adding device ffe48d000.port to group 24
+iommu: Adding device ffe490000.port to group 25
+iommu: Adding device ffe491000.port to group 26
+iommu: Adding device ffe100300.dma to group 27
+iommu: Adding device ffe101300.dma to group 28
+iommu: Adding device ffe102300.dma to group 29
+iommu: Adding device ffe210000.usb to group 30
+iommu: Adding device ffe211000.usb to group 31
+iommu: Adding device ffe316000.pme to group 32
+iommu: Adding device ffe31a000.bman to group 33
+iommu: Adding device ffe318000.qman to group 34
+iommu: Adding device ffe220000.sata to group 35
+iommu: Adding device ffe221000.sata to group 36
+iommu: Adding device ffe240000.pcie to group 37
+iommu: Adding device ffe250000.pcie to group 38
+iommu: Adding device ffe270000.pcie to group 39
+software IO TLB [mem 0xf2800000-0xf6800000] (64MB) mapped at [        (ptrval)-        (ptrval)]
+PCI: Probing PCI hardware
+fsl-pci ffe250000.pcie: PCI host bridge to bus 0000:00
+pci_bus 0000:00: root bus resource [io  0x8000080000010000-0x800008000001ffff] (bus address [0x0000-0xffff])
+pci_bus 0000:00: root bus resource [mem 0xc20000000-0xc2fffffff] (bus address [0xe0000000-0xefffffff])
+pci_bus 0000:00: root bus resource [bus 00-01]
+pci 0000:00:00.0: [Firmware Bug]: reg 0x10: invalid BAR (can't size)
+iommu: Removing device ffe250000.pcie from group 38
+iommu: Adding device 0000:00:00.0 to group 40
+pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+fsl-pci ffe270000.pcie: PCI host bridge to bus 0001:00
+pci_bus 0001:00: root bus resource [io  0x8000080000021000-0x8000080000030fff] (bus address [0x0000-0xffff])
+pci_bus 0001:00: root bus resource [mem 0xc40000000-0xc5fffffff] (bus address [0xe0000000-0xffffffff])
+pci_bus 0001:00: root bus resource [bus 00-01]
+iommu: Removing device ffe270000.pcie from group 39
+iommu: Adding device 0001:00:00.0 to group 38
+pci 0001:01:00.0: enabling Extended Tags
+iommu: Adding device 0001:01:00.0 to group 38
+pci 0001:01:00.1: enabling Extended Tags
+iommu: Adding device 0001:01:00.1 to group 38
+pci 0001:00:00.0: PCI bridge to [bus 01-ff]
+PCI: Cannot allocate resource region 6 of device 0000:00:00.0, will remap
+PCI: Cannot allocate resource region 0 of device 0001:00:00.0, will remap
+PCI: Cannot allocate resource region 6 of device 0001:00:00.0, will remap
+PCI: Cannot allocate resource region 2 of device 0001:01:00.0, will remap
+PCI: Cannot allocate resource region 0 of device 0001:01:00.1, will remap
+pci 0000:00:00.0: BAR 6: no space for [mem size 0x01000000 pref]
+pci 0000:00:00.0: BAR 6: failed to assign [mem size 0x01000000 pref]
+pci 0000:00:00.0: PCI bridge to [bus 01]
+pci 0000:00:00.0:   bridge window [io  0x8000080000010000-0x800008000001ffff]
+pci 0000:00:00.0:   bridge window [mem 0xc20000000-0xc2fffffff]
+pci 0001:00:00.0: BAR 15: no space for [mem size 0x10000000 pref]
+pci 0001:00:00.0: BAR 15: failed to assign [mem size 0x10000000 pref]
+pci 0001:00:00.0: BAR 6: no space for [mem size 0x01000000 pref]
+pci 0001:00:00.0: BAR 6: failed to assign [mem size 0x01000000 pref]
+pci 0001:00:00.0: BAR 0: no space for [io  size 0x0004]
+pci 0001:00:00.0: BAR 0: failed to assign [io  size 0x0004]
+pci 0001:01:00.0: BAR 0: assigned [mem 0xc40000000-0xc4fffffff 64bit pref]
+pci 0001:01:00.0: BAR 2: assigned [mem 0xc50020000-0xc5003ffff 64bit]
+pci 0001:01:00.1: BAR 0: assigned [mem 0xc50040000-0xc50043fff 64bit]
+pci 0001:00:00.0: PCI bridge to [bus 01]
+pci 0001:00:00.0:   bridge window [io  0x8000080000021000-0x8000080000030fff]
+pci 0001:00:00.0:   bridge window [mem 0xc40000000-0xc5fffffff]
+pci_bus 0001:00: Some PCI device resources are unassigned, try booting with pci=realloc
+Setting up RapidIO peer-to-peer network /rapidio@ffe0c0000
+fsl-of-rio ffe0c0000.rapidio: Of-device full name /rapidio@ffe0c0000
+fsl-of-rio ffe0c0000.rapidio: Regs: [mem 0xffe0c0000-0xffe0d0fff]
+fsl-of-rio ffe0c0000.rapidio: No valid fsl,srio-rmu-handle property
+fsl-of-rio: probe of ffe0c0000.rapidio failed with error -2
+HugeTLB registered 4.00 MiB page size, pre-allocated 0 pages
+HugeTLB registered 16.0 MiB page size, pre-allocated 0 pages
+HugeTLB registered 64.0 MiB page size, pre-allocated 0 pages
+HugeTLB registered 256 MiB page size, pre-allocated 0 pages
+HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+raid6: altivecx1 gen()  1752 MB/s
+raid6: altivecx2 gen()  2104 MB/s
+raid6: altivecx4 gen()  2981 MB/s
+raid6: altivecx8 gen()  3158 MB/s
+raid6: int64x1  gen()   568 MB/s
+raid6: int64x1  xor()   729 MB/s
+raid6: int64x2  gen()   931 MB/s
+raid6: int64x2  xor()   929 MB/s
+raid6: int64x4  gen()  1360 MB/s
+raid6: int64x4  xor()  1009 MB/s
+raid6: int64x8  gen()  1627 MB/s
+raid6: int64x8  xor()   997 MB/s
+raid6: using algorithm altivecx8 gen() 3158 MB/s
+raid6: using intx1 recovery algorithm
+Freescale Elo series DMA driver
+fsl-elo-dma ffe100300.dma: #0 (fsl,eloplus-dma-channel), irq 28
+fsl-elo-dma ffe100300.dma: #1 (fsl,eloplus-dma-channel), irq 29
+fsl-elo-dma ffe100300.dma: #2 (fsl,eloplus-dma-channel), irq 30
+fsl-elo-dma ffe100300.dma: #3 (fsl,eloplus-dma-channel), irq 31
+fsl-elo-dma ffe100300.dma: #4 (fsl,eloplus-dma-channel), irq 76
+fsl-elo-dma ffe100300.dma: #5 (fsl,eloplus-dma-channel), irq 77
+fsl-elo-dma ffe100300.dma: #6 (fsl,eloplus-dma-channel), irq 78
+fsl-elo-dma ffe100300.dma: #7 (fsl,eloplus-dma-channel), irq 79
+fsl-elo-dma ffe101300.dma: #0 (fsl,eloplus-dma-channel), irq 32
+fsl-elo-dma ffe101300.dma: #1 (fsl,eloplus-dma-channel), irq 33
+fsl-elo-dma ffe101300.dma: #2 (fsl,eloplus-dma-channel), irq 34
+fsl-elo-dma ffe101300.dma: #3 (fsl,eloplus-dma-channel), irq 35
+fsl-elo-dma ffe101300.dma: #4 (fsl,eloplus-dma-channel), irq 80
+fsl-elo-dma ffe101300.dma: #5 (fsl,eloplus-dma-channel), irq 81
+fsl-elo-dma ffe101300.dma: #6 (fsl,eloplus-dma-channel), irq 82
+fsl-elo-dma ffe101300.dma: #7 (fsl,eloplus-dma-channel), irq 83
+fsl-elo-dma ffe102300.dma: #0 (fsl,eloplus-dma-channel), irq 464
+fsl-elo-dma ffe102300.dma: #1 (fsl,eloplus-dma-channel), irq 465
+fsl-elo-dma ffe102300.dma: #2 (fsl,eloplus-dma-channel), irq 466
+fsl-elo-dma ffe102300.dma: #3 (fsl,eloplus-dma-channel), irq 467
+fsl-elo-dma ffe102300.dma: #4 (fsl,eloplus-dma-channel), irq 473
+fsl-elo-dma ffe102300.dma: #5 (fsl,eloplus-dma-channel), irq 474
+fsl-elo-dma ffe102300.dma: #6 (fsl,eloplus-dma-channel), irq 475
+fsl-elo-dma ffe102300.dma: #7 (fsl,eloplus-dma-channel), irq 476
+pci 0001:01:00.0: vgaarb: VGA device added: decodes=io+mem,owns=none,locks=none
+pci 0001:01:00.0: vgaarb: bridge control possible
+pci 0001:01:00.0: vgaarb: setting as boot device (VGA legacy resources not available)
+vgaarb: loaded
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+EDAC MC: Ver: 3.0.0
+fsl-ifc ffe124000.localbus: Freescale Integrated Flash Controller
+fsl-ifc ffe124000.localbus: IFC version 1.3, 8 banks
+clocksource: Switched to clocksource timebase
+FS-Cache: Loaded
+CacheFiles: Loaded
+NET: Registered protocol family 2
+tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes)
+TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+TCP bind hash table entries: 32768 (order: 7, 524288 bytes)
+TCP: Hash tables configured (established 32768 bind 32768)
+UDP hash table entries: 2048 (order: 4, 65536 bytes)
+UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+pci 0001:01:00.1: Linked as a consumer to 0001:01:00.0
+workingset: timestamp_bits=62 max_order=20 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+ntfs: driver 2.1.32 [Flags: R/W].
+jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+romfs: ROMFS MTD (C) 2007 Red Hat, Inc.
+JFS: nTxBlock = 8192, nTxLock = 65536
+SGI XFS with ACLs, security attributes, no debug enabled
+NILFS version 2 loaded
+gfs2: GFS2 installed
+NET: Registered protocol family 38
+async_tx: api initialized (async)
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 250)
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+io scheduler mq-deadline registered
+io scheduler kyber registered
+pcieport 0000:00:00.0: AER enabled with IRQ 21
+pcieport 0001:00:00.0: AER enabled with IRQ 23
+vga16fb: unable to map device
+vga16fb: probe of vga16fb.0 failed with error -12
+bman_portal ff4000000.bman-portal: Portal initialised, cpu 0
+bman_portal ff4004000.bman-portal: Portal initialised, cpu 1
+bman_portal ff4008000.bman-portal: Portal initialised, cpu 2
+bman_portal ff400c000.bman-portal: Portal initialised, cpu 3
+bman_portal ff4010000.bman-portal: Portal initialised, cpu 4
+bman_portal ff4014000.bman-portal: Portal initialised, cpu 5
+bman_portal ff4018000.bman-portal: Portal initialised, cpu 6
+bman_portal ff401c000.bman-portal: Portal initialised, cpu 7
+qman_portal ff6000000.qman-portal: Portal initialised, cpu 0
+qman_portal ff6004000.qman-portal: Portal initialised, cpu 1
+qman_portal ff6008000.qman-portal: Portal initialised, cpu 2
+qman_portal ff600c000.qman-portal: Portal initialised, cpu 3
+qman_portal ff6010000.qman-portal: Portal initialised, cpu 4
+qman_portal ff6014000.qman-portal: Portal initialised, cpu 5
+qman_portal ff6018000.qman-portal: Portal initialised, cpu 6
+qman_portal ff601c000.qman-portal: Portal initialised, cpu 7
+Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+console [ttyS0] disabled
+serial8250.0: ttyS0 at MMIO 0xffe11c500 (irq = 36, base_baud = 18748125) is a 16550A
+console [ttyS0] enabled
+console [ttyS0] enabled
+bootconsole [udbg0] disabled
+bootconsole [udbg0] disabled
+serial8250.0: ttyS1 at MMIO 0xffe11c600 (irq = 36, base_baud = 18748125) is a 16550A
+serial8250.0: ttyS2 at MMIO 0xffe11d500 (irq = 37, base_baud = 18748125) is a 16550A
+serial8250.0: ttyS3 at MMIO 0xffe11d600 (irq = 37, base_baud = 18748125) is a 16550A
+ePAPR hypervisor byte channel driver
+[drm] radeon kernel modesetting enabled.
+[drm] initializing kernel modesetting (CEDAR 0x1002:0x68F9 0x1682:0x304A 0x00).
+ATOM BIOS: DDR3
+[drm] GPU not posted. posting now...
+radeon 0001:01:00.0: VRAM: 1024M 0x0000000000000000 - 0x000000003FFFFFFF (1024M used)
+radeon 0001:01:00.0: GTT: 1024M 0x0000000040000000 - 0x000000007FFFFFFF
+[drm] Detected VRAM RAM=1024M, BAR=256M
+[drm] RAM width 64bits DDR
+[TTM] Zone  kernel: Available graphics memory: 1974720 kiB
+[TTM] Initializing pool allocator
+[TTM] Initializing DMA pool allocator
+[drm] radeon: 1024M of VRAM memory ready
+[drm] radeon: 1024M of GTT memory ready.
+[drm] Loading CEDAR Microcode
+radeon 0001:01:00.0: Direct firmware load for radeon/CEDAR_pfp.bin failed with error -2
+r600_cp: Failed to load firmware "radeon/CEDAR_pfp.bin"
+[drm:.evergreen_init] *ERROR* Failed to load firmware!
+radeon 0001:01:00.0: Fatal error during GPU init
+[drm] radeon: finishing device.
+[TTM] Finalizing pool allocator
+[TTM] Finalizing DMA pool allocator
+[TTM] Zone  kernel: Used memory at exit: 0 kiB
+[drm] radeon: ttm finalized
+radeon: probe of 0001:01:00.0 failed with error -2
+[drm] amdgpu kernel modesetting enabled.
+brd: module loaded
+loop: module loaded
+st: Version 20160209, fixed bufsize 32768, s/g segs 256
+fsl-sata ffe220000.sata: Sata FSL Platform/CSB Driver init
+scsi host0: sata_fsl
+ata1: SATA max UDMA/133 irq 68
+fsl-sata ffe221000.sata: Sata FSL Platform/CSB Driver init
+scsi host1: sata_fsl
+ata2: SATA max UDMA/133 irq 69
+fe8000000.nor: Found 1 x16 devices at 0x0 in 16-bit bank. Manufacturer ID 0x000089 Chip ID 0x00227e
+Amd/Fujitsu Extended Query Table at 0x0040
+  Amd/Fujitsu Extended Query version 1.3.
+number of CFI chips: 1
+nand: device found, Manufacturer ID: 0x2c, Chip ID: 0xac
+nand: Micron MT29F4G08ABBDAH4
+nand: 512 MiB, SLC, erase size: 128 KiB, page size: 2048, OOB size: 64
+Bad block table found at page 262080, version 0x01
+Bad block table found at page 262016, version 0x01
+fsl,ifc-nand fff800000.nand: IFC NAND device at 0xfff800000, bank 1
+fsl_espi ffe110000.spi: cs=0, init_csmode=0x100008
+m25p80 spi0.0: found n25q512ax3, expected n25q512a
+m25p80 spi0.0: n25q512ax3 (65536 Kbytes)
+fsl_espi ffe110000.spi: at 0x        (ptrval) (irq = 53)
+libphy: Fixed MDIO Bus: probed
+libphy: Freescale XGMAC MDIO Bus: probed
+libphy: Freescale XGMAC MDIO Bus: probed
+libphy: Freescale XGMAC MDIO Bus: probed
+libphy: Freescale XGMAC MDIO Bus: probed
+libphy: Freescale XGMAC MDIO Bus: probed
+libphy: Freescale XGMAC MDIO Bus: probed
+libphy: Freescale XGMAC MDIO Bus: probed
+libphy: Freescale XGMAC MDIO Bus: probed
+libphy: Freescale XGMAC MDIO Bus: probed
+libphy: Freescale XGMAC MDIO Bus: probed
+fsl_dpaa_mac ffe4e0000.ethernet: of_get_mac_address(/soc@ffe000000/fman@400000/ethernet@e0000) failed
+fsl_dpaa_mac: probe of ffe4e0000.ethernet failed with error -22
+fsl_dpaa_mac ffe4e2000.ethernet: of_get_mac_address(/soc@ffe000000/fman@400000/ethernet@e2000) failed
+fsl_dpaa_mac: probe of ffe4e2000.ethernet failed with error -22
+fsl_dpaa_mac ffe4e4000.ethernet: of_get_mac_address(/soc@ffe000000/fman@400000/ethernet@e4000) failed
+fsl_dpaa_mac: probe of ffe4e4000.ethernet failed with error -22
+fsl_dpaa_mac ffe4e6000.ethernet: of_get_mac_address(/soc@ffe000000/fman@400000/ethernet@e6000) failed
+fsl_dpaa_mac: probe of ffe4e6000.ethernet failed with error -22
+fsl_dpaa_mac ffe4f0000.ethernet: of_get_mac_address(/soc@ffe000000/fman@400000/ethernet@f0000) failed
+fsl_dpaa_mac: probe of ffe4f0000.ethernet failed with error -22
+fsl_dpaa_mac ffe4f2000.ethernet: of_get_mac_address(/soc@ffe000000/fman@400000/ethernet@f2000) failed
+fsl_dpaa_mac: probe of ffe4f2000.ethernet failed with error -22
+e100: Intel(R) PRO/100 Network Driver, 3.5.24-k2-NAPI
+e100: Copyright(c) 1999-2006 Intel Corporation
+e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+e1000: Copyright (c) 1999-2006 Intel Corporation.
+e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+igb: Copyright (c) 2007-2014 Intel Corporation.
+igbvf: Intel(R) Gigabit Virtual Function Network Driver - version 2.4.0-k
+igbvf: Copyright (c) 2009 - 2012 Intel Corporation.
+ixgbe: Intel(R) 10 Gigabit PCI Express Network Driver - version 5.1.0-k
+ixgbe: Copyright (c) 1999-2016 Intel Corporation.
+ixgbevf: Intel(R) 10 Gigabit PCI Express Virtual Function Network Driver - version 4.1.0-k
+ixgbevf: Copyright (c) 2009 - 2015 Intel Corporation.
+i40e: Intel(R) Ethernet Connection XL710 Network Driver - version 2.3.2-k
+i40e: Copyright (c) 2013 - 2014 Intel Corporation.
+ixgb: Intel(R) PRO/10GbE Network Driver - version 1.0.135-k2-NAPI
+ixgb: Copyright (c) 1999-2008 Intel Corporation.
+i40evf: Intel(R) 40-10 Gigabit Virtual Function Network Driver - version 3.2.2-k
+Copyright (c) 2013 - 2015 Intel Corporation.
+Intel(R) Ethernet Switch Host Interface Driver - version 0.23.4-k
+Copyright(c) 2013 - 2018 Intel Corporation.
+ice: Intel(R) Ethernet Connection E800 Series Linux Driver - version ice-0.7.0-k
+ice: Copyright (c) 2018, Intel Corporation.
+jme: JMicron JMC2XX ethernet driver version 1.0.8
+sky2: driver version 1.30
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-pci: EHCI PCI platform driver
+ehci-platform: EHCI generic platform driver
+ehci-fsl: Freescale EHCI Host controller driver
+fsl-ehci fsl-ehci.0: Freescale On-Chip EHCI Host Controller
+fsl-ehci fsl-ehci.0: new USB bus registered, assigned bus number 1
+fsl-ehci fsl-ehci.0: irq 44, io mem 0xffe210000
+fsl-ehci fsl-ehci.0: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+fsl-ehci fsl-ehci.1: Freescale On-Chip EHCI Host Controller
+fsl-ehci fsl-ehci.1: new USB bus registered, assigned bus number 2
+fsl-ehci fsl-ehci.1: irq 45, io mem 0xffe211000
+fsl-ehci fsl-ehci.1: USB 2.0 started, EHCI 1.00
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+usbcore: registered new interface driver usb-storage
+i2c /dev entries driver
+mpc-i2c ffe118000.i2c: timeout 1000000 us
+rtc-ds1307 0-0068: SET TIME!
+rtc-ds1307 0-0068: registered as rtc0
+ata1: No Device OR PHYRDY change,Hstatus = 0xa0000000
+mpc-i2c ffe118100.i2c: timeout 1000000 us
+ata1: SATA link down (SStatus 10 SControl 300)
+mpc-i2c ffe119000.i2c: timeout 1000000 us
+ata2: No Device OR PHYRDY change,Hstatus = 0xa0000000
+ata2: SATA link down (SStatus 10 SControl 300)
+mpc-i2c ffe119100.i2c: timeout 1000000 us
+i2c i2c-1: Added multiplexed i2c bus 4
+i2c i2c-1: Added multiplexed i2c bus 5
+i2c i2c-1: Added multiplexed i2c bus 6
+i2c i2c-1: Added multiplexed i2c bus 7
+pca954x 1-0077: registered 4 multiplexed busses for I2C switch pca9546
+Freescale(R) MPC85xx EDAC driver, (C) 2006 Montavista Software
+EDAC MC0: Giving out device to module fsl_ddr_edac controller fsl_mc_err: DEV fsl_mc_err (INTERRUPT)
+fsl_ddr_edac acquired irq 490 for MC
+fsl_ddr_edac MC err registered
+EDAC PCI0: Giving out device to module MPC85xx_edac controller mpc85xx_pci_err: DEV mpc85xx-pci-edac.0.auto (INTERRUPT)
+MPC85xx_edac acquired irq 21 for PCI Err
+MPC85xx_edac PCI err registered
+EDAC PCI1: Giving out device to module MPC85xx_edac controller mpc85xx_pci_err: DEV mpc85xx-pci-edac.1.auto (INTERRUPT)
+MPC85xx_edac acquired irq 23 for PCI Err
+MPC85xx_edac PCI err registered
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+mmc0: SDHCI controller on ffe114000.sdhc [ffe114000.sdhc] using ADMA 64-bit
+iommu: Adding device ffe301000.jr to group 39
+iommu: Adding device ffe302000.jr to group 41
+iommu: Adding device ffe303000.jr to group 42
+iommu: Adding device ffe304000.jr to group 43
+platform caam_qi: Linux CAAM Queue I/F driver initialised
+caam ffe300000.crypto: Instantiated RNG4 SH1
+caam ffe300000.crypto: device ID = 0x0a13020000000000 (Era 6)
+caam ffe300000.crypto: job rings = 4, qi = 1, dpaa2 = no
+caam algorithms registered in /proc/crypto
+platform caam_qi: algorithms registered in /proc/crypto
+caam_jr ffe301000.jr: registering rng-caam
+caam ffe300000.crypto: caam pkc algorithms registered in /proc/crypto
+mmc0: new high speed SDHC card at address e624
+usbcore: registered new interface driver usbhid
+mmcblk0: mmc0:e624 SU08G 7.40 GiB 
+usbhid: USB HID core driver
+Freescale hypervisor management driver
+fsl-hv: no hypervisor found
+ mmcblk0: p1 p2
+ipip: IPv4 and MPLS over IPv4 tunneling driver
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+Segment Routing with IPv6
+sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+8021q: 802.1Q VLAN Support v1.8
+Key type dns_resolver registered
+drmem: No dynamic reconfiguration memory found
+Btrfs loaded, crc32c=crc32c-generic
+rtc-ds1307 0-0068: setting system clock to 2000-01-01 00:01:06 UTC (946684866)
+Waiting 5 sec before mounting root device...
+md: Skipping autodetection of RAID arrays. (raid=autodetect will force)
+EXT4-fs (mmcblk0p2): warning: mounting unchecked fs, running e2fsck is recommended
+EXT4-fs (mmcblk0p2): mounted filesystem without journal. Opts: (null)
+VFS: Mounted root (ext4 filesystem) on device 179:2.
+devtmpfs: mounted
+Freeing unused kernel memory: 668K
+This architecture does not have kernel memory protection.
+random: fast init done
+INIT: version 2.88 booting
+Error opening /dev/fb0: No such file or directory
+Starting udev
+udev: Not using udev cache because of changes detected in the following files:
+udev:     /proc/version /proc/cmdline /proc/devices
+udev:     lib/udev/rules.d/* etc/udev/rules.d/*
+udev: The udev cache will be regenerated. To identify the detected changes,
+udev: compare the cached sysconf at   /etc/udev/cache.data
+udev: against the current sysconf at  /dev/shm/udev.cache
+udevd[328]: starting version 182
+snd_hda_intel 0001:01:00.1: Force to snoop mode by module option
+input: HDA ATI HDMI HDMI/DP,pcm=3 as /devices/platform/ffe270000.pcie/pci0001:00/0001:00:00.0/0001:01:00.1/sound/card0/input0
+EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+bootlogd: cannot allocate pseudo tty: No such file or directory
+EXT4-fs error (device mmcblk0p2): ext4_lookup:1576: inode #154771: comm S30urandom: deleted inode referenced: 154788
+EXT4-fs error (device mmcblk0p2): ext4_lookup:1576: inode #154771: comm rm: deleted inode referenced: 154788
+EXT4-fs error (device mmcblk0p2): ext4_lookup:1576: inode #154771: comm rm: deleted inode referenced: 154788
+rm: cannot remove '/var/lib/urandom/random-seed': Structure needs cleaning
+EXT4-fs error (device mmcblk0p2): ext4_lookup:1576: inode #154771: comm dd: deleted inode referenced: 154788
+urandom start: failed.
+Populating dev cache
+Sun Jul 16 10:08:57 UTC 2017
+INIT: Entering runlevel: 5
+Configuring network interfaces... done.
+Starting Xserver
+^[[20;158R^[[20;158Ropen /dev/fb0: No such file or directory
+Starting system message bus: random: dbus-daemon: uninitialized urandom read (12 bytes read)
+random: dbus-daemon: uninitialized urandom read (12 bytes read)
+dbus.
+Starting OpenBSD Secure Shell server: sshd
+done.
+Starting rpcbind daemon...done.
+starting statd: done
+exportfs: EXT4-fs error (device mmcblk0p2): ext4_lookup:1576: inode #154775: comm exportfs: deleted inode referenced: 154812
+can't open /etc/exports for readEXT4-fs error (device mmcblk0p2): ext4_lookup:1576: inode #154775: comm exportfs: deleted inode referenced: 154813
+ing
+exportfs: could not open /vEXT4-fs error (device mmcblk0p2): ext4_lookup:1576: inode #154775: comm exportfs: deleted inode referenced: 154812
+ar/lib/nfs/.xtab.lock for locking: errno 117 (Structure needs cleaning)
+exportfs: could not open /var/lib/nfs/.etab.lock for locking: errno 117 (Structure needs cleaning)
+exportfs: can't lock /var/lib/nfs/etab for writing
+exportfs: could not open /var/lib/nfs/.xtab.lock for locking: errno 117 (Structure needs cleaning)
+exportfs: can't lock /var/lib/nfs/xtab for writing
+Installing knfsd (copyright (C) 1996 okir@monad.swb.de).
+starting 8 nfsd kernel threads: done
+starting mountd: EXT4-fs error (device mmcblk0p2): ext4_lookup:1576: inode #154775: comm rpc.mountd: deleted inode referenced: 154813
+EXT4-fs error (device mmcblk0p2): ext4_lookup:1576: inode #154775: comm rpc.mountd: deleted inode referenced: 154812
+done
+Starting syslogd/klogd: done
+
+QorIQ SDK (FSL Reference Distro) 2.0 t2080rdb /dev/ttyS0
+
+t2080rdb login: root
+
