@@ -44,15 +44,9 @@ If you alreadey cross-compiled a kernel and then you want to cross-compile anoth
 `make ARCH=powerpc SUBARCH=ppc64 CROSS_COMPILE=powerpc64-linux-gnu- clean`
 
 
-You may want to compile the dtb file (a flattened device-tree block with header in one binary blob) for the T2080rdb using the dts file (a text file containing a "source" for a device-tree) coming with the kernel you should install the device tree compiler by entering
+In order to correctly initialize your T2080rdb board, you require a .dtb file in "/boot" called "uImage.dtb".
+You may find information on how to obtain the .dtb file here
 
-`sudo apt install device-tree-compiler`
-
-To compile a dtb file from the T2080rdb dts file
-
-`dtc -O dtb -o /myCustomPath/t2080rdb.dtb /kernel/arch/powerpc/boot/dts/fsl/t2080rdb.dts`
-
-Please note that you MUST customize the default t2080rdb.dts (and related dtsi) files to enable video card support on the T2080rdb devkit.
-
+https://gitlab.com/oshw-powerpc-notebook/T2080customizations/blob/master/device_tree/
 
 
