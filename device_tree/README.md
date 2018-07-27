@@ -9,3 +9,4 @@ To start the compilation download all .dts and dtsi files in this folder and ent
 `dtc -O dtb -o ./uImage.dtb ./t2080rdb.dts`
 
 Please note that this the file "t2080si-post.dtsi" has been modified in order to accomodate a video card attached on the onboard PCIe 4x (J20) using a PCIe 4x to PCIe 16x adaptor cable.
+Another file altered to accomodate a PCIe video card is the file "t208xrdb.dtsi".
