@@ -827,7 +827,7 @@ Welcome to [1mDebian GNU/Linux buster/sid[0m!
 [OK] Listening on initctl Compatibility Named Pipe.
 [OK] Mounted Kernel Debug File System.
 [OK] Mounted POSIX Message Queue File System.
-[[0;1;31mFAILED[0m] Failed to start Load Kernel Modules.
+[FAILED] Failed to start Load Kernel Modules.
 See 'systemctl status systemd-modules-load.service' for details.
 [OK] Mounted Huge Pages File System.
 [OK] Started Create list of required sta…vice nodes for the current kernel.
@@ -880,7 +880,7 @@ See 'systemctl status systemd-modules-load.service' for details.
          Activating swap /dev/disk/by-uuid/2…3be-2517-44f4-b90f-423518ec566f...
 [   19.418588] snd_hda_intel 0001:01:00.1: Force to snoop mode by module option
 [   19.426322] Unable to find swap-space signature
-[[0;1;31mFAILED[0m] Failed to activate swap /dev/disk/b…823be-2517-44f4-b90f-423518ec566f.
+[FAILED] Failed to activate swap /dev/disk/b…823be-2517-44f4-b90f-423518ec566f.
 See 'systemctl status "dev-disk-by\\x2d…0f\\x2d423518ec566f.swap"' for details.
 [[0;1;33mDEPEND[0m] Dependency failed for Swap.
 [OK] Reached target System Initialization.
