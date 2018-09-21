@@ -784,170 +784,170 @@ WARNING: adjusting available memory to 30000000
 [   11.300213] systemd[1]: systemd 239 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
 [   11.323036] systemd[1]: Detected architecture ppc64.
 
-Welcome to [1mDebian GNU/Linux buster/sid[0m!
+Welcome to [1mDebian GNU/Linux buster/sid[0m!
 
 [   11.340652] systemd[1]: Set hostname to <T2080RDB>.
 [   11.634389] random: systemd: uninitialized urandom read (16 bytes read)
 [   11.641205] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
-[[0;32m  OK  [0m] Started Dispatch Password Requests to Console Directory Watch.
+[[0;32m  OK  [0m] Started Dispatch Password Requests to Console Directory Watch.
 [   11.659600] random: systemd: uninitialized urandom read (16 bytes read)
 [   11.666416] systemd[1]: Listening on udev Control Socket.
-[[0;32m  OK  [0m] Listening on udev Control Socket.
+[[0;32m  OK  [0m] Listening on udev Control Socket.
 [   11.679565] random: systemd: uninitialized urandom read (16 bytes read)
 [   11.686381] systemd[1]: Listening on Journal Socket.
-[[0;32m  OK  [0m] Listening on Journal Socket.
+[[0;32m  OK  [0m] Listening on Journal Socket.
 [   11.700895] systemd[1]: Mounting Kernel Debug File System...
          Mounting Kernel Debug File System...
 [   11.713869] systemd[1]: Listening on fsck to fsckd communication Socket.
-[[0;32m  OK  [0m] Listening on fsck to fsckd communication Socket.
+[[0;32m  OK  [0m] Listening on fsck to fsckd communication Socket.
 [   11.729857] systemd[1]: Listening on Journal Audit Socket.
-[[0;32m  OK  [0m] Listening on Journal Audit Socket.
+[[0;32m  OK  [0m] Listening on Journal Audit Socket.
 [   11.743033] systemd[1]: Created slice User and Session Slice.
-[[0;32m  OK  [0m] Created slice User and Session Slice.
+[[0;32m  OK  [0m] Created slice User and Session Slice.
          Mounting POSIX Message Queue File System...
-[[0;32m  OK  [0m] Created slice system-serial\x2dgetty.slice.
+[[0;32m  OK  [0m] Created slice system-serial\x2dgetty.slice.
          Starting Load Kernel Modules...
-[[0;32m  OK  [0m] Listening on Journal Socket (/dev/log).
-[[0;32m  OK  [0m] Started Forward Password Requests to Wall Directory Watch.
-[[0;32m  OK  [0m] Reached target Local Encrypted Volumes.
-[[0;32m  OK  [0m] Reached target Slices.
-[[0;32m  OK  [0m] Listening on Syslog Socket.
+[[0;32m  OK  [0m] Listening on Journal Socket (/dev/log).
+[[0;32m  OK  [0m] Started Forward Password Requests to Wall Directory Watch.
+[[0;32m  OK  [0m] Reached target Local Encrypted Volumes.
+[[0;32m  OK  [0m] Reached target Slices.
+[[0;32m  OK  [0m] Listening on Syslog Socket.
          Starting Journal Service...
          Mounting Huge Pages File System...
          Starting Create list of required st…ce nodes for the current kernel...
-[[0;32m  OK  [0m] Set up automount Arbitrary Executab…rmats File[   11.861258] random: crng init done
+[[0;32m  OK  [0m] Set up automount Arbitrary Executab…rmats File[   11.861258] random: crng init done
 [   11.864791] random: 7 urandom warning(s) missed due to ratelimiting
  System Automount Point.
          Starting Remount Root and Kernel File Systems...
-[[0;32m  OK  [0m] Reached target Remote File Systems.
-[[0;32m  OK  [0m] Created slice system-getty.slice.
-[[0;32m  OK  [0m] Listening on udev Kernel Socket.
+[[0;32m  OK  [0m] Reached target Remote File Systems.
+[[0;32m  OK  [0m] Created slice system-getty.slice.
+[[0;32m  OK  [0m] Listening on udev Kernel Socket.
          Starting udev Coldplug all Devices...
          Starting Set the console keyboard layout...
-[[0;32m  OK  [0m] Listening on initctl Compatibility Named Pipe.
-[[0;32m  OK  [0m] Mounted Kernel Debug File System.
-[[0;32m  OK  [0m] Mounted POSIX Message Queue File System.
-[[0;1;31mFAILED[0m] Failed to start Load Kernel Modules.
+[[0;32m  OK  [0m] Listening on initctl Compatibility Named Pipe.
+[[0;32m  OK  [0m] Mounted Kernel Debug File System.
+[[0;32m  OK  [0m] Mounted POSIX Message Queue File System.
+[[0;1;31mFAILED[0m] Failed to start Load Kernel Modules.
 See 'systemctl status systemd-modules-load.service' for details.
-[[0;32m  OK  [0m] Mounted Huge Pages File System.
-[[0;32m  OK  [0m] Started Create list of required sta…vice nodes for the current kernel.
+[[0;32m  OK  [0m] Mounted Huge Pages File System.
+[[0;32m  OK  [0m] Started Create list of required sta…vice nodes for the current kernel.
          Starting Apply Kernel Variables...
          Mounting Kernel Configuration File System...
-[[0;32m  OK  [0m] Started Journal Service.
-[[0;32m  OK  [0m] Started Apply Kernel Variables.
-[[0;32m  OK  [0m] Mounted Kernel Configuration File System.
-[[0;32m  OK  [0m] Started Set the console keyboard layout.
-[[0;32m  OK  [0m] Started udev Coldplug all Devices.
+[[0;32m  OK  [0m] Started Journal Service.
+[[0;32m  OK  [0m] Started Apply Kernel Variables.
+[[0;32m  OK  [0m] Mounted Kernel Configuration File System.
+[[0;32m  OK  [0m] Started Set the console keyboard layout.
+[[0;32m  OK  [0m] Started udev Coldplug all Devices.
          Starting Helper to synchronize boot up for ifupdown...
-[[0;32m  OK  [0m] Started Helper to synchronize boot up for ifupdown.
+[[0;32m  OK  [0m] Started Helper to synchronize boot up for ifupdown.
 [   13.647179] EXT4-fs (sda3): re-mounted. Opts: errors=remount-ro
-[[0;32m  OK  [0m] Started Remount Root and Kernel File Systems.
+[[0;32m  OK  [0m] Started Remount Root and Kernel File Systems.
          Starting Load/Save Random Seed...
          Starting Flush Journal to Persistent Storage...
          Starting Create System Users...
-[[0;32m  OK  [0m] Started Load/Save Random Seed.
+[[0;32m  OK  [0m] Started Load/Save Random Seed.
 [   13.708860] systemd-journald[2752]: Received request to flush runtime journal from PID 1
 [   13.727259] systemd-journald[2752]: File /var/log/journal/cc70563e9bb04926b54b0c9f2f3716d0/system.journal corrupted or uncleanly shut down, renaming and replacing.
-[[0;32m  OK  [0m] Started Create System Users.
+[[0;32m  OK  [0m] Started Create System Users.
          Starting Create Static Device Nodes in /dev...
-[[0;32m  OK  [0m] Started Create Static Device Nodes in /dev.
-[[0;32m  OK  [0m] Reached target Local File Systems (Pre).
-[[0;32m  OK  [0m] Reached target Local File Systems.
+[[0;32m  OK  [0m] Started Create Static Device Nodes in /dev.
+[[0;32m  OK  [0m] Reached target Local File Systems (Pre).
+[[0;32m  OK  [0m] Reached target Local File Systems.
          Starting Set console font and keymap...
          Starting Raise network interfaces...
          Starting udev Kernel Device Manager...
-[[0;32m  OK  [0m] Started Flush Journal to Persistent Storage.
+[[0;32m  OK  [0m] Started Flush Journal to Persistent Storage.
          Starting Create Volatile Files and Directories...
-[[0;32m  OK  [0m] Started Set console font and keymap.
-[[0;32m  OK  [0m] Started Create Volatile Files and Directories.
+[[0;32m  OK  [0m] Started Set console font and keymap.
+[[0;32m  OK  [0m] Started Create Volatile Files and Directories.
          Starting Update UTMP about System Boot/Shutdown...
          Starting Network Time Synchronization...
-[[0;32m  OK  [0m] Started Update UTMP about System Boot/Shutdown.
-[[0;32m  OK  [0m] Started udev Kernel Device Manager.
-[[0;32m  OK  [0m] Started Network Time Synchronization.
-[[0;32m  OK  [0m] Reached target System Time Synchronized.
+[[0;32m  OK  [0m] Started Update UTMP about System Boot/Shutdown.
+[[0;32m  OK  [0m] Started udev Kernel Device Manager.
+[[0;32m  OK  [0m] Started Network Time Synchronization.
+[[0;32m  OK  [0m] Reached target System Time Synchronized.
 [   17.053997] pcieport 0001:00:00.0: AER: Corrected error received: 0001:00:00.0
 [   17.061246] pcieport 0001:00:00.0: PCIe Bus Error: severity=Corrected, type=Physical Layer, (Receiver ID)
 [   17.070834] pcieport 0001:00:00.0:   device [1957:0830] error status/mask=00000001/00006000
 [   17.079199] pcieport 0001:00:00.0:    [ 0] Receiver Error         (First)
-[[0;32m  OK  [0m] Started Raise network interfaces.
+[[0;32m  OK  [0m] Started Raise network interfaces.
 [   17.825450] sd 1:0:0:0: Attached scsi generic sg0 type 0
-[[0;32m  OK  [0m] Found device /dev/ttyS0.
-[[0;32m  OK  [0m] Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+[[0;32m  OK  [0m] Found device /dev/ttyS0.
+[[0;32m  OK  [0m] Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
          Starting Load/Save RF Kill Switch Status...
-[[0;32m  OK  [0m] Started Load/Save RF Kill Switch Status.
-[[0;32m  OK  [0m] Found device SDCFXS-032G swap.
+[[0;32m  OK  [0m] Started Load/Save RF Kill Switch Status.
+[[0;32m  OK  [0m] Found device SDCFXS-032G swap.
          Activating swap /dev/disk/by-uuid/2…3be-2517-44f4-b90f-423518ec566f...
 [   19.418588] snd_hda_intel 0001:01:00.1: Force to snoop mode by module option
 [   19.426322] Unable to find swap-space signature
-[[0;1;31mFAILED[0m] Failed to activate swap /dev/disk/b…823be-2517-44f4-b90f-423518ec566f.
+[[0;1;31mFAILED[0m] Failed to activate swap /dev/disk/b…823be-2517-44f4-b90f-423518ec566f.
 See 'systemctl status "dev-disk-by\\x2d…0f\\x2d423518ec566f.swap"' for details.
-[[0;1;33mDEPEND[0m] Dependency failed for Swap.
-[[0;32m  OK  [0m] Reached target System Initialization.
-[[0;32m  OK  [0m] Started Daily apt download activities.
-[[0;32m  OK  [0m] Started Daily Cleanup of Temporary Directories.
+[[0;1;33mDEPEND[0m] Dependency failed for Swap.
+[[0;32m  OK  [0m] Reached target System Initialization.
+[[0;32m  OK  [0m] Started Daily apt download activities.
+[[0;32m  OK  [0m] Started Daily Cleanup of Temporary Directories.
 [   19.497207] input: HDA ATI HDMI HDMI/DP,pcm=3 as /devices/platform/ffe270000.pcie/pci0001:00/0001:00:00.0/0001:01:00.1/sound/card0/input4
-[[0;32m  OK  [0m] Listening on CUPS Scheduler.
-[[0;32m  OK  [0m] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
-[[0;32m  OK  [0m] Started Trigger anacron every hour.
-[[0;32m  OK  [0m] Started Daily apt upgrade and clean activities.
-[[0;32m  OK  [0m] Started CUPS Scheduler.
-[[0;32m  OK  [0m] Reached target Paths.
-[[0;32m  OK  [0m] Listening on D-Bus System Message Bus Socket.
-[[0;32m  OK  [0m] Reached target Sockets.
-[[0;32m  OK  [0m] Reached target Basic System.
+[[0;32m  OK  [0m] Listening on CUPS Scheduler.
+[[0;32m  OK  [0m] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[[0;32m  OK  [0m] Started Trigger anacron every hour.
+[[0;32m  OK  [0m] Started Daily apt upgrade and clean activities.
+[[0;32m  OK  [0m] Started CUPS Scheduler.
+[[0;32m  OK  [0m] Reached target Paths.
+[[0;32m  OK  [0m] Listening on D-Bus System Message Bus Socket.
+[[0;32m  OK  [0m] Reached target Sockets.
+[[0;32m  OK  [0m] Reached target Basic System.
          Starting Avahi mDNS/DNS-SD Stack...
          Starting Restore /etc/resolv.conf i…fore the ppp link was shut down...
-[[0;32m  OK  [0m] Started Regular background program processing daemon.
+[[0;32m  OK  [0m] Started Regular background program processing daemon.
          Starting Initialize hardware monitoring sensors...
          Starting Modem Manager...
-[[0;32m  OK  [0m] Started CUPS Scheduler.
+[[0;32m  OK  [0m] Started CUPS Scheduler.
          Starting LSB: handle special hotkeys of Apple computers...
-[[0;32m  OK  [0m] Started irqbalance daemon.
+[[0;32m  OK  [0m] Started irqbalance daemon.
          Starting System Logging Service...
-[[0;32m  OK  [0m] Started Run anacron jobs.
+[[0;32m  OK  [0m] Started Run anacron jobs.
          Starting Login Service...
          Starting Disk Manager...
-[[0;32m  OK  [0m] Started D-Bus System Message Bus.
+[[0;32m  OK  [0m] Started D-Bus System Message Bus.
          Starting Network Manager...
          Starting WPA supplicant...
          Starting Wicd a wireless and wired network manager for Linux...
-[[0;32m  OK  [0m] Started Daily rotation of log files.
-[[0;32m  OK  [0m] Reached target Timers.
-[[0;32m  OK  [0m] Started Restore /etc/resolv.conf if…before the ppp link was shut down.
-[[0;32m  OK  [0m] Started LSB: handle special hotkeys of Apple computers.
-[[0;32m  OK  [0m] Started System Logging Service.
-[[0;32m  OK  [0m] Reached target Sound Card.
-[[0;32m  OK  [0m] Started Initialize hardware monitoring sensors.
-[[0;32m  OK  [0m] Started Login Service.
-[[0;32m  OK  [0m] Started Avahi mDNS/DNS-SD Stack.
-[[0;32m  OK  [0m] Started WPA supplicant.
-[[0;32m  OK  [0m] Started Make remote CUPS printers available locally.
+[[0;32m  OK  [0m] Started Daily rotation of log files.
+[[0;32m  OK  [0m] Reached target Timers.
+[[0;32m  OK  [0m] Started Restore /etc/resolv.conf if…before the ppp link was shut down.
+[[0;32m  OK  [0m] Started LSB: handle special hotkeys of Apple computers.
+[[0;32m  OK  [0m] Started System Logging Service.
+[[0;32m  OK  [0m] Reached target Sound Card.
+[[0;32m  OK  [0m] Started Initialize hardware monitoring sensors.
+[[0;32m  OK  [0m] Started Login Service.
+[[0;32m  OK  [0m] Started Avahi mDNS/DNS-SD Stack.
+[[0;32m  OK  [0m] Started WPA supplicant.
+[[0;32m  OK  [0m] Started Make remote CUPS printers available locally.
          Starting Authorization Manager...
-[[0;32m  OK  [0m] Started Network Manager.
+[[0;32m  OK  [0m] Started Network Manager.
          Starting Network Manager Wait Online...
          Starting Hostname Service...
-[[0;32m  OK  [0m] Started Authorization Manager.
+[[0;32m  OK  [0m] Started Authorization Manager.
 [   20.914868] pcieport 0001:00:00.0: AER: Corrected error received: 0001:00:00.0
 [   20.922129] pcieport 0001:00:00.0: PCIe Bus Error: severity=Corrected, type=Physical Layer, (Receiver ID)
 [   20.931746] pcieport 0001:00:00.0:   device [1957:0830] error status/mask=00000001/00006000
 [   20.940123] pcieport 0001:00:00.0:    [ 0] Receiver Error         (First)
-[[0;32m  OK  [0m] Started Modem Manager.
-[[0;32m  OK  [0m] Started Hostname Service.
+[[0;32m  OK  [0m] Started Modem Manager.
+[[0;32m  OK  [0m] Started Hostname Service.
          Starting Network Manager Script Dispatcher Service...
-[[0;32m  OK  [0m] Started Wicd a wireless and wired network manager for Linux.
-[[0;32m  OK  [0m] Reached target Network.
+[[0;32m  OK  [0m] Started Wicd a wireless and wired network manager for Linux.
+[[0;32m  OK  [0m] Reached target Network.
          Starting Permit User Sessions...
          Starting OpenBSD Secure Shell server...
-[[0;32m  OK  [0m] Started Network Manager Script Dispatcher Service.
-[[0;32m  OK  [0m] Started Permit User Sessions.
-[[0;32m  OK  [0m] Started Serial Getty on ttyS0.
+[[0;32m  OK  [0m] Started Network Manager Script Dispatcher Service.
+[[0;32m  OK  [0m] Started Permit User Sessions.
+[[0;32m  OK  [0m] Started Serial Getty on ttyS0.
          Starting Light Display Manager...
-[[0;32m  OK  [0m] Started Getty on tty1.
-[[0;32m  OK  [0m] Reached target Login Prompts.
-[[0;32m  OK  [0m] Started Light Display Manager.
-[[0;32m  OK  [0m] Started OpenBSD Secure Shell server.
-[[0;32m  OK  [0m] Started Disk Manager.
+[[0;32m  OK  [0m] Started Getty on tty1.
+[[0;32m  OK  [0m] Reached target Login Prompts.
+[[0;32m  OK  [0m] Started Light Display Manager.
+[[0;32m  OK  [0m] Started OpenBSD Secure Shell server.
+[[0;32m  OK  [0m] Started Disk Manager.
 [   22.301476] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
 [   22.328352] usb 2-1: firmware version 0x4330 and device bootcode version 0x4810 differ
 [   22.423556] zd1211rw 2-1:1.0: firmware version 4605
@@ -957,17 +957,17 @@ See 'systemctl status "dev-disk-by\\x2d…0f\\x2d423518ec566f.swap"' for details
 [   22.597898] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
 [   22.723921] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
 [   22.887636] NET: Registered protocol family 5
-[[0;32m  OK  [0m] Started Network Manager Wait Online.
-[[0;32m  OK  [0m] Reached target Network is Online.
+[[0;32m  OK  [0m] Started Network Manager Wait Online.
+[[0;32m  OK  [0m] Reached target Network is Online.
          Starting LSB: exim Mail Transport Agent...
          Starting Samba NMB Daemon...
-[[0;32m  OK  [0m] Created slice system-user\x2druntime\x2ddir.slice.
-[[0;32m  OK  [0m] Started /run/user/113 mount wrapper.
-[[0;32m  OK  [0m] Created slice User Slice of UID 113.
+[[0;32m  OK  [0m] Created slice system-user\x2druntime\x2ddir.slice.
+[[0;32m  OK  [0m] Started /run/user/113 mount wrapper.
+[[0;32m  OK  [0m] Created slice User Slice of UID 113.
          Starting User Manager for UID 113...
-[[0;32m  OK  [0m] Started Session c1 of user lightdm.
-[[0;32m  OK  [0m] Started LSB: exim Mail Transport Agent.
-[[0;32m  OK  [0m] Started User Manager for UID 113.
+[[0;32m  OK  [0m] Started Session c1 of user lightdm.
+[[0;32m  OK  [0m] Started LSB: exim Mail Transport Agent.
+[[0;32m  OK  [0m] Started User Manager for UID 113.
 [   26.766845] fuse init (API version 7.27)
 
 
