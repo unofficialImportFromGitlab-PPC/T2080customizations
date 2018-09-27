@@ -44,18 +44,27 @@ If you alreadey cross-compiled a kernel and then you want to cross-compile anoth
 `make ARCH=powerpc SUBARCH=ppc64 CROSS_COMPILE=powerpc64-linux-gnu- clean`
 
 
-In order to correctly initialize your T2080rdb board, you require a Device Tree Blob (dtb) file and 
-.dtb file in "/boot" called "uImage.dtb".
-You may find information on how to obtain the .dtb file here
+In order to correctly initialize your T2080rdb board, your U-Boot requires a Device Tree Blob (dtb) file and the Freescale/NXP DPAA FMAN microcode.
+
+
+You may obtain the dtb file ("uImage.dtb") from here
 
 https://gitlab.com/oshw-powerpc-notebook/T2080customizations/blob/master/device_tree/
 
+You may obtain the DPAA FMAN microcode from here
+
+https://gitlab.com/oshw-powerpc-notebook/T2080customizations/tree/master/fman_microcode
+
+
 Infos on Device Tree Blobs (dtb)
+
 http://www.informit.com/articles/article.aspx?p=1647051&seqNum=5
 
 
 Infos on Freescale/NXP DPAA
+
 http://cache.freescale.com/files/training/doc/ftf/2014/FTF-NET-F0146.pdf
+
 http://cache.freescale.com/files/training/doc/ftf/2014/FTF-NET-F0111.pdf
 
 
