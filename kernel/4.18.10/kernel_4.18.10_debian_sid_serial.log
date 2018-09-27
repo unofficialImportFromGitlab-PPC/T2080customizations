@@ -1,0 +1,967 @@
+SD boot...
+Initializing....using SPD
+2 GiB left unmapped
+
+
+U-Boot 2016.092.0+ga06b209 (Jul 12 2018 - 23:44:34 +0200)
+
+CPU0:  T2080E, Version: 1.1, (0x85380011)
+Core:  e6500, Version: 2.0, (0x80400120)
+Clock Configuration:
+       CPU0:1799.820 MHz, CPU1:1799.820 MHz, CPU2:1799.820 MHz, CPU3:1799.820 MHz, 
+       CCB:599.940 MHz,
+       DDR:933.310 MHz (1866.620 MT/s data rate) (Asynchronous), IFC:599.940 MHz
+       FMAN1: 699.930 MHz
+       QMAN:  299.970 MHz
+       PME:   599.940 MHz
+L1:    D-cache 32 KiB enabled
+       I-cache 32 KiB enabled
+Reset Configuration Word (RCW):
+       00000000: 1207001b 15000000 00000000 00000000
+       00000010: 66150002 00000000 68104000 c1000000
+       00000020: 00800000 00000000 00000000 000307fc
+       00000030: 00000000 00000000 00000000 00000004
+Board: T2080RDB, Board rev: 0x01 CPLD ver: 0x03, boot from SD/MMC
+SERDES Reference Clocks:
+SD1_CLK1=156.25MHZ, SD1_CLK2=100.00MHZ
+SD2_CLK1=100.00MHZ, SD2_CLK2=100.00MHZ
+I2C:   ready
+SPI:   ready
+DRAM:  Detected UDIMM D3XP56082XL10AA   
+2 GiB left unmapped
+4 GiB (DDR3, 64-bit, CL=13, ECC on)
+       DDR Chip-Select Interleaving Mode: CS0+CS1
+Flash: 128 MiB
+L2:    2 MiB enabled
+Corenet Platform Cache: 512 KiB enabled
+Using SERDES1 Protocol: 102 (0x66)
+Using SERDES2 Protocol: 21 (0x15)
+SEC0: RNG instantiated
+NAND:  512 MiB
+MMC:   FSL_SDHC: 0
+EEPROM: Invalid ID (ff ff ff ff)
+PCIe1: Endpoint, undetermined, regs @ 0xfe240000
+PCIe1: Bus 00 - 00
+PCIe2: Root Complex, no link, regs @ 0xfe250000
+PCIe2: Bus 01 - 01
+PCIe3: disabled
+PCIe4: Root Complex, x4 gen1, regs @ 0xfe270000
+  03:00.0     - 1002:68f9 - Display controller
+  03:00.1     - 1002:aa68 - Multimedia device
+PCIe4: Bus 02 - 03
+Video: ATI Radeon video card (1002, 68f9) found @(3:0:0)
+videoboot: Booting PCI video card bus 3, function 0, device 0
+videoboot: Video ROM failed to map!
+No radeon video card found!
+In:    serial
+Out:   serial
+Err:   serial
+Net:   
+MMC read: dev # 0, block # 2080, count 128 ...
+Fman1: Uploading microcode version 106.4.18
+MMC read: dev # 0, block # 2208, count 512 ...
+Not found Cortina PHY ucode at 0x00114000
+MMC read: dev # 0, block # 2208, count 512 ...
+Not found Cortina PHY ucode at 0x00114000
+FM1@DTSEC3 [PRIME], FM1@DTSEC4, FM1@TGEC1, FM1@TGEC2, FM1@TGEC3, FM1@TGEC4
+Hit any key to stop autoboot: 10  9  8  7  6  5  4  3  2  1  0 
+Device: FSL_SDHC
+Manufacturer ID: 3
+OEM: 5344
+Name: SU16G 
+Tran Speed: 50000000
+Rd Block Len: 512
+SD version 3.0
+High Capacity: Yes
+Capacity: 14.8 GiB
+Bus Width: 4-bit
+Erase Group Size: 512 Bytes
+17364805 bytes read in 818 ms (20.2 MiB/s)
+36545 bytes read in 60 ms (594.7 KiB/s)
+WARNING: adjusting available memory to 30000000
+## Booting kernel from Legacy Image at 03000000 ...
+   Image Name:   Linux-4.18.10
+   Image Type:   PowerPC Linux Kernel Image (gzip compressed)
+   Data Size:    17364741 Bytes = 16.6 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 05000000
+   Booting using the fdt blob at 0x5000000
+   Uncompressing Kernel Image ... OK
+   Loading Device Tree to 03fe4000, end 03fffec0 ... OK
+[    0.000000] OF: reserved mem: initialized node qman-fqd, compatible id fsl,qman-fqd
+[    0.000000] OF: reserved mem: initialized node qman-pfdr, compatible id fsl,qman-pfdr
+[    0.000000] OF: reserved mem: initialized node bman-fbpr, compatible id fsl,bman-fbpr
+[    0.000000] MMU: Supported page sizes
+[    0.000000]          4 KB as direct
+[    0.000000]       2048 KB as direct & indirect
+[    0.000000]       4096 KB as direct
+[    0.000000]      16384 KB as direct
+[    0.000000]      65536 KB as direct
+[    0.000000]     262144 KB as direct
+[    0.000000]    1048576 KB as direct
+[    0.000000] MMU: Book3E HW tablewalk enabled
+[    0.000000] Linux version 4.18.10 (mario@mario-HP-EliteBook-840-G1) (gcc version 7.3.0 (Ubuntu 7.3.0-16ubuntu3)) #2 SMP Wed Sep 26 21:24:01 CEST 2018
+[    0.000000] Using CoreNet Generic machine description
+[    0.000000] bootconsole [udbg0] enabled
+[    0.000000] CPU maps initialized for 2 threads per core
+[    0.000000] -----------------------------------------------------
+[    0.000000] phys_mem_size     = 0xdac00000
+[    0.000000] dcache_bsize      = 0x40
+[    0.000000] icache_bsize      = 0x40
+[    0.000000] cpu_features      = 0x00000003009003b6
+[    0.000000]   possible        = 0x00000003009003b6
+[    0.000000]   always          = 0x00000003008003b4
+[    0.000000] cpu_user_features = 0xdc008000 0x08000000
+[    0.000000] mmu_features      = 0x000a0010
+[    0.000000] firmware_features = 0x0000000000000000
+[    0.000000] -----------------------------------------------------
+[    0.000000] numa:   NODE_DATA [mem 0xdab1a040-0xdab23fff]
+[    0.000000] CoreNet Generic board
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000000000-0x000000007fffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   [mem 0x0000000080000000-0x00000000dabfffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x00000000dabfffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x00000000dabfffff]
+[    0.000000] MMU: Allocated 2112 bytes of context maps for 255 contexts
+[    0.000000] percpu: Embedded 24 pages/cpu @(____ptrval____) s58640 r0 d39664 u131072
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 882000
+[    0.000000] Policy zone: Normal
+[    0.000000] Kernel command line: root=/dev/sda3 rw rootdelay=5 video= mem=3500M console=ttyS0,115200
+[    0.000000] log_buf_len individual max cpu contribution: 4096 bytes
+[    0.000000] log_buf_len total cpu_extra contributions: 28672 bytes
+[    0.000000] log_buf_len min size: 16384 bytes
+[    0.000000] log_buf_len: 65536 bytes
+[    0.000000] early log buf free: 12324(75%)
+[    0.000000] Memory: 3415292K/3584000K available (26896K kernel code, 4780K rwdata, 9368K rodata, 888K init, 2043K bss, 168708K reserved, 0K cma-reserved)
+[    0.000000] random: get_random_u64 called from .cache_random_seq_create+0x64/0x180 with crng_init=0
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	RCU event tracing is enabled.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=24 to nr_cpu_ids=8.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+[    0.000000] NR_IRQS: 512, nr_irqs: 512, preallocated irqs: 16
+[    0.000000] mpic: Setting up MPIC " OpenPIC  " version 1.2 at ffe040000, max 8 CPUs
+[    0.000000] mpic: ISU size: 512, shift: 9, mask: 1ff
+[    0.000000] mpic: Initializing for 512 sources
+[    0.000004] clocksource: timebase: mask: 0xffffffffffffffff max_cycles: 0x8a5d528ca, max_idle_ns: 440795203517 ns
+[    0.010181] clocksource: timebase mult[1aab5972] shift[24] registered
+[    0.017884] Console: colour dummy device 80x25
+[    0.022285] pid_max: default: 32768 minimum: 301
+[    0.028013] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.035805] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.042864] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.049497] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.057401] e6500 family performance monitor hardware support registered
+[    0.064074] Hierarchical SRCU implementation.
+[    0.071230] smp: Bringing up secondary CPUs ...
+[    0.078824] smp: Brought up 1 node, 8 CPUs
+[    0.082838] Using shared cache scheduler topology
+[    0.088106] devtmpfs: initialized
+[    0.095356] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.105040] futex hash table entries: 2048 (order: 5, 131072 bytes)
+[    0.111399] xor: measuring software checksum speed
+[    0.126128]    8regs     :  3504.000 MB/sec
+[    0.140245]    8regs_prefetch:  3188.000 MB/sec
+[    0.154710]    32regs    :  2848.000 MB/sec
+[    0.168828]    32regs_prefetch:  2660.000 MB/sec
+[    0.183380]    altivec   :  5704.000 MB/sec
+[    0.187475] xor: using function: altivec (5704.000 MB/sec)
+[    0.193396] NET: Registered protocol family 16
+[    0.198207] audit: initializing netlink subsys (disabled)
+[    0.203585] audit: type=2000 audit(0.084:1): state=initialized audit_enabled=0 res=1
+[    0.211281] cpuidle: using governor ladder
+[    0.215419] cpuidle: using governor menu
+[    0.232910] Machine: fsl,T2080RDB
+[    0.236143] SoC family: QorIQ T2080
+[    0.239619] SoC ID: svr:0x85380011, Revision: 1.1
+[    0.247132] Found FSL PCI host bridge at 0x0000000ffe250000. Firmware bus number: 0->0
+[    0.254968] PCI host bridge /pcie@ffe250000  ranges:
+[    0.259926]  MEM 0x0000000c20000000..0x0000000c2fffffff -> 0x00000000e0000000 
+[    0.267140]   IO 0x0000000ff8010000..0x0000000ff801ffff -> 0x0000000000000000
+[    0.274284] /pcie@ffe250000: PCICSRBAR @ 0xff000007
+[    0.279137] setup_pci_atmu: end of DRAM dac00000
+[    0.283751] /pcie@ffe250000: Setting PCI inbound window greater than memory size
+[    0.291411] Found FSL PCI host bridge at 0x0000000ffe270000. Firmware bus number: 0->1
+[    0.299246] PCI host bridge /pcie@ffe270000  ranges:
+[    0.304204]  MEM 0x0000000c40000000..0x0000000c5fffffff -> 0x00000000e0000000 
+[    0.311419]   IO 0x0000000ff8030000..0x0000000ff803ffff -> 0x0000000000000000
+[    0.318558] /pcie@ffe270000: PCICSRBAR @ 0xdf000007
+[    0.323415] setup_pci_atmu: end of DRAM dac00000
+[    0.328029] /pcie@ffe270000: Setting PCI inbound window greater than memory size
+[    0.337285] iommu: Adding device ff6000000.qman-portal to group 0
+[    0.343316] iommu: Adding device ff6004000.qman-portal to group 1
+[    0.349396] iommu: Adding device ff6008000.qman-portal to group 2
+[    0.355482] iommu: Adding device ff600c000.qman-portal to group 3
+[    0.361567] iommu: Adding device ff6010000.qman-portal to group 4
+[    0.367657] iommu: Adding device ff6014000.qman-portal to group 5
+[    0.373739] iommu: Adding device ff6018000.qman-portal to group 6
+[    0.379825] iommu: Adding device ff601c000.qman-portal to group 7
+[    0.385911] iommu: Adding device ff6020000.qman-portal to group 8
+[    0.392003] iommu: Adding device ff6024000.qman-portal to group 9
+[    0.398084] iommu: Adding device ff6028000.qman-portal to group 10
+[    0.404256] iommu: Adding device ff602c000.qman-portal to group 11
+[    0.410429] iommu: Adding device ff6030000.qman-portal to group 12
+[    0.416606] iommu: Adding device ff6034000.qman-portal to group 13
+[    0.422780] iommu: Adding device ff6038000.qman-portal to group 14
+[    0.428948] iommu: Adding device ff603c000.qman-portal to group 15
+[    0.435120] iommu: Adding device ff6040000.qman-portal to group 16
+[    0.441293] iommu: Adding device ff6044000.qman-portal to group 17
+[    0.447479] iommu: Adding device ffe114000.sdhc to group 18
+[    0.453061] iommu: Adding device ffe488000.port to group 19
+[    0.458597] iommu: Adding device ffe489000.port to group 20
+[    0.464161] iommu: Adding device ffe48a000.port to group 21
+[    0.469728] iommu: Adding device ffe48b000.port to group 22
+[    0.475290] iommu: Adding device ffe48c000.port to group 23
+[    0.480855] iommu: Adding device ffe48d000.port to group 24
+[    0.486421] iommu: Adding device ffe490000.port to group 25
+[    0.491983] iommu: Adding device ffe491000.port to group 26
+[    0.497570] iommu: Adding device ffe100300.dma to group 27
+[    0.503023] iommu: Adding device ffe101300.dma to group 28
+[    0.508499] iommu: Adding device ffe102300.dma to group 29
+[    0.513989] iommu: Adding device ffe210000.usb to group 30
+[    0.519457] iommu: Adding device ffe211000.usb to group 31
+[    0.524935] iommu: Adding device ffe316000.pme to group 32
+[    0.530410] iommu: Adding device ffe31a000.bman to group 33
+[    0.535973] iommu: Adding device ffe318000.qman to group 34
+[    0.541541] iommu: Adding device ffe220000.sata to group 35
+[    0.547102] iommu: Adding device ffe221000.sata to group 36
+[    0.552666] iommu: Adding device ffe240000.pcie to group 37
+[    0.558232] iommu: Adding device ffe250000.pcie to group 38
+[    0.563798] iommu: Adding device ffe270000.pcie to group 39
+[    0.585259] PCI: Probing PCI hardware
+[    0.588946] fsl-pci ffe250000.pcie: PCI host bridge to bus 0000:00
+[    0.595046] pci_bus 0000:00: root bus resource [io  0x8000080000010000-0x800008000001ffff] (bus address [0x0000-0xffff])
+[    0.605911] pci_bus 0000:00: root bus resource [mem 0xc20000000-0xc2fffffff] (bus address [0xe0000000-0xefffffff])
+[    0.616257] pci_bus 0000:00: root bus resource [bus 00]
+[    0.621519] pci 0000:00:00.0: [Firmware Bug]: reg 0x10: invalid BAR (can't size)
+[    0.629025] iommu: Removing device ffe250000.pcie from group 38
+[    0.634882] iommu: Adding device 0000:00:00.0 to group 40
+[    0.642476] pci 0000:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    0.652521] pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[    0.657765] fsl-pci ffe270000.pcie: PCI host bridge to bus 0001:00
+[    0.663863] pci_bus 0001:00: root bus resource [io  0x8000080000021000-0x8000080000030fff] (bus address [0x0000-0xffff])
+[    0.674730] pci_bus 0001:00: root bus resource [mem 0xc40000000-0xc5fffffff] (bus address [0xe0000000-0xffffffff])
+[    0.685075] pci_bus 0001:00: root bus resource [bus 00-01]
+[    0.690728] iommu: Removing device ffe270000.pcie from group 39
+[    0.696579] iommu: Adding device 0001:00:00.0 to group 38
+[    0.704236] pci 0001:01:00.0: enabling Extended Tags
+[    0.709286] iommu: Adding device 0001:01:00.0 to group 38
+[    0.714741] pci 0001:01:00.1: enabling Extended Tags
+[    0.719787] iommu: Adding device 0001:01:00.1 to group 38
+[    0.730200] pci 0001:00:00.0: PCI bridge to [bus 01-ff]
+[    0.735448] PCI: Cannot allocate resource region 0 of device 0001:00:00.0, will remap
+[    0.743196] PCI: Cannot allocate resource region 6 of device 0001:00:00.0, will remap
+[    0.751024] PCI: Cannot allocate resource region 2 of device 0001:01:00.0, will remap
+[    0.758850] PCI: Cannot allocate resource region 0 of device 0001:01:00.1, will remap
+[    0.766701] pci 0000:00:00.0: BAR 6: no space for [mem size 0x01000000 pref]
+[    0.773713] pci 0000:00:00.0: BAR 6: failed to assign [mem size 0x01000000 pref]
+[    0.781104] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    0.786060] pci 0000:00:00.0:   bridge window [io  0x8000080000010000-0x800008000001ffff]
+[    0.794233] pci 0000:00:00.0:   bridge window [mem 0xc20000000-0xc2fffffff]
+[    0.801206] pci 0001:00:00.0: BAR 15: no space for [mem size 0x10000000 pref]
+[    0.808316] pci 0001:00:00.0: BAR 15: failed to assign [mem size 0x10000000 pref]
+[    0.815794] pci 0001:00:00.0: BAR 6: no space for [mem size 0x01000000 pref]
+[    0.822835] pci 0001:00:00.0: BAR 6: failed to assign [mem size 0x01000000 pref]
+[    0.830226] pci 0001:00:00.0: BAR 0: no space for [io  size 0x0004]
+[    0.836485] pci 0001:00:00.0: BAR 0: failed to assign [io  size 0x0004]
+[    0.843096] pci 0001:01:00.0: BAR 0: assigned [mem 0xc40000000-0xc4fffffff 64bit pref]
+[    0.851016] pci 0001:01:00.0: BAR 2: assigned [mem 0xc50020000-0xc5003ffff 64bit]
+[    0.858492] pci 0001:01:00.1: BAR 0: assigned [mem 0xc50040000-0xc50043fff 64bit]
+[    0.865968] pci 0001:00:00.0: PCI bridge to [bus 01]
+[    0.870915] pci 0001:00:00.0:   bridge window [io  0x8000080000021000-0x8000080000030fff]
+[    0.879088] pci 0001:00:00.0:   bridge window [mem 0xc40000000-0xc5fffffff]
+[    0.886044] pci_bus 0001:00: Some PCI device resources are unassigned, try booting with pci=realloc
+[    0.897643] Setting up RapidIO peer-to-peer network /rapidio@ffe0c0000
+[    0.904091] fsl-of-rio ffe0c0000.rapidio: Of-device full name /rapidio@ffe0c0000
+[    0.911477] fsl-of-rio ffe0c0000.rapidio: Regs: [mem 0xffe0c0000-0xffe0d0fff]
+[    0.918610] fsl-of-rio ffe0c0000.rapidio: No valid fsl,srio-rmu-handle property
+[    0.925918] fsl-of-rio: probe of ffe0c0000.rapidio failed with error -2
+[    0.950328] HugeTLB registered 4.00 MiB page size, pre-allocated 0 pages
+[    0.956960] HugeTLB registered 16.0 MiB page size, pre-allocated 0 pages
+[    0.963644] HugeTLB registered 64.0 MiB page size, pre-allocated 0 pages
+[    0.970338] HugeTLB registered 256 MiB page size, pre-allocated 0 pages
+[    0.976945] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[    1.000712] raid6: altivecx1 gen()  1746 MB/s
+[    1.022052] raid6: altivecx2 gen()  2109 MB/s
+[    1.043378] raid6: altivecx4 gen()  2984 MB/s
+[    1.064710] raid6: altivecx8 gen()  3167 MB/s
+[    1.086084] raid6: int64x1  gen()   578 MB/s
+[    1.107345] raid6: int64x1  xor()   728 MB/s
+[    1.128637] raid6: int64x2  gen()   933 MB/s
+[    1.149871] raid6: int64x2  xor()   927 MB/s
+[    1.171110] raid6: int64x4  gen()  1359 MB/s
+[    1.192348] raid6: int64x4  xor()  1007 MB/s
+[    1.213601] raid6: int64x8  gen()  1628 MB/s
+[    1.234851] raid6: int64x8  xor()   998 MB/s
+[    1.239032] raid6: using algorithm altivecx8 gen() 3167 MB/s
+[    1.244684] raid6: using intx1 recovery algorithm
+[    1.249490] Freescale Elo series DMA driver
+[    1.254026] fsl-elo-dma ffe100300.dma: #0 (fsl,eloplus-dma-channel), irq 28
+[    1.260945] fsl-elo-dma ffe100300.dma: #1 (fsl,eloplus-dma-channel), irq 29
+[    1.267899] fsl-elo-dma ffe100300.dma: #2 (fsl,eloplus-dma-channel), irq 30
+[    1.274859] fsl-elo-dma ffe100300.dma: #3 (fsl,eloplus-dma-channel), irq 31
+[    1.281811] fsl-elo-dma ffe100300.dma: #4 (fsl,eloplus-dma-channel), irq 76
+[    1.288766] fsl-elo-dma ffe100300.dma: #5 (fsl,eloplus-dma-channel), irq 77
+[    1.295721] fsl-elo-dma ffe100300.dma: #6 (fsl,eloplus-dma-channel), irq 78
+[    1.302679] fsl-elo-dma ffe100300.dma: #7 (fsl,eloplus-dma-channel), irq 79
+[    1.310038] fsl-elo-dma ffe101300.dma: #0 (fsl,eloplus-dma-channel), irq 32
+[    1.316957] fsl-elo-dma ffe101300.dma: #1 (fsl,eloplus-dma-channel), irq 33
+[    1.323910] fsl-elo-dma ffe101300.dma: #2 (fsl,eloplus-dma-channel), irq 34
+[    1.330865] fsl-elo-dma ffe101300.dma: #3 (fsl,eloplus-dma-channel), irq 35
+[    1.337823] fsl-elo-dma ffe101300.dma: #4 (fsl,eloplus-dma-channel), irq 80
+[    1.344776] fsl-elo-dma ffe101300.dma: #5 (fsl,eloplus-dma-channel), irq 81
+[    1.351737] fsl-elo-dma ffe101300.dma: #6 (fsl,eloplus-dma-channel), irq 82
+[    1.358687] fsl-elo-dma ffe101300.dma: #7 (fsl,eloplus-dma-channel), irq 83
+[    1.366037] fsl-elo-dma ffe102300.dma: #0 (fsl,eloplus-dma-channel), irq 464
+[    1.373043] fsl-elo-dma ffe102300.dma: #1 (fsl,eloplus-dma-channel), irq 465
+[    1.380083] fsl-elo-dma ffe102300.dma: #2 (fsl,eloplus-dma-channel), irq 466
+[    1.387126] fsl-elo-dma ffe102300.dma: #3 (fsl,eloplus-dma-channel), irq 467
+[    1.394168] fsl-elo-dma ffe102300.dma: #4 (fsl,eloplus-dma-channel), irq 473
+[    1.401212] fsl-elo-dma ffe102300.dma: #5 (fsl,eloplus-dma-channel), irq 474
+[    1.408252] fsl-elo-dma ffe102300.dma: #6 (fsl,eloplus-dma-channel), irq 475
+[    1.415295] fsl-elo-dma ffe102300.dma: #7 (fsl,eloplus-dma-channel), irq 476
+[    1.423076] pci 0001:01:00.0: vgaarb: VGA device added: decodes=io+mem,owns=none,locks=none
+[    1.431350] pci 0001:01:00.0: vgaarb: bridge control possible
+[    1.437085] pci 0001:01:00.0: vgaarb: setting as boot device (VGA legacy resources not available)
+[    1.445952] vgaarb: loaded
+[    1.448889] SCSI subsystem initialized
+[    1.452823] usbcore: registered new interface driver usbfs
+[    1.458257] usbcore: registered new interface driver hub
+[    1.463579] usbcore: registered new device driver usb
+[    1.468828] pps_core: LinuxPPS API ver. 1 registered
+[    1.473709] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.482846] PTP clock support registered
+[    1.486868] EDAC MC: Ver: 3.0.0
+[    1.490216] fsl-ifc ffe124000.localbus: Freescale Integrated Flash Controller
+[    1.497286] fsl-ifc ffe124000.localbus: IFC version 1.3, 8 banks
+[    1.503714] NET: Registered protocol family 8
+[    1.507984] NET: Registered protocol family 20
+[    1.513048] clocksource: Switched to clocksource timebase
+[    1.576632] VFS: Disk quotas dquot_6.6.0
+[    1.580510] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.587432] FS-Cache: Loaded
+[    1.590400] CacheFiles: Loaded
+[    1.598200] NET: Registered protocol family 2
+[    1.602750] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes)
+[    1.610555] TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+[    1.617876] TCP bind hash table entries: 32768 (order: 7, 524288 bytes)
+[    1.624613] TCP: Hash tables configured (established 32768 bind 32768)
+[    1.631132] UDP hash table entries: 2048 (order: 4, 65536 bytes)
+[    1.637102] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+[    1.643604] NET: Registered protocol family 1
+[    1.648147] RPC: Registered named UNIX socket transport module.
+[    1.653985] RPC: Registered udp transport module.
+[    1.658680] RPC: Registered tcp transport module.
+[    1.663372] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.670055] NET: Registered protocol family 44
+[    1.674451] pci 0001:01:00.1: Linked as a consumer to 0001:01:00.0
+[    1.683185] Initialise system trusted keyrings
+[    1.687616] workingset: timestamp_bits=38 max_order=20 bucket_order=0
+[    1.698242] zbud: loaded
+[    1.702410] FS-Cache: Netfs 'nfs' registered for caching
+[    1.707970] NFS: Registering the id_resolver key type
+[    1.712953] Key type id_resolver registered
+[    1.717111] Key type id_legacy registered
+[    1.721113] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    1.728042] FS-Cache: Netfs 'cifs' registered for caching
+[    1.733523] Key type cifs.spnego registered
+[    1.737625] Key type cifs.idmap registered
+[    1.741709] ntfs: driver 2.1.32 [Flags: R/W].
+[    1.746165] jffs2: version 2.2. (NAND) (SUMMARY)  Â© 2001-2006 Red Hat, Inc.
+[    1.753405] romfs: ROMFS MTD (C) 2007 Red Hat, Inc.
+[    1.758395] JFS: nTxBlock = 8192, nTxLock = 65536
+[    1.765570] SGI XFS with ACLs, security attributes, no debug enabled
+[    1.772947] NILFS version 2 loaded
+[    1.777184] gfs2: GFS2 installed
+[    1.783837] NET: Registered protocol family 38
+[    1.788298] async_tx: api initialized (async)
+[    1.792574] Key type asymmetric registered
+[    1.796656] Asymmetric key parser 'x509' registered
+[    1.801580] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 247)
+[    1.809002] io scheduler noop registered
+[    1.812841] io scheduler deadline registered
+[    1.817181] io scheduler cfq registered (default)
+[    1.821801] io scheduler mq-deadline registered
+[    1.826320] io scheduler kyber registered
+[    1.830385] io scheduler bfq registered
+[    1.834795] crc32: CRC_LE_BITS = 64, CRC_BE BITS = 64
+[    1.839762] crc32: self tests passed, processed 225944 bytes in 306991 nsec
+[    1.847035] crc32c: CRC_LE_BITS = 64
+[    1.850522] crc32c: self tests passed, processed 225944 bytes in 153909 nsec
+[    1.887625] crc32_combine: 8373 self tests passed
+[    1.922763] crc32c_combine: 8373 self tests passed
+[    1.929131] pcieport 0000:00:00.0: AER enabled with IRQ 21
+[    1.934581] pcieport 0001:00:00.0: AER enabled with IRQ 23
+[    1.940058] pcieport 0000:00:00.0: Signaling PME with IRQ 21
+[    1.945687] pcieport 0001:00:00.0: Signaling PME with IRQ 23
+[    1.952093] switchtec: loaded.
+[    1.960483] bman_portal ff4000000.bman-portal: Portal initialised, cpu 0
+[    1.967171] bman_portal ff4004000.bman-portal: Portal initialised, cpu 1
+[    1.973860] bman_portal ff4008000.bman-portal: Portal initialised, cpu 2
+[    1.980549] bman_portal ff400c000.bman-portal: Portal initialised, cpu 3
+[    1.987243] bman_portal ff4010000.bman-portal: Portal initialised, cpu 4
+[    1.993938] bman_portal ff4014000.bman-portal: Portal initialised, cpu 5
+[    2.000636] bman_portal ff4018000.bman-portal: Portal initialised, cpu 6
+[    2.007327] bman_portal ff401c000.bman-portal: Portal initialised, cpu 7
+[    2.014744] qman_portal ff6000000.qman-portal: Portal initialised, cpu 0
+[    2.021434] qman_portal ff6004000.qman-portal: Portal initialised, cpu 1
+[    2.028136] qman_portal ff6008000.qman-portal: Portal initialised, cpu 2
+[    2.034831] qman_portal ff600c000.qman-portal: Portal initialised, cpu 3
+[    2.041524] qman_portal ff6010000.qman-portal: Portal initialised, cpu 4
+[    2.048217] qman_portal ff6014000.qman-portal: Portal initialised, cpu 5
+[    2.054914] qman_portal ff6018000.qman-portal: Portal initialised, cpu 6
+[    2.061696] qman_portal ff601c000.qman-portal: Portal initialised, cpu 7
+[    2.098535] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    2.105874] console [ttyS0] disabled serial8250.0: ttyS0 at MMIO 0xffe11c500 (irq = 36, base_baud = 18748125) is a 16550A
+[    2.118148] console [ttyS0] enabled
+[    2.118148] console [ttyS0] enabled
+[    2.125078] bootconsole [udbg0] disabled
+[    2.125078] bootconsole [udbg0] disabled
+[    2.133354] serial8250.0: ttyS1 at MMIO 0xffe11c600 (irq = 36, base_baud = 18748125) is a 16550A
+[    2.142531] serial8250.0: ttyS2 at MMIO 0xffe11d500 (irq = 37, base_baud = 18748125) is a 16550A
+[    2.151700] serial8250.0: ttyS3 at MMIO 0xffe11d600 (irq = 37, base_baud = 18748125) is a 16550A
+[    2.161649] console [ttyS0] disabled
+[    2.165267] console [ttyS0] enabled
+[    2.169209] ffe11c600.serial: ttyS1 at MMIO 0xffe11c600 (irq = 36, base_baud = 18748125) is a 16550
+[    2.178695] ffe11d500.serial: ttyS2 at MMIO 0xffe11d500 (irq = 37, base_baud = 18748125) is a 16550
+[    2.188191] ffe11d600.serial: ttyS3 at MMIO 0xffe11d600 (irq = 37, base_baud = 18748125) is a 16550
+[    2.197751] ePAPR hypervisor byte channel driver
+[    2.202683] [drm] radeon kernel modesetting enabled.
+[    2.207972] [drm] initializing kernel modesetting (CEDAR 0x1002:0x68F9 0x1682:0x304A 0x00).
+[    2.347934] ATOM BIOS: DDR3
+[    2.350799] [drm] GPU not posted. posting now...
+[    2.359027] radeon 0001:01:00.0: VRAM: 1024M 0x0000000000000000 - 0x000000003FFFFFFF (1024M used)
+[    2.367910] radeon 0001:01:00.0: GTT: 1024M 0x0000000040000000 - 0x000000007FFFFFFF
+[    2.375575] [drm] Detected VRAM RAM=1024M, BAR=256M
+[    2.380455] [drm] RAM width 64bits DDR
+[    2.384279] [TTM] Zone  kernel: Available graphics memory: 1741132 kiB
+[    2.390812] [TTM] Initializing pool allocator
+[    2.395176] [TTM] Initializing DMA pool allocator
+[    2.399921] [drm] radeon: 1024M of VRAM memory ready
+[    2.404889] [drm] radeon: 1024M of GTT memory ready.
+[    2.409871] [drm] Loading CEDAR Microcode
+[    2.413890] [drm] Internal thermal controller without fan control
+[    2.423650] [drm] radeon: dpm initialized
+[    2.427710] [drm] GART: num cpu pages 262144, num gpu pages 262144
+[    2.435467] [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+[    2.469218] [drm] PCIE GART of 1024M enabled (table at 0x000000000014C000).
+[    2.476344] radeon 0001:01:00.0: WB enabled
+[    2.480532] radeon 0001:01:00.0: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x(____ptrval____)
+[    2.491326] radeon 0001:01:00.0: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x(____ptrval____)
+[    2.505983] radeon 0001:01:00.0: fence driver on ring 5 use gpu addr 0x000000000005c418 and cpu addr 0x(____ptrval____)
+[    2.516777] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    2.523395] [drm] Driver supports precise vblank timestamp query.
+[    2.529494] radeon 0001:01:00.0: radeon: MSI limited to 32-bit
+[    2.535410] radeon 0001:01:00.0: radeon: using MSI.
+[    2.540326] [drm] radeon: irq initialized.
+[    2.561013] [drm] ring test on 0 succeeded in 0 usecs
+[    2.566074] [drm] ring test on 3 succeeded in 3 usecs
+[    2.745907] [drm] ring test on 5 succeeded in 1 usecs
+[    2.750968] [drm] UVD initialized successfully.
+[    2.755776] [drm] ib test on ring 0 succeeded in 0 usecs
+[    2.761165] [drm] ib test on ring 3 succeeded in 0 usecs
+[    2.915685] [drm] ib test on ring 5 succeeded
+[    2.920827] [drm] Radeon Display Connectors
+[    2.925018] [drm] Connector 0:
+[    2.928073] [drm]   HDMI-A-1
+[    2.930951] [drm]   HPD2
+[    2.933483] [drm]   DDC: 0x6460 0x6460 0x6464 0x6464 0x6468 0x6468 0x646c 0x646c
+[    2.940883] [drm]   Encoders:
+[    2.943849] [drm]     DFP1: INTERNAL_UNIPHY1
+[    2.948120] [drm] Connector 1:
+[    2.951172] [drm]   DVI-I-1
+[    2.953964] [drm]   HPD4
+[    2.956496] [drm]   DDC: 0x6440 0x6440 0x6444 0x6444 0x6448 0x6448 0x644c 0x644c
+[    2.963896] [drm]   Encoders:
+[    2.966862] [drm]     DFP2: INTERNAL_UNIPHY
+[    2.971045] [drm]     CRT1: INTERNAL_KLDSCP_DAC1
+[    2.975663] [drm] Connector 2:
+[    2.978716] [drm]   VGA-1
+[    2.981334] [drm]   DDC: 0x6430 0x6430 0x6434 0x6434 0x6438 0x6438 0x643c 0x643c
+[    2.988734] [drm]   Encoders:
+[    2.991700] [drm]     CRT2: INTERNAL_KLDSCP_DAC2
+[    3.117178] [drm] fb mappable at 0xC4034D000
+[    3.121450] [drm] vram apper at 0xC40000000
+[    3.125633] [drm] size 8294400
+[    3.128687] [drm] fb depth is 24
+[    3.131914] [drm]    pitch is 7680
+[    3.185836] Console: switching to colour frame buffer device 240x67
+[    3.217847] radeon 0001:01:00.0: fb0: radeondrmfb frame buffer device
+[    3.224422] [drm] Initialized radeon 2.50.0 20080528 for 0001:01:00.0 on minor 0
+[    3.231982] [drm] amdgpu kernel modesetting enabled.
+[    3.241507] brd: module loaded
+[    3.248298] loop: module loaded
+[    3.251691] zram: Added device: zram0
+[    4.313213] st: Version 20160209, fixed bufsize 32768, s/g segs 256
+[    4.320625] fsl-sata ffe220000.sata: Sata FSL Platform/CSB Driver init
+[    4.327554] scsi host0: sata_fsl
+[    4.330939] ata1: SATA max UDMA/133 irq 68
+[    4.335089] fsl-sata ffe221000.sata: Sata FSL Platform/CSB Driver init
+[    4.341909] scsi host1: sata_fsl
+[    4.345225] ata2: SATA max UDMA/133 irq 69
+[    4.354041] fe8000000.nor: Found 1 x16 devices at 0x0 in 16-bit bank. Manufacturer ID 0x000089 Chip ID 0x00227e
+[    4.364143] Amd/Fujitsu Extended Query Table at 0x0040
+[    4.369297]   Amd/Fujitsu Extended Query version 1.3.
+[    4.374353] number of CFI chips: 1
+[    4.378168] ftl_cs: FTL header not found.
+[    4.384343] nand: device found, Manufacturer ID: 0x2c, Chip ID: 0xac
+[    4.390704] nand: Micron MT29F4G08ABBDAH4
+[    4.394716] nand: 512 MiB, SLC, erase size: 128 KiB, page size: 2048, OOB size: 64
+[    4.402733] Bad block table found at page 262080, version 0x01
+[    4.409370] Bad block table found at page 262016, version 0x01
+[    4.419079] ftl_cs: FTL header not found.
+[    4.423374] fsl,ifc-nand fff800000.nand: IFC NAND device at 0xfff800000, bank 1
+[    4.430982] fsl_espi ffe110000.spi: cs=0, init_csmode=0x100008
+[    4.437099] m25p80 spi0.0: found n25q512ax3, expected n25q512a
+[    4.443074] m25p80 spi0.0: n25q512ax3 (65536 Kbytes)
+[    4.451813] random: fast init done
+[    4.470281] ftl_cs: FTL header not found.
+[    4.474588] fsl_espi ffe110000.spi: at 0x(____ptrval____) (irq = 53)
+[    4.481359] Ethernet Channel Bonding Driver: v3.7.1 (April 27, 2011)
+[    4.488970] MACsec IEEE 802.1AE
+[    4.493751] libphy: Fixed MDIO Bus: probed
+[    4.498164] tun: Universal TUN/TAP device driver, 1.6
+[    4.503440] Atheros(R) L2 Ethernet Driver - version 2.2.3
+[    4.508843] Copyright (c) 2007 Atheros Corporation.
+[    4.514298] cnic: QLogic cnicDriver v2.5.22 (July 20, 2015)
+[    4.519937] bnx2x: QLogic 5771x/578xx 10/20-Gigabit Ethernet Driver bnx2x 1.712.30-0 (2014/02/10)
+[    4.529158] bna: QLogic BR-series 10G Ethernet driver - version: 3.2.25.1
+[    4.536004] enic: Cisco VIC Ethernet NIC Driver, ver 2.3.0.53
+[    4.542321] libphy: Freescale XGMAC MDIO Bus: probed
+[    4.547910] libphy: Freescale XGMAC MDIO Bus: probed
+[    4.556372] libphy: Freescale XGMAC MDIO Bus: probed
+[    4.561428] libphy: Freescale XGMAC MDIO Bus: probed
+[    4.566481] libphy: Freescale XGMAC MDIO Bus: probed
+[    4.571532] libphy: Freescale XGMAC MDIO Bus: probed
+[    4.576580] libphy: Freescale XGMAC MDIO Bus: probed
+[    4.581633] libphy: Freescale XGMAC MDIO Bus: probed
+[    4.586686] libphy: Freescale XGMAC MDIO Bus: probed
+[    4.591736] libphy: Freescale XGMAC MDIO Bus: probed
+[    4.605022] fsl_dpaa_mac ffe4e0000.ethernet: of_count_phandle_with_args(/soc@ffe000000/fman@400000/ethernet@e0000, fsl,fman-ports) failed
+[    4.617391] fsl_dpaa_mac: probe of ffe4e0000.ethernet failed with error -2
+[    4.624319] fsl_dpaa_mac ffe4e2000.ethernet: of_get_mac_address(/soc@ffe000000/fman@400000/ethernet@e2000) failed
+[    4.634598] fsl_dpaa_mac: probe of ffe4e2000.ethernet failed with error -22
+[    4.641613] fsl_dpaa_mac ffe4e4000.ethernet: of_count_phandle_with_args(/soc@ffe000000/fman@400000/ethernet@e4000, fsl,fman-ports) failed
+[    4.653979] fsl_dpaa_mac: probe of ffe4e4000.ethernet failed with error -2
+[    4.660906] fsl_dpaa_mac ffe4e6000.ethernet: of_count_phandle_with_args(/soc@ffe000000/fman@400000/ethernet@e6000, fsl,fman-ports) failed
+[    4.673272] fsl_dpaa_mac: probe of ffe4e6000.ethernet failed with error -2
+[    4.680199] fsl_dpaa_mac ffe4f0000.ethernet: of_get_mac_address(/soc@ffe000000/fman@400000/ethernet@f0000) failed
+[    4.690478] fsl_dpaa_mac: probe of ffe4f0000.ethernet failed with error -22
+[    4.697491] fsl_dpaa_mac ffe4f2000.ethernet: of_get_mac_address(/soc@ffe000000/fman@400000/ethernet@f2000) failed
+[    4.707769] fsl_dpaa_mac: probe of ffe4f2000.ethernet failed with error -22
+[    4.714923] e100: Intel(R) PRO/100 Network Driver, 3.5.24-k2-NAPI
+[    4.721023] e100: Copyright(c) 1999-2006 Intel Corporation
+[    4.726551] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+[    4.733606] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    4.739387] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    4.745224] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    4.751179] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    4.758146] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    4.763751] igbvf: Intel(R) Gigabit Virtual Function Network Driver - version 2.4.0-k
+[    4.771589] igbvf: Copyright (c) 2009 - 2012 Intel Corporation.
+[    4.777543] ixgbe: Intel(R) 10 Gigabit PCI Express Network Driver - version 5.1.0-k
+[    4.785209] ixgbe: Copyright (c) 1999-2016 Intel Corporation.
+[    4.791073] ixgbevf: Intel(R) 10 Gigabit PCI Express Virtual Function Network Driver - version 4.1.0-k
+[    4.800388] ixgbevf: Copyright (c) 2009 - 2015 Intel Corporation.
+[    4.806554] i40e: Intel(R) Ethernet Connection XL710 Network Driver - version 2.3.2-k
+[    4.814393] i40e: Copyright (c) 2013 - 2014 Intel Corporation.
+[    4.820337] ixgb: Intel(R) PRO/10GbE Network Driver - version 1.0.135-k2-NAPI
+[    4.827479] ixgb: Copyright (c) 1999-2008 Intel Corporation.
+[    4.833172] i40evf: Intel(R) 40-10 Gigabit Virtual Function Network Driver - version 3.2.2-k
+[    4.836337] ata1: No Device OR PHYRDY change,Hstatus = 0xa0000000
+[    4.841619] Copyright (c) 2013 - 2015 Intel Corporation.
+[    4.841696] Intel(R) Ethernet Switch Host Interface Driver - version 0.23.4-k
+[    4.847724] ata1: SATA link down (SStatus 10 SControl 300)
+[    4.854049] ata2: Signature Update detected @ 503 msecs
+[    4.860183] Copyright(c) 2013 - 2018 Intel Corporation.
+[    4.860278] ice: Intel(R) Ethernet Connection E800 Series Linux Driver - version ice-0.7.0-k
+[    4.884572] ice: Copyright (c) 2018, Intel Corporation.
+[    4.889871] jme: JMicron JMC2XX ethernet driver version 1.0.8
+[    4.895864] sky2: driver version 1.30
+[    4.899638] PPP generic driver version 2.4.2
+[    4.904011] PPP BSD Compression module registered
+[    4.908719] PPP Deflate Compression module registered
+[    4.913788] PPP MPPE Compression module registered
+[    4.918583] NET: Registered protocol family 24
+[    4.923117] usbcore: registered new interface driver ath9k_htc
+[    4.929017] Loaded prism54 driver, version 1.2
+[    4.933562] usbcore: registered new interface driver zd1211rw
+[    4.939340] usbcore: registered new interface driver zd1201
+[    4.944917] VMware vmxnet3 virtual NIC driver - version 1.4.16.0-k-NAPI
+[    4.951588] usbcore: registered new interface driver catc
+[    4.957013] usbcore: registered new interface driver kaweth
+[    4.962591] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    4.970017] usbcore: registered new interface driver pegasus
+[    4.975704] usbcore: registered new interface driver rtl8150
+[    4.981398] usbcore: registered new interface driver r8152
+[    4.986913] usbcore: registered new interface driver lan78xx
+[    4.992599] usbcore: registered new interface driver cdc_subset
+[    4.998813] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    5.005476] ehci-pci: EHCI PCI platform driver
+[    5.009952] ehci-platform: EHCI generic platform driver
+[    5.016205] ehci-fsl: Freescale EHCI Host controller driver
+[    5.021866] fsl-ehci fsl-ehci.0: Freescale On-Chip EHCI Host Controller
+[    5.022051] ata2: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+[    5.028496] fsl-ehci fsl-ehci.0: new USB bus registered, assigned bus number 1
+[    5.035722] ata2.00: CFA: SDCFXS-032G, HDX12.03, max UDMA7
+[    5.047391] ata2.00: 62537328 sectors, multi 0: LBA48 
+[    5.051812] fsl-ehci fsl-ehci.0: irq 44, io mem 0xffe210000
+[    5.052534] ata2.00: applying bridge limits
+[    5.062831] ata2.00: configured for UDMA/100
+[    5.065047] fsl-ehci fsl-ehci.0: USB 2.0 started, EHCI 1.00
+[    5.067384] scsi 1:0:0:0: Direct-Access     ATA      SDCFXS-032G      2.03 PQ: 0 ANSI: 5
+[    5.072783] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.18
+[    5.081228] sd 1:0:0:0: [sda] 62537328 512-byte logical blocks: (32.0 GB/29.8 GiB)
+[    5.089048] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    5.096646] sd 1:0:0:0: [sda] Write Protect is off
+[    5.103848] usb usb1: Product: Freescale On-Chip EHCI Host Controller
+[    5.115081] usb usb1: Manufacturer: Linux 4.18.10 ehci_hcd
+[    5.115125] sd 1:0:0:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[    5.120572] usb usb1: SerialNumber: fsl-ehci.0
+[    5.130960]  sda: [mac] sda1 sda2 sda3 sda4 sda5
+[    5.134363] hub 1-0:1.0: USB hub found
+[    5.139517] sd 1:0:0:0: [sda] Attached SCSI removable disk
+[    5.142540] hub 1-0:1.0: 1 port detected
+[    5.152176] fsl-ehci fsl-ehci.1: Freescale On-Chip EHCI Host Controller
+[    5.158805] fsl-ehci fsl-ehci.1: new USB bus registered, assigned bus number 2
+[    5.175944] fsl-ehci fsl-ehci.1: irq 45, io mem 0xffe211000
+[    5.188048] fsl-ehci fsl-ehci.1: USB 2.0 started, EHCI 1.00
+[    5.193721] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.18
+[    5.201995] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    5.209224] usb usb2: Product: Freescale On-Chip EHCI Host Controller
+[    5.215670] usb usb2: Manufacturer: Linux 4.18.10 ehci_hcd
+[    5.221161] usb usb2: SerialNumber: fsl-ehci.1
+[    5.225796] hub 2-0:1.0: USB hub found
+[    5.229561] hub 2-0:1.0: 1 port detected
+[    5.233749] usbcore: registered new interface driver usb-storage
+[    5.240341] mousedev: PS/2 mouse device common for all mice
+[    5.246408] i2c /dev entries driver
+[    5.250683] mpc-i2c ffe118000.i2c: timeout 1000000 us
+[    5.256730] rtc-ds1307 8-0068: SET TIME!
+[    5.266719] rtc-ds1307 8-0068: registered as rtc0
+[    5.272172] at24 8-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    5.279133] mpc-i2c ffe118100.i2c: timeout 1000000 us
+[    5.284592] mpc-i2c ffe119000.i2c: timeout 1000000 us
+[    5.289816] mpc-i2c ffe119100.i2c: timeout 1000000 us
+[    5.295866] i2c i2c-9: Added multiplexed i2c bus 12
+[    5.300869] i2c i2c-9: Added multiplexed i2c bus 13
+[    5.305872] i2c i2c-9: Added multiplexed i2c bus 14
+[    5.310876] i2c i2c-9: Added multiplexed i2c bus 15
+[    5.315761] pca954x 9-0077: registered 4 multiplexed busses for I2C switch pca9546
+[    5.324537] booke_wdt: powerpc book-e watchdog driver loaded
+[    5.330688] device-mapper: uevent: version 1.0.3
+[    5.336105] device-mapper: ioctl: 4.39.0-ioctl (2018-04-03) initialised: dm-devel@redhat.com
+[    5.344552] Freescale(R) MPC85xx EDAC driver, (C) 2006 Montavista Software
+[    5.352305] EDAC MC0: Giving out device to module fsl_ddr_edac controller fsl_mc_err: DEV fsl_mc_err (INTERRUPT)
+[    5.362564] fsl_ddr_edac acquired irq 490 for MC
+[    5.367190] fsl_ddr_edac MC err registered
+[    5.372457] EDAC PCI0: Giving out device to module MPC85xx_edac controller mpc85xx_pci_err: DEV mpc85xx-pci-edac.0.auto (INTERRUPT)
+[    5.384307] MPC85xx_edac acquired irq 21 for PCI Err
+[    5.389274] MPC85xx_edac PCI err registered
+[    5.393503] EDAC PCI1: Giving out device to module MPC85xx_edac controller mpc85xx_pci_err: DEV mpc85xx-pci-edac.1.auto (INTERRUPT)
+[    5.405352] MPC85xx_edac acquired irq 23 for PCI Err
+[    5.410319] MPC85xx_edac PCI err registered
+[    5.415397] sdhci: Secure Digital Host Controller Interface driver
+[    5.421583] sdhci: Copyright(c) Pierre Ossman
+[    5.426059] sdhci-pltfm: SDHCI platform and OF driver helper
+[    5.457736] mmc0: SDHCI controller on ffe114000.sdhc [ffe114000.sdhc] using ADMA 64-bit
+[    5.466055] ledtrig-cpu: registered to indicate activity on CPUs
+[    5.472597] iommu: Adding device ffe301000.jr to group 39
+[    5.477051] usb 1-1: new high-speed USB device number 2 using fsl-ehci
+[    5.478339] iommu: Adding device ffe302000.jr to group 41
+[    5.490157] iommu: Adding device ffe303000.jr to group 42
+[    5.495789] iommu: Adding device ffe304000.jr to group 43
+[    5.501732] platform caam_qi: Linux CAAM Queue I/F driver initialised
+[    5.508197] caam ffe300000.crypto: Instantiated RNG4 SH1
+[    5.513520] caam ffe300000.crypto: device ID = 0x0a13020000000000 (Era 6)
+[    5.520316] caam ffe300000.crypto: job rings = 4, qi = 1
+[    5.529682] caam algorithms registered in /proc/crypto
+[    5.537865] mmc0: new high speed SDHC card at address e624
+[    5.538114] platform caam_qi: algorithms registered in /proc/crypto
+[    5.543757] mmcblk0: mmc0:e624 SU16G 14.8 GiB 
+[    5.551290] caam_jr ffe301000.jr: registering rng-caam
+[    5.559453]  mmcblk0: p1
+[    5.559512] caam ffe300000.crypto: caam pkc algorithms registered in /proc/crypto
+[    5.569532] hidraw: raw HID events driver (C) Jiri Kosina
+[    5.575042] usbcore: registered new interface driver usbhid
+[    5.580619] usbhid: USB HID core driver
+[    5.584665] NET: Registered protocol family 40
+[    5.589165] Freescale hypervisor management driver
+[    5.593974] fsl-hv: no hypervisor found
+[    5.598413] ipip: IPv4 and MPLS over IPv4 tunneling driver
+[    5.604163] gre: GRE over IPv4 demultiplexor driver
+[    5.609046] ip_gre: GRE over IPv4 tunneling driver
+[    5.614400] Initializing XFRM netlink socket
+[    5.618963] NET: Registered protocol family 10
+[    5.621689] usb 1-1: New USB device found, idVendor=1a40, idProduct=0101, bcdDevice= 1.11
+[    5.624066] Segment Routing with IPv6
+[    5.631596] usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    5.631599] usb 1-1: Product: USB 2.0 Hub
+[    5.635299] mip6: Mobile IPv6
+[    5.642738] hub 1-1:1.0: USB hub found
+[    5.646674] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    5.652439] hub 1-1:1.0: 4 ports detected
+[    5.653576] NET: Registered protocol family 17
+[    5.667518] NET: Registered protocol family 15
+[    5.671995] lec:lane_module_init: lec.c: initialized
+[    5.676967] mpoa:atm_mpoa_init: mpc.c: initialized
+[    5.681774] l2tp_core: L2TP core driver, V2.0
+[    5.686134] l2tp_netlink: L2TP netlink interface
+[    5.690798] sctp: Hash tables configured (bind 256/256)
+[    5.696385] NET: Registered protocol family 21
+[    5.700930] Registered RDS/tcp transport
+[    5.704859] lib80211: common routines for IEEE802.11 drivers
+[    5.710530] tipc: Activated (version 2.0.0)
+[    5.714740] NET: Registered protocol family 30
+[    5.719228] tipc: Started in single node mode
+[    5.723599] Key type dns_resolver registered
+[    5.728073] batman_adv: B.A.T.M.A.N. advanced 2018.2 (compatibility version 15) loaded
+[    5.736002] mpls_gso: MPLS GSO support
+[    5.739991] drmem: No dynamic reconfiguration memory found
+[    5.745754] registered taskstats version 1
+[    5.749855] Loading compiled-in X.509 certificates
+[    5.754716] zswap: loaded using pool lzo/zbud
+[    5.759679] Btrfs loaded, crc32c=crc32c-generic
+[    5.764533] Key type encrypted registered
+[    5.769271] gtp: GTP module loaded (pdp ctx size 104 bytes)
+[    5.775989] rtc-ds1307 8-0068: setting system clock to 2000-01-01 00:18:01 UTC (946685881)
+[    5.784521] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    5.792842] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    5.799431] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    5.808057] cfg80211: failed to load regulatory.db
+[    5.813143] Waiting 5 sec before mounting root device...
+[    5.946049] usb 1-1.1: new low-speed USB device number 3 using fsl-ehci
+[    6.000048] usb 2-1: new high-speed USB device number 2 using fsl-ehci
+[    6.047316] usb 1-1.1: New USB device found, idVendor=046d, idProduct=c018, bcdDevice=43.01
+[    6.055676] usb 1-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    6.062992] usb 1-1.1: Product: USB Optical Mouse
+[    6.067699] usb 1-1.1: Manufacturer: Logitech
+[    6.074634] input: Logitech USB Optical Mouse as /devices/platform/ffe000000.soc/ffe210000.usb/fsl-ehci.0/usb1/1-1/1-1.1/1-1.1:1.0/0003:046D:C018.0001/input/input0
+[    6.089458] hid-generic 0003:046D:C018.0001: input,hidraw0: USB HID v1.11 Mouse [Logitech USB Optical Mouse] on usb-fsl-ehci.0-1.1/input0
+[    6.134822] usb 2-1: New USB device found, idVendor=0586, idProduct=3401, bcdDevice=48.10
+[    6.143011] usb 2-1: New USB device strings: Mfr=16, Product=32, SerialNumber=0
+[    6.150333] usb 2-1: Product: ZyAIR G-220
+[    6.154346] usb 2-1: Manufacturer: ZyXEL
+[    6.178048] usb 1-1.2: new low-speed USB device number 4 using fsl-ehci
+[    6.274048] usb 2-1: reset high-speed USB device number 2 using fsl-ehci
+[    6.280318] usb 1-1.2: New USB device found, idVendor=046d, idProduct=c31c, bcdDevice=64.00
+[    6.289108] usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    6.296424] usb 1-1.2: Product: USB Keyboard
+[    6.300697] usb 1-1.2: Manufacturer: Logitech
+[    6.310239] input: Logitech USB Keyboard as /devices/platform/ffe000000.soc/ffe210000.usb/fsl-ehci.0/usb1/1-1/1-1.2/1-1.2:1.0/0003:046D:C31C.0002/input/input1
+[    6.376452] hid-generic 0003:046D:C31C.0002: input,hidraw1: USB HID v1.10 Keyboard [Logitech USB Keyboard] on usb-fsl-ehci.0-1.2/input0
+[    6.394505] input: Logitech USB Keyboard Consumer Control as /devices/platform/ffe000000.soc/ffe210000.usb/fsl-ehci.0/usb1/1-1/1-1.2/1-1.2:1.1/0003:046D:C31C.0003/input/input2
+[    6.410524] zd1211rw 2-1:1.0: phy0
+[    6.462184] input: Logitech USB Keyboard System Control as /devices/platform/ffe000000.soc/ffe210000.usb/fsl-ehci.0/usb1/1-1/1-1.2/1-1.2:1.1/0003:046D:C31C.0003/input/input3
+[    6.477807] hid-generic 0003:046D:C31C.0003: input,hidraw2: USB HID v1.10 Device [Logitech USB Keyboard] on usb-fsl-ehci.0-1.2/input1
+[   10.974062] md: Waiting for all devices to be available before autodetect
+[   10.980862] md: If you don't use raid, use raid=noautodetect
+[   10.986810] md: Autodetecting RAID arrays.
+[   10.990911] md: autorun ...
+[   10.993705] md: ... autorun DONE.
+[   10.998569] EXT4-fs (sda3): mounting ext3 file system using the ext4 subsystem
+[   11.043352] EXT4-fs (sda3): mounted filesystem with ordered data mode. Opts: (null)
+[   11.051028] VFS: Mounted root (ext3 filesystem) on device 8:3.
+[   11.058021] devtmpfs: mounted
+[   11.061567] Freeing unused kernel memory: 888K
+[   11.066016] This architecture does not have kernel memory protection.
+[   11.320083] systemd[1]: System time before build time, advancing clock.
+[   11.398508] systemd[1]: systemd 239 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+[   11.421305] systemd[1]: Detected architecture ppc64.
+
+Welcome to Debian GNU/Linux buster/sid!
+
+[   11.439216] systemd[1]: Set hostname to <T2080RDB>.
+[   11.744704] random: systemd: uninitialized urandom read (16 bytes read)
+[   11.751494] systemd[1]: Listening on Journal Audit Socket.
+[OK] Listening on Journal Audit Socket.
+[   11.765096] random: systemd: uninitialized urandom read (16 bytes read)
+[   11.772819] systemd[1]: Created slice system-serial\x2dgetty.slice.
+[OK] Created slice system-serial\x2dgetty.slice.
+[   11.787116] random: systemd: uninitialized urandom read (16 bytes read)
+[   11.793861] systemd[1]: Listening on udev Kernel Socket.
+[OK] Listening on udev Kernel Socket.
+[   11.806281] systemd[1]: Listening on Journal Socket.
+[OK] Listening on Journal Socket.
+[   11.819706] systemd[1]: Mounting POSIX Message Queue File System...
+         Mounting POSIX Message Queue File System...
+[   11.835094] systemd[1]: Mounting Kernel Debug File System...
+         Mounting Kernel Debug File System...
+[   11.850446] systemd[1]: Starting Create list of required static device nodes for the current kernel...
+         Starting Create list of required stâŠce nodes for the current kernel...
+[OK] Started Dispatch Password Requests to Console Directory Watch.
+[OK] Listening on Syslog Socket.
+[OK] Started Forward Password Requests to Wall Directory Watch.
+[OK] Reached target Local Encrypted Volumes.
+[OK] Listening on initctl Compatibility Named Pipe.
+[OK] Listening on udev Control Socket.
+         Starting udev Coldplug all Devices...
+[OK] Listening on Journal Socket (/dev/log).
+         Starting Load Kernel Modules...
+[   11.951303] random: crng init done
+[   11.954717] random: 7 urandom warning(s) missed due to ratelimiting
+         Starting Journal Service...
+[OK] Listening on fsck to fsckd communication Socket.
+         Starting Remount Root and Kernel File Systems...
+[OK] Created slice User and Session Slice.
+[OK] Reached target Slices.
+[OK] Set up automount Arbitrary ExecutabâŠrmats File System Automount Point.
+[OK] Created slice system-getty.slice.
+[OK] Reached target User and Group Name Lookups.
+         Starting Set the console keyboard layout...
+         Mounting Huge Pages File System...
+[OK] Reached target Remote File Systems.
+[OK] Mounted POSIX Message Queue File System.
+[OK] Mounted Kernel Debug File System.
+[OK] Started Create list of required staâŠvice nodes for the current kernel.
+[FAILED] Failed to start Load Kernel Modules.
+See 'systemctl status systemd-modules-load.service' for details.
+[OK] Mounted Huge Pages File System.
+         Mounting Kernel Configuration File System...
+         Starting Apply Kernel Variables...
+[OK] Mounted Kernel Configuration File System.
+[OK] Started Journal Service.
+[OK] Started Apply Kernel Variables.
+[OK] Started Set the console keyboard layout.
+[OK] Started udev Coldplug all Devices.
+         Starting Helper to synchronize boot up for ifupdown...
+[OK] Started Helper to synchronize boot up for ifupdown.
+[   13.663620] EXT4-fs (sda3): re-mounted. Opts: errors=remount-ro
+[OK] Started Remount Root and Kernel File Systems.
+         Starting Load/Save Random Seed...
+         Starting Flush Journal to Persistent Storage...
+         Starting Create System Users...
+[OK] Started Load/Save Random Seed.
+[   13.724481] systemd-journald[2772]: Received request to flush runtime journal from PID 1
+[   13.742274] systemd-journald[2772]: File /var/log/journal/cc70563e9bb04926b54b0c9f2f3716d0/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[OK] Started Create System Users.
+         Starting Create Static Device Nodes in /dev...
+[OK] Started Create Static Device Nodes in /dev.
+         Starting udev Kernel Device Manager...
+[OK] Reached target Local File Systems (Pre).
+[OK] Reached target Local File Systems.
+         Starting Set console font and keymap...
+         Starting Raise network interfaces...
+[OK] Started Flush Journal to Persistent Storage.
+         Starting Create Volatile Files and Directories...
+[OK] Started udev Kernel Device Manager.
+[OK] Started Create Volatile Files and Directories.
+[OK] Started Set console font and keymap.
+[OK] Started Entropy daemon using the HAVEGE algorithm.
+         Starting Update UTMP about System Boot/Shutdown...
+         Starting Network Time Synchronization...
+[OK] Started Update UTMP about System Boot/Shutdown.
+[OK] Found device /dev/ttyS0.
+[OK] Started Network Time Synchronization.
+[OK] Reached target System Time Synchronized.
+[OK] Started Raise network interfaces.
+[   15.146984] sd 1:0:0:0: Attached scsi generic sg0 type 0
+[   17.329968] snd_hda_intel 0001:01:00.1: Force to snoop mode by module option
+[OK] Found device SDCFXS-032G swap.
+         Activating swap /dev/disk/by-uuid/2âŠ3be-2517-44f4-b90f-423518ec566f...
+[OK] Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+         Starting Load/Save RF Kill Switch Status...
+[   17.468020] input: HDA ATI HDMI HDMI/DP,pcm=3 as /devices/platform/ffe270000.pcie/pci0001:00/0001:00:00.0/0001:01:00.1/sound/card0/input4
+         Starting Load Kernel Modules...
+[FAILED] Failed to start Load Kernel Modules.
+See 'systemctl status systemd-modules-load.service' for details.
+[OK] Started Load/Save RF Kill Switch Status.
+[   17.559247] Unable to find swap-space signature
+[FAILED] Failed to activate swap /dev/disk/bâŠ823be-2517-44f4-b90f-423518ec566f.
+See 'systemctl status "dev-disk-by\\x2dâŠ0f\\x2d423518ec566f.swap"' for details.
+[DEPEND] Dependency failed for Swap.
+[OK] Reached target System Initialization.
+[OK] Listening on CUPS Scheduler.
+[OK] Started Daily Cleanup of Temporary Directories.
+[OK] Started Trigger anacron every hour.
+[OK] Started CUPS Scheduler.
+[OK] Reached target Paths.
+[OK] Started Daily rotation of log files.
+[OK] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[OK] Started Daily apt download activities.
+[OK] Started Daily apt upgrade and clean activities.
+[OK] Reached target Timers.
+[OK] Listening on D-Bus System Message Bus Socket.
+[OK] Reached target Sockets.
+[OK] Reached target Basic System.
+         Starting Avahi mDNS/DNS-SD Stack...
+         Starting Modem Manager...
+         Starting Login Service...
+         Starting LSB: handle special hotkeys of Apple computers...
+[OK] Started D-Bus System Message Bus.
+         Starting WPA supplicant...
+         Starting Network Manager...
+[OK] Started irqbalance daemon.
+         Starting Disk Manager...
+[OK] Reached target Sound Card.
+[OK] Started Run anacron jobs.
+         Starting System Logging Service...
+         Starting Restore /etc/resolv.conf iâŠfore the ppp link was shut down...
+         Starting Initialize hardware monitoring sensors...
+[OK] Started Regular background program processing daemon.
+[OK] Started CUPS Scheduler.
+         Starting Accounts Service...
+         Starting Wicd a wireless and wired network manager for Linux...
+[OK] Started System Logging Service.
+[OK] Started LSB: handle special hotkeys of Apple computers.
+[OK] Started Restore /etc/resolv.conf ifâŠbefore the ppp link was shut down.
+[OK] Started Initialize hardware monitoring sensors.
+[OK] Started Login Service.
+[OK] Started Avahi mDNS/DNS-SD Stack.
+[OK] Started WPA supplicant.
+         Starting Authorization Manager...
+[OK] Started Make remote CUPS printers available locally.
+[OK] Started Network Manager.
+         Starting Network Manager Wait Online...
+         Starting Hostname Service...
+[OK] Started Authorization Manager.
+[OK] Started Accounts Service.
+[OK] Started Hostname Service.
+         Starting Network Manager Script Dispatcher Service...
+[OK] Started Modem Manager.
+[OK] Started Network Manager Script Dispatcher Service.
+[   19.371447] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   19.378941] usb 2-1: firmware version 0x4330 and device bootcode version 0x4810 differ
+[OK] Started Disk Manager.
+[OK] Started Wicd a wireless and wired network manager for Linux.
+[   19.472016] zd1211rw 2-1:1.0: firmware version 4605
+[OK] Reached target Network.
+         Starting Permit User Sessions...
+         Starting OpenBSD Secure Shell server...
+[   19.517034] zd1211rw 2-1:1.0: zd1211 chip 0586:3401 v4810 high 00-a0-c5 AL2230_RF pa0 -----
+[OK] Started Permit User Sessions.
+         Starting Light Display Manager...
+[OK] Started Getty on tty1.
+[   19.556405] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[OK] Started Serial Getty on ttyS0.
+[OK] Reached target Login Prompts.
+[   19.616337] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[OK] Started Light Display Manager.
+[OK] Started OpenBSD Secure Shell server.
+[   19.799655] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   20.098938] NET: Registered protocol family 3
+[   20.194852] NET: Registered protocol family 5
+[OK] Started Network Manager Wait Online.
+[OK] Reached target Network is Online.
+         Starting Samba NMB Daemon...
+         Starting LSB: exim Mail Transport Agent...
+[OK] Started LSB: exim Mail Transport Agent.
+[OK] Created slice system-user\x2druntime\x2ddir.slice.
+[OK] Created slice User Slice of UID 113.
+[OK] Started Session c1 of user lightdm.
+[OK] Started /run/user/113 mount wrapper.
+         Starting User Manager for UID 113...
+[OK] Started User Manager for UID 113.
+[   24.229002] fuse init (API version 7.27)
+         Mounting FUSE Control File System...
+[OK] Mounted FUSE Control File System.
+
+
+Debian GNU/Linux buster/sid T2080RDB ttyS0
+
+T2080RDB login: 
