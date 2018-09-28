@@ -1,7 +1,7 @@
 You may download the compiled 4.17.6 kernel for PPC64 book3e e6500 and related modules from my Google Drive here
 
 
-XXXX
+https://drive.google.com/file/d/1vOYV2JMGHpdx6i_8A-mrCe5u7kEw7VuI/view?usp=sharing
 
 
 To cross-compile a kernel using the provided .config file follow this procedure (tested on Ubuntu 18.04 amd64).
