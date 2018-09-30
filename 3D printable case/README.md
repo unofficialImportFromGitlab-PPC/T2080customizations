@@ -1,0 +1,1 @@
+This folder is meant for collecting 3D printable case for housing the T2080rdb together with the ATX power supply, and, possibly, additional boards such as a GPU, SATA HDD or SSD, and so on.
