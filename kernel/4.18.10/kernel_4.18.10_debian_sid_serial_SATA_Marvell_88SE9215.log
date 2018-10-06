@@ -1,0 +1,1376 @@
+SD boot...
+Initializing....using SPD
+2 GiB left unmapped
+
+
+U-Boot 2016.092.0+ga06b209 (Jul 12 2018 - 23:44:34 +0200)
+
+CPU0:  T2080E, Version: 1.1, (0x85380011)
+Core:  e6500, Version: 2.0, (0x80400120)
+Clock Configuration:
+       CPU0:1799.820 MHz, CPU1:1799.820 MHz, CPU2:1799.820 MHz, CPU3:1799.820 MHz, 
+       CCB:599.940 MHz,
+       DDR:933.310 MHz (1866.620 MT/s data rate) (Asynchronous), IFC:599.940 MHz
+       FMAN1: 699.930 MHz
+       QMAN:  299.970 MHz
+       PME:   599.940 MHz
+L1:    D-cache 32 KiB enabled
+       I-cache 32 KiB enabled
+Reset Configuration Word (RCW):
+       00000000: 1207001b 15000000 00000000 00000000
+       00000010: 66150002 00000000 68104000 c1000000
+       00000020: 00800000 00000000 00000000 000307fc
+       00000030: 00000000 00000000 00000000 00000004
+Board: T2080RDB, Board rev: 0x01 CPLD ver: 0x03, boot from SD/MMC
+SERDES Reference Clocks:
+SD1_CLK1=156.25MHZ, SD1_CLK2=100.00MHZ
+SD2_CLK1=100.00MHZ, SD2_CLK2=100.00MHZ
+I2C:   ready
+SPI:   ready
+DRAM:  Detected UDIMM D3XP56082XL10AA   
+2 GiB left unmapped
+4 GiB (DDR3, 64-bit, CL=13, ECC on)
+       DDR Chip-Select Interleaving Mode: CS0+CS1
+Flash: 128 MiB
+L2:    2 MiB enabled
+Corenet Platform Cache: 512 KiB enabled
+Using SERDES1 Protocol: 102 (0x66)
+Using SERDES2 Protocol: 21 (0x15)
+SEC0: RNG instantiated
+NAND:  512 MiB
+MMC:   FSL_SDHC: 0
+EEPROM: Invalid ID (ff ff ff ff)
+PCIe1: Endpoint, undetermined, regs @ 0xfe240000
+PCIe1: Bus 00 - 00
+PCIe2: Root Complex, no link, regs @ 0xfe250000
+PCIe2: Bus 01 - 01
+PCIe3: disabled
+PCIe4: Root Complex, x1 gen2, regs @ 0xfe270000
+  03:00.0     - 1b4b:9215 - Mass storage controller
+PCIe4: Bus 02 - 03
+Video: No radeon video card found!
+In:    serial
+Out:   serial
+Err:   serial
+Net:   
+MMC read: dev # 0, block # 2080, count 128 ...
+Fman1: Uploading microcode version 106.4.18
+MMC read: dev # 0, block # 2208, count 512 ...
+Not found Cortina PHY ucode at 0x00114000
+MMC read: dev # 0, block # 2208, count 512 ...
+Not found Cortina PHY ucode at 0x00114000
+FM1@DTSEC3 [PRIME], FM1@DTSEC4, FM1@TGEC1, FM1@TGEC2, FM1@TGEC3, FM1@TGEC4
+Hit any key to stop autoboot: 10  9  8  7  6  5  4  3  2  1  0 
+Device: FSL_SDHC
+Manufacturer ID: 3
+OEM: 5344
+Name: SU16G 
+Tran Speed: 50000000
+Rd Block Len: 512
+SD version 3.0
+High Capacity: Yes
+Capacity: 14.8 GiB
+Bus Width: 4-bit
+Erase Group Size: 512 Bytes
+17364805 bytes read in 817 ms (20.3 MiB/s)
+36545 bytes read in 57 ms (626 KiB/s)
+WARNING: adjusting available memory to 30000000
+## Booting kernel from Legacy Image at 03000000 ...
+   Image Name:   Linux-4.18.10
+   Image Type:   PowerPC Linux Kernel Image (gzip compressed)
+   Data Size:    17364741 Bytes = 16.6 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 05000000
+   Booting using the fdt blob at 0x5000000
+   Uncompressing Kernel Image ... OK
+   Loading Device Tree to 03fe4000, end 03fffec0 ... OK
+[    0.000000] OF: reserved mem: initialized node qman-fqd, compatible id fsl,qman-fqd
+[    0.000000] OF: reserved mem: initialized node qman-pfdr, compatible id fsl,qman-pfdr
+[    0.000000] OF: reserved mem: initialized node bman-fbpr, compatible id fsl,bman-fbpr
+[    0.000000] MMU: Supported page sizes
+[    0.000000]          4 KB as direct
+[    0.000000]       2048 KB as direct & indirect
+[    0.000000]       4096 KB as direct
+[    0.000000]      16384 KB as direct
+[    0.000000]      65536 KB as direct
+[    0.000000]     262144 KB as direct
+[    0.000000]    1048576 KB as direct
+[    0.000000] MMU: Book3E HW tablewalk enabled
+[    0.000000] Linux version 4.18.10 (mario@mario-HP-EliteBook-840-G1) (gcc version 7.3.0 (Ubuntu 7.3.0-16ubuntu3)) #2 SMP Wed Sep 26 21:24:01 CEST 2018
+[    0.000000] Using CoreNet Generic machine description
+[    0.000000] bootconsole [udbg0] enabled
+[    0.000000] CPU maps initialized for 2 threads per core
+[    0.000000] -----------------------------------------------------
+[    0.000000] phys_mem_size     = 0x100000000
+[    0.000000] dcache_bsize      = 0x40
+[    0.000000] icache_bsize      = 0x40
+[    0.000000] cpu_features      = 0x00000003009003b6
+[    0.000000]   possible        = 0x00000003009003b6
+[    0.000000]   always          = 0x00000003008003b4
+[    0.000000] cpu_user_features = 0xdc008000 0x08000000
+[    0.000000] mmu_features      = 0x000a0010
+[    0.000000] firmware_features = 0x0000000000000000
+[    0.000000] -----------------------------------------------------
+[    0.000000] numa:   NODE_DATA [mem 0xfff1a040-0xfff23fff]
+[    0.000000] CoreNet Generic board
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000000000-0x000000007fffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   [mem 0x0000000080000000-0x00000000ffffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x00000000ffffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x00000000ffffffff]
+[    0.000000] MMU: Allocated 2112 bytes of context maps for 255 contexts
+[    0.000000] percpu: Embedded 24 pages/cpu @(____ptrval____) s58640 r0 d39664 u131072
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1032192
+[    0.000000] Policy zone: Normal
+[    0.000000] Kernel command line: root=/dev/sdb3 rw rootdelay=5 console=ttyS0,115200
+[    0.000000] log_buf_len individual max cpu contribution: 4096 bytes
+[    0.000000] log_buf_len total cpu_extra contributions: 28672 bytes
+[    0.000000] log_buf_len min size: 16384 bytes
+[    0.000000] log_buf_len: 65536 bytes
+[    0.000000] early log buf free: 12336(75%)
+[    0.000000] Memory: 3932084K/4194304K available (26896K kernel code, 4780K rwdata, 9368K rodata, 888K init, 2043K bss, 262220K reserved, 0K cma-reserved)
+[    0.000000] random: get_random_u64 called from .cache_random_seq_create+0x64/0x180 with crng_init=0
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	RCU event tracing is enabled.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=24 to nr_cpu_ids=8.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+[    0.000000] NR_IRQS: 512, nr_irqs: 512, preallocated irqs: 16
+[    0.000000] mpic: Setting up MPIC " OpenPIC  " version 1.2 at ffe040000, max 8 CPUs
+[    0.000000] mpic: ISU size: 512, shift: 9, mask: 1ff
+[    0.000000] mpic: Initializing for 512 sources
+[    0.000004] clocksource: timebase: mask: 0xffffffffffffffff max_cycles: 0x8a5d528ca, max_idle_ns: 440795203517 ns
+[    0.010181] clocksource: timebase mult[1aab5972] shift[24] registered
+[    0.017886] Console: colour dummy device 80x25
+[    0.022287] pid_max: default: 32768 minimum: 301
+[    0.028020] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.035808] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.042868] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.049502] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.057404] e6500 family performance monitor hardware support registered
+[    0.064075] Hierarchical SRCU implementation.
+[    0.071226] smp: Bringing up secondary CPUs ...
+[    0.078811] smp: Brought up 1 node, 8 CPUs
+[    0.082826] Using shared cache scheduler topology
+[    0.088108] devtmpfs: initialized
+[    0.095275] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.104964] futex hash table entries: 2048 (order: 5, 131072 bytes)
+[    0.111320] xor: measuring software checksum speed
+[    0.126049]    8regs     :  3504.000 MB/sec
+[    0.140166]    8regs_prefetch:  3192.000 MB/sec
+[    0.154631]    32regs    :  2848.000 MB/sec
+[    0.168749]    32regs_prefetch:  2660.000 MB/sec
+[    0.183301]    altivec   :  5704.000 MB/sec
+[    0.187395] xor: using function: altivec (5704.000 MB/sec)
+[    0.193317] NET: Registered protocol family 16
+[    0.198079] audit: initializing netlink subsys (disabled)
+[    0.203458] audit: type=2000 audit(0.083:1): state=initialized audit_enabled=0 res=1
+[    0.211153] cpuidle: using governor ladder
+[    0.215285] cpuidle: using governor menu
+[    0.232745] Machine: fsl,T2080RDB
+[    0.235978] SoC family: QorIQ T2080
+[    0.239454] SoC ID: svr:0x85380011, Revision: 1.1
+[    0.246973] Found FSL PCI host bridge at 0x0000000ffe250000. Firmware bus number: 0->0
+[    0.254810] PCI host bridge /pcie@ffe250000  ranges:
+[    0.259769]  MEM 0x0000000c20000000..0x0000000c2fffffff -> 0x00000000e0000000 
+[    0.266982]   IO 0x0000000ff8010000..0x0000000ff801ffff -> 0x0000000000000000
+[    0.274126] /pcie@ffe250000: PCICSRBAR @ 0xff000007
+[    0.278979] setup_pci_atmu: end of DRAM 100000000
+[    0.283680] /pcie@ffe250000: Setup 64-bit PCI DMA window
+[    0.288978] /pcie@ffe250000: WARNING: Outbound window cfg leaves gaps in memory map. Adjusting the memory map could reduce unnecessary bounce buffering.
+[    0.302627] /pcie@ffe250000: DMA window size is 0xe0000000
+[    0.308380] Found FSL PCI host bridge at 0x0000000ffe270000. Firmware bus number: 0->1
+[    0.316215] PCI host bridge /pcie@ffe270000  ranges:
+[    0.321173]  MEM 0x0000000c40000000..0x0000000c5fffffff -> 0x00000000e0000000 
+[    0.328387]   IO 0x0000000ff8030000..0x0000000ff803ffff -> 0x0000000000000000
+[    0.335526] /pcie@ffe270000: PCICSRBAR @ 0xdf000007
+[    0.340384] setup_pci_atmu: end of DRAM 100000000
+[    0.345085] /pcie@ffe270000: Setup 64-bit PCI DMA window
+[    0.350382] /pcie@ffe270000: DMA window size is 0xdf000007
+[    0.357724] iommu: Adding device ff6000000.qman-portal to group 0
+[    0.363755] iommu: Adding device ff6004000.qman-portal to group 1
+[    0.369834] iommu: Adding device ff6008000.qman-portal to group 2
+[    0.375920] iommu: Adding device ff600c000.qman-portal to group 3
+[    0.382006] iommu: Adding device ff6010000.qman-portal to group 4
+[    0.388096] iommu: Adding device ff6014000.qman-portal to group 5
+[    0.394179] iommu: Adding device ff6018000.qman-portal to group 6
+[    0.400264] iommu: Adding device ff601c000.qman-portal to group 7
+[    0.406350] iommu: Adding device ff6020000.qman-portal to group 8
+[    0.412441] iommu: Adding device ff6024000.qman-portal to group 9
+[    0.418522] iommu: Adding device ff6028000.qman-portal to group 10
+[    0.424695] iommu: Adding device ff602c000.qman-portal to group 11
+[    0.430868] iommu: Adding device ff6030000.qman-portal to group 12
+[    0.437046] iommu: Adding device ff6034000.qman-portal to group 13
+[    0.443219] iommu: Adding device ff6038000.qman-portal to group 14
+[    0.449387] iommu: Adding device ff603c000.qman-portal to group 15
+[    0.455559] iommu: Adding device ff6040000.qman-portal to group 16
+[    0.461733] iommu: Adding device ff6044000.qman-portal to group 17
+[    0.467917] iommu: Adding device ffe114000.sdhc to group 18
+[    0.473503] iommu: Adding device ffe488000.port to group 19
+[    0.479037] iommu: Adding device ffe489000.port to group 20
+[    0.484600] iommu: Adding device ffe48a000.port to group 21
+[    0.490168] iommu: Adding device ffe48b000.port to group 22
+[    0.495729] iommu: Adding device ffe48c000.port to group 23
+[    0.501294] iommu: Adding device ffe48d000.port to group 24
+[    0.506858] iommu: Adding device ffe490000.port to group 25
+[    0.512424] iommu: Adding device ffe491000.port to group 26
+[    0.518008] iommu: Adding device ffe100300.dma to group 27
+[    0.523461] iommu: Adding device ffe101300.dma to group 28
+[    0.528938] iommu: Adding device ffe102300.dma to group 29
+[    0.534426] iommu: Adding device ffe210000.usb to group 30
+[    0.539896] iommu: Adding device ffe211000.usb to group 31
+[    0.545373] iommu: Adding device ffe316000.pme to group 32
+[    0.550848] iommu: Adding device ffe31a000.bman to group 33
+[    0.556412] iommu: Adding device ffe318000.qman to group 34
+[    0.561980] iommu: Adding device ffe220000.sata to group 35
+[    0.567540] iommu: Adding device ffe221000.sata to group 36
+[    0.573105] iommu: Adding device ffe240000.pcie to group 37
+[    0.578669] iommu: Adding device ffe250000.pcie to group 38
+[    0.584237] iommu: Adding device ffe270000.pcie to group 39
+[    0.598777] software IO TLB [mem 0xf0c56000-0xf4c56000] (64MB) mapped at [(____ptrval____)-(____ptrval____)]
+[    0.608527] PCI: Probing PCI hardware
+[    0.612263] fsl-pci ffe250000.pcie: PCI host bridge to bus 0000:00
+[    0.618363] pci_bus 0000:00: root bus resource [io  0x8000080000010000-0x800008000001ffff] (bus address [0x0000-0xffff])
+[    0.629229] pci_bus 0000:00: root bus resource [mem 0xc20000000-0xc2fffffff] (bus address [0xe0000000-0xefffffff])
+[    0.639574] pci_bus 0000:00: root bus resource [bus 00]
+[    0.644836] pci 0000:00:00.0: [Firmware Bug]: reg 0x10: invalid BAR (can't size)
+[    0.652340] iommu: Removing device ffe250000.pcie from group 38
+[    0.658195] iommu: Adding device 0000:00:00.0 to group 40
+[    0.665712] pci 0000:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    0.675755] pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[    0.680999] fsl-pci ffe270000.pcie: PCI host bridge to bus 0001:00
+[    0.687098] pci_bus 0001:00: root bus resource [io  0x8000080000021000-0x8000080000030fff] (bus address [0x0000-0xffff])
+[    0.697964] pci_bus 0001:00: root bus resource [mem 0xc40000000-0xc5fffffff] (bus address [0xe0000000-0xffffffff])
+[    0.708309] pci_bus 0001:00: root bus resource [bus 00-01]
+[    0.713961] iommu: Removing device ffe270000.pcie from group 39
+[    0.719812] iommu: Adding device 0001:00:00.0 to group 38
+[    0.727598] iommu: Adding device 0001:01:00.0 to group 38
+[    0.738004] pci 0001:00:00.0: PCI bridge to [bus 01-ff]
+[    0.743222] PCI: Cannot allocate resource region 0 of device 0001:00:00.0, will remap
+[    0.750969] PCI: Cannot allocate resource region 6 of device 0001:00:00.0, will remap
+[    0.758826] pci 0000:00:00.0: BAR 6: no space for [mem size 0x01000000 pref]
+[    0.765837] pci 0000:00:00.0: BAR 6: failed to assign [mem size 0x01000000 pref]
+[    0.773227] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    0.778183] pci 0000:00:00.0:   bridge window [io  0x8000080000010000-0x800008000001ffff]
+[    0.786356] pci 0000:00:00.0:   bridge window [mem 0xc20000000-0xc2fffffff]
+[    0.793329] pci 0001:00:00.0: BAR 6: no space for [mem size 0x01000000 pref]
+[    0.800353] pci 0001:00:00.0: BAR 6: failed to assign [mem size 0x01000000 pref]
+[    0.807743] pci 0001:00:00.0: BAR 0: no space for [io  size 0x0004]
+[    0.814002] pci 0001:00:00.0: BAR 0: failed to assign [io  size 0x0004]
+[    0.820612] pci 0001:00:00.0: PCI bridge to [bus 01]
+[    0.825567] pci 0001:00:00.0:   bridge window [io  0x8000080000021000-0x8000080000030fff]
+[    0.833739] pci 0001:00:00.0:   bridge window [mem 0xc40000000-0xc5fffffff]
+[    0.840696] pci_bus 0001:00: Some PCI device resources are unassigned, try booting with pci=realloc
+[    0.852272] Setting up RapidIO peer-to-peer network /rapidio@ffe0c0000
+[    0.858720] fsl-of-rio ffe0c0000.rapidio: Of-device full name /rapidio@ffe0c0000
+[    0.866107] fsl-of-rio ffe0c0000.rapidio: Regs: [mem 0xffe0c0000-0xffe0d0fff]
+[    0.873240] fsl-of-rio ffe0c0000.rapidio: No valid fsl,srio-rmu-handle property
+[    0.880547] fsl-of-rio: probe of ffe0c0000.rapidio failed with error -2
+[    0.904779] HugeTLB registered 4.00 MiB page size, pre-allocated 0 pages
+[    0.911403] HugeTLB registered 16.0 MiB page size, pre-allocated 0 pages
+[    0.918095] HugeTLB registered 64.0 MiB page size, pre-allocated 0 pages
+[    0.924789] HugeTLB registered 256 MiB page size, pre-allocated 0 pages
+[    0.931397] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.955167] raid6: altivecx1 gen()  1750 MB/s
+[    0.976510] raid6: altivecx2 gen()  2109 MB/s
+[    0.997837] raid6: altivecx4 gen()  2984 MB/s
+[    1.019169] raid6: altivecx8 gen()  3167 MB/s
+[    1.040556] raid6: int64x1  gen()   578 MB/s
+[    1.061817] raid6: int64x1  xor()   728 MB/s
+[    1.083110] raid6: int64x2  gen()   933 MB/s
+[    1.104345] raid6: int64x2  xor()   927 MB/s
+[    1.125586] raid6: int64x4  gen()  1359 MB/s
+[    1.146826] raid6: int64x4  xor()  1007 MB/s
+[    1.168081] raid6: int64x8  gen()  1628 MB/s
+[    1.189337] raid6: int64x8  xor()   998 MB/s
+[    1.193518] raid6: using algorithm altivecx8 gen() 3167 MB/s
+[    1.199169] raid6: using intx1 recovery algorithm
+[    1.203941] Freescale Elo series DMA driver
+[    1.208425] fsl-elo-dma ffe100300.dma: #0 (fsl,eloplus-dma-channel), irq 28
+[    1.215342] fsl-elo-dma ffe100300.dma: #1 (fsl,eloplus-dma-channel), irq 29
+[    1.222356] fsl-elo-dma ffe100300.dma: #2 (fsl,eloplus-dma-channel), irq 30
+[    1.229294] fsl-elo-dma ffe100300.dma: #3 (fsl,eloplus-dma-channel), irq 31
+[    1.236229] fsl-elo-dma ffe100300.dma: #4 (fsl,eloplus-dma-channel), irq 76
+[    1.243183] fsl-elo-dma ffe100300.dma: #5 (fsl,eloplus-dma-channel), irq 77
+[    1.250142] fsl-elo-dma ffe100300.dma: #6 (fsl,eloplus-dma-channel), irq 78
+[    1.257094] fsl-elo-dma ffe100300.dma: #7 (fsl,eloplus-dma-channel), irq 79
+[    1.264500] fsl-elo-dma ffe101300.dma: #0 (fsl,eloplus-dma-channel), irq 32
+[    1.271417] fsl-elo-dma ffe101300.dma: #1 (fsl,eloplus-dma-channel), irq 33
+[    1.278371] fsl-elo-dma ffe101300.dma: #2 (fsl,eloplus-dma-channel), irq 34
+[    1.285326] fsl-elo-dma ffe101300.dma: #3 (fsl,eloplus-dma-channel), irq 35
+[    1.292288] fsl-elo-dma ffe101300.dma: #4 (fsl,eloplus-dma-channel), irq 80
+[    1.299239] fsl-elo-dma ffe101300.dma: #5 (fsl,eloplus-dma-channel), irq 81
+[    1.306196] fsl-elo-dma ffe101300.dma: #6 (fsl,eloplus-dma-channel), irq 82
+[    1.313150] fsl-elo-dma ffe101300.dma: #7 (fsl,eloplus-dma-channel), irq 83
+[    1.320516] fsl-elo-dma ffe102300.dma: #0 (fsl,eloplus-dma-channel), irq 464
+[    1.327521] fsl-elo-dma ffe102300.dma: #1 (fsl,eloplus-dma-channel), irq 465
+[    1.334561] fsl-elo-dma ffe102300.dma: #2 (fsl,eloplus-dma-channel), irq 466
+[    1.341604] fsl-elo-dma ffe102300.dma: #3 (fsl,eloplus-dma-channel), irq 467
+[    1.348648] fsl-elo-dma ffe102300.dma: #4 (fsl,eloplus-dma-channel), irq 473
+[    1.355688] fsl-elo-dma ffe102300.dma: #5 (fsl,eloplus-dma-channel), irq 474
+[    1.362731] fsl-elo-dma ffe102300.dma: #6 (fsl,eloplus-dma-channel), irq 475
+[    1.369773] fsl-elo-dma ffe102300.dma: #7 (fsl,eloplus-dma-channel), irq 476
+[    1.377647] vgaarb: loaded
+[    1.380511] SCSI subsystem initialized
+[    1.384456] usbcore: registered new interface driver usbfs
+[    1.389887] usbcore: registered new interface driver hub
+[    1.395210] usbcore: registered new device driver usb
+[    1.400473] pps_core: LinuxPPS API ver. 1 registered
+[    1.405352] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.414493] PTP clock support registered
+[    1.418518] EDAC MC: Ver: 3.0.0
+[    1.421849] fsl-ifc ffe124000.localbus: Freescale Integrated Flash Controller
+[    1.428918] fsl-ifc ffe124000.localbus: IFC version 1.3, 8 banks
+[    1.435363] NET: Registered protocol family 8
+[    1.439634] NET: Registered protocol family 20
+[    1.444617] clocksource: Switched to clocksource timebase
+[    1.508242] VFS: Disk quotas dquot_6.6.0
+[    1.512122] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.519022] FS-Cache: Loaded
+[    1.521990] CacheFiles: Loaded
+[    1.529580] NET: Registered protocol family 2
+[    1.534133] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes)
+[    1.541940] TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+[    1.549263] TCP bind hash table entries: 32768 (order: 7, 524288 bytes)
+[    1.556001] TCP: Hash tables configured (established 32768 bind 32768)
+[    1.562517] UDP hash table entries: 2048 (order: 4, 65536 bytes)
+[    1.568489] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+[    1.575005] NET: Registered protocol family 1
+[    1.579576] RPC: Registered named UNIX socket transport module.
+[    1.585417] RPC: Registered udp transport module.
+[    1.590106] RPC: Registered tcp transport module.
+[    1.594801] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.601480] NET: Registered protocol family 44
+[    1.608357] Initialise system trusted keyrings
+[    1.612805] workingset: timestamp_bits=38 max_order=20 bucket_order=0
+[    1.623386] zbud: loaded
+[    1.627636] FS-Cache: Netfs 'nfs' registered for caching
+[    1.633198] NFS: Registering the id_resolver key type
+[    1.638175] Key type id_resolver registered
+[    1.642337] Key type id_legacy registered
+[    1.646341] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    1.653257] FS-Cache: Netfs 'cifs' registered for caching
+[    1.658745] Key type cifs.spnego registered
+[    1.662847] Key type cifs.idmap registered
+[    1.666931] ntfs: driver 2.1.32 [Flags: R/W].
+[    1.671387] jffs2: version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+[    1.678640] romfs: ROMFS MTD (C) 2007 Red Hat, Inc.
+[    1.683643] JFS: nTxBlock = 8192, nTxLock = 65536
+[    1.690836] SGI XFS with ACLs, security attributes, no debug enabled
+[    1.698204] NILFS version 2 loaded
+[    1.702412] gfs2: GFS2 installed
+[    1.709055] NET: Registered protocol family 38
+[    1.713453] async_tx: api initialized (async)
+[    1.717766] Key type asymmetric registered
+[    1.721854] Asymmetric key parser 'x509' registered
+[    1.726775] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 247)
+[    1.734195] io scheduler noop registered
+[    1.738032] io scheduler deadline registered
+[    1.742378] io scheduler cfq registered (default)
+[    1.746998] io scheduler mq-deadline registered
+[    1.751517] io scheduler kyber registered
+[    1.755582] io scheduler bfq registered
+[    1.759998] crc32: CRC_LE_BITS = 64, CRC_BE BITS = 64
+[    1.764964] crc32: self tests passed, processed 225944 bytes in 307150 nsec
+[    1.772234] crc32c: CRC_LE_BITS = 64
+[    1.775721] crc32c: self tests passed, processed 225944 bytes in 153802 nsec
+[    1.812855] crc32_combine: 8373 self tests passed
+[    1.848024] crc32c_combine: 8373 self tests passed
+[    1.854393] pcieport 0000:00:00.0: AER enabled with IRQ 21
+[    1.859833] pcieport 0001:00:00.0: AER enabled with IRQ 23
+[    1.865318] pcieport 0000:00:00.0: Signaling PME with IRQ 21
+[    1.870949] pcieport 0001:00:00.0: Signaling PME with IRQ 23
+[    1.877362] switchtec: loaded.
+[    1.885810] bman_portal ff4000000.bman-portal: Portal initialised, cpu 0
+[    1.892491] bman_portal ff4004000.bman-portal: Portal initialised, cpu 1
+[    1.899183] bman_portal ff4008000.bman-portal: Portal initialised, cpu 2
+[    1.905887] bman_portal ff400c000.bman-portal: Portal initialised, cpu 3
+[    1.912571] bman_portal ff4010000.bman-portal: Portal initialised, cpu 4
+[    1.919270] bman_portal ff4014000.bman-portal: Portal initialised, cpu 5
+[    1.925961] bman_portal ff4018000.bman-portal: Portal initialised, cpu 6
+[    1.932663] bman_portal ff401c000.bman-portal: Portal initialised, cpu 7
+[    1.940074] qman_portal ff6000000.qman-portal: Portal initialised, cpu 0
+[    1.946768] qman_portal ff6004000.qman-portal: Portal initialised, cpu 1
+[    1.953461] qman_portal ff6008000.qman-portal: Portal initialised, cpu 2
+[    1.960153] qman_portal ff600c000.qman-portal: Portal initialised, cpu 3
+[    1.966857] qman_portal ff6010000.qman-portal: Portal initialised, cpu 4
+[    1.973548] qman_portal ff6014000.qman-portal: Portal initialised, cpu 5
+[    1.980246] qman_portal ff6018000.qman-portal: Portal initialised, cpu 6
+[    1.987023] qman_portal ff601c000.qman-portal: Portal initialised, cpu 7
+[    2.024133] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    2.031470] console [ttyS0] disabled
+[    2.034994] serial8250.0: ttyS0 at MMIO 0xffe11c500 (irq = 36, base_baud = 18748125) is a 16550A
+[    2.043759] console [ttyS0] enabled
+[    2.043759] console [ttyS0] enabled
+[    2.050699] bootconsole [udbg0] disabled
+[    2.050699] bootconsole [udbg0] disabled
+[    2.058983] serial8250.0: ttyS1 at MMIO 0xffe11c600 (irq = 36, base_baud = 18748125) is a 16550A
+[    2.068153] serial8250.0: ttyS2 at MMIO 0xffe11d500 (irq = 37, base_baud = 18748125) is a 16550A
+[    2.077323] serial8250.0: ttyS3 at MMIO 0xffe11d600 (irq = 37, base_baud = 18748125) is a 16550A
+[    2.087261] console [ttyS0] disabled
+[    2.090877] console [ttyS0] enabled
+[    2.094827] ffe11c600.serial: ttyS1 at MMIO 0xffe11c600 (irq = 36, base_baud = 18748125) is a 16550
+[    2.104335] ffe11d500.serial: ttyS2 at MMIO 0xffe11d500 (irq = 37, base_baud = 18748125) is a 16550
+[    2.113840] ffe11d600.serial: ttyS3 at MMIO 0xffe11d600 (irq = 37, base_baud = 18748125) is a 16550
+[    2.123434] ePAPR hypervisor byte channel driver
+[    2.128357] [drm] radeon kernel modesetting enabled.
+[    2.133439] [drm] amdgpu kernel modesetting enabled.
+[    2.142931] brd: module loaded
+[    2.149740] loop: module loaded
+[    2.153143] zram: Added device: zram0
+[    2.157007] st: Version 20160209, fixed bufsize 32768, s/g segs 256
+[    2.174042] ahci 0001:01:00.0: AHCI 0001.0000 32 slots 4 ports 6 Gbps 0xf impl SATA mode
+[    2.182144] ahci 0001:01:00.0: flags: 64bit ncq sntf led only pmp fbs pio slum part sxs 
+[    2.191210] scsi host0: ahci
+[    2.194344] scsi host1: ahci
+[    2.197398] scsi host2: ahci
+[    2.200450] scsi host3: ahci
+[    2.203425] ata1: SATA max UDMA/133 abar m2048@0xc41000000 port 0xc41000100 irq 17
+[    2.211004] ata2: SATA max UDMA/133 abar m2048@0xc41000000 port 0xc41000180 irq 17
+[    2.218580] ata3: SATA max UDMA/133 abar m2048@0xc41000000 port 0xc41000200 irq 17
+[    2.226156] ata4: SATA max UDMA/133 abar m2048@0xc41000000 port 0xc41000280 irq 17
+[    2.234435] fsl-sata ffe220000.sata: Sata FSL Platform/CSB Driver init
+[    2.241302] scsi host4: sata_fsl
+[    2.244619] ata5: SATA max UDMA/133 irq 68
+[    2.248763] fsl-sata ffe221000.sata: Sata FSL Platform/CSB Driver init
+[    2.255580] scsi host5: sata_fsl
+[    2.258891] ata6: SATA max UDMA/133 irq 69
+[    2.267707] fe8000000.nor: Found 1 x16 devices at 0x0 in 16-bit bank. Manufacturer ID 0x000089 Chip ID 0x00227e
+[    2.277810] Amd/Fujitsu Extended Query Table at 0x0040
+[    2.282963]   Amd/Fujitsu Extended Query version 1.3.
+[    2.288019] number of CFI chips: 1
+[    2.291839] ftl_cs: FTL header not found.
+[    2.298040] nand: device found, Manufacturer ID: 0x2c, Chip ID: 0xac
+[    2.304401] nand: Micron MT29F4G08ABBDAH4
+[    2.308413] nand: 512 MiB, SLC, erase size: 128 KiB, page size: 2048, OOB size: 64
+[    2.316430] Bad block table found at page 262080, version 0x01
+[    2.323072] Bad block table found at page 262016, version 0x01
+[    2.332760] ftl_cs: FTL header not found.
+[    2.337051] fsl,ifc-nand fff800000.nand: IFC NAND device at 0xfff800000, bank 1
+[    2.344667] fsl_espi ffe110000.spi: cs=0, init_csmode=0x100008
+[    2.350782] m25p80 spi0.0: found n25q512ax3, expected n25q512a
+[    2.356751] m25p80 spi0.0: n25q512ax3 (65536 Kbytes)
+[    2.365457] random: fast init done
+[    2.383762] ftl_cs: FTL header not found.
+[    2.388058] fsl_espi ffe110000.spi: at 0x(____ptrval____) (irq = 53)
+[    2.394832] Ethernet Channel Bonding Driver: v3.7.1 (April 27, 2011)
+[    2.402451] MACsec IEEE 802.1AE
+[    2.407223] libphy: Fixed MDIO Bus: probed
+[    2.411671] tun: Universal TUN/TAP device driver, 1.6
+[    2.416961] Atheros(R) L2 Ethernet Driver - version 2.2.3
+[    2.422366] Copyright (c) 2007 Atheros Corporation.
+[    2.427830] cnic: QLogic cnicDriver v2.5.22 (July 20, 2015)
+[    2.433482] bnx2x: QLogic 5771x/578xx 10/20-Gigabit Ethernet Driver bnx2x 1.712.30-0 (2014/02/10)
+[    2.442711] bna: QLogic BR-series 10G Ethernet driver - version: 3.2.25.1
+[    2.449569] enic: Cisco VIC Ethernet NIC Driver, ver 2.3.0.53
+[    2.455903] libphy: Freescale XGMAC MDIO Bus: probed
+[    2.461496] libphy: Freescale XGMAC MDIO Bus: probed
+[    2.469972] libphy: Freescale XGMAC MDIO Bus: probed
+[    2.475027] libphy: Freescale XGMAC MDIO Bus: probed
+[    2.480079] libphy: Freescale XGMAC MDIO Bus: probed
+[    2.485128] libphy: Freescale XGMAC MDIO Bus: probed
+[    2.490181] libphy: Freescale XGMAC MDIO Bus: probed
+[    2.495232] libphy: Freescale XGMAC MDIO Bus: probed
+[    2.500285] libphy: Freescale XGMAC MDIO Bus: probed
+[    2.505339] libphy: Freescale XGMAC MDIO Bus: probed
+[    2.518688] fsl_dpaa_mac ffe4e0000.ethernet: of_get_mac_address(/soc@ffe000000/fman@400000/ethernet@e0000) failed
+[    2.528969] fsl_dpaa_mac: probe of ffe4e0000.ethernet failed with error -22
+[    2.535983] fsl_dpaa_mac ffe4e2000.ethernet: of_get_mac_address(/soc@ffe000000/fman@400000/ethernet@e2000) failed
+[    2.540559] ata3: SATA link down (SStatus 0 SControl 300)
+[    2.546261] fsl_dpaa_mac: probe of ffe4e2000.ethernet failed with error -22
+[    2.551688] ata2: SATA link down (SStatus 0 SControl 300)
+[    2.558670] fsl_dpaa_mac ffe4e4000.ethernet: of_count_phandle_with_args(/soc@ffe000000/fman@400000/ethernet@e4000, fsl,fman-ports) failed
+[    2.564048] ata4: SATA link down (SStatus 0 SControl 300)
+[    2.576386] fsl_dpaa_mac: probe of ffe4e4000.ethernet failed with error -2
+[    2.588704] fsl_dpaa_mac ffe4e6000.ethernet: of_count_phandle_with_args(/soc@ffe000000/fman@400000/ethernet@e6000, fsl,fman-ports) failed
+[    2.601071] fsl_dpaa_mac: probe of ffe4e6000.ethernet failed with error -2
+[    2.607998] fsl_dpaa_mac ffe4f0000.ethernet: of_get_mac_address(/soc@ffe000000/fman@400000/ethernet@f0000) failed
+[    2.618277] fsl_dpaa_mac: probe of ffe4f0000.ethernet failed with error -22
+[    2.625291] fsl_dpaa_mac ffe4f2000.ethernet: of_get_mac_address(/soc@ffe000000/fman@400000/ethernet@f2000) failed
+[    2.635569] fsl_dpaa_mac: probe of ffe4f2000.ethernet failed with error -22
+[    2.642730] e100: Intel(R) PRO/100 Network Driver, 3.5.24-k2-NAPI
+[    2.648828] e100: Copyright(c) 1999-2006 Intel Corporation
+[    2.654360] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+[    2.661414] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    2.667194] e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+[    2.673030] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+[    2.678986] igb: Intel(R) Gigabit Ethernet Network Driver - version 5.4.0-k
+[    2.685953] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    2.691561] igbvf: Intel(R) Gigabit Virtual Function Network Driver - version 2.4.0-k
+[    2.699404] igbvf: Copyright (c) 2009 - 2012 Intel Corporation.
+[    2.705436] ixgbe: Intel(R) 10 Gigabit PCI Express Network Driver - version 5.1.0-k
+[    2.713101] ixgbe: Copyright (c) 1999-2016 Intel Corporation.
+[    2.718954] ixgbevf: Intel(R) 10 Gigabit PCI Express Virtual Function Network Driver - version 4.1.0-k
+[    2.728271] ixgbevf: Copyright (c) 2009 - 2015 Intel Corporation.
+[    2.734440] i40e: Intel(R) Ethernet Connection XL710 Network Driver - version 2.3.2-k
+[    2.742279] i40e: Copyright (c) 2013 - 2014 Intel Corporation.
+[    2.748211] ixgb: Intel(R) PRO/10GbE Network Driver - version 1.0.135-k2-NAPI
+[    2.750468] ata5: No Device OR PHYRDY change,Hstatus = 0xa0000000
+[    2.755355] ixgb: Copyright (c) 1999-2008 Intel Corporation.
+[    2.761455] ata5: SATA link down (SStatus 10 SControl 300)
+[    2.767121] ata6: Signature Update detected @ 502 msecs
+[    2.767139] i40evf: Intel(R) 40-10 Gigabit Virtual Function Network Driver - version 3.2.2-k
+[    2.767141] Copyright (c) 2013 - 2015 Intel Corporation.
+[    2.767219] Intel(R) Ethernet Switch Host Interface Driver - version 0.23.4-k
+[    2.767220] Copyright(c) 2013 - 2018 Intel Corporation.
+[    2.767315] ice: Intel(R) Ethernet Connection E800 Series Linux Driver - version ice-0.7.0-k
+[    2.767316] ice: Copyright (c) 2018, Intel Corporation.
+[    2.767392] jme: JMicron JMC2XX ethernet driver version 1.0.8
+[    2.767669] sky2: driver version 1.30
+[    2.767784] PPP generic driver version 2.4.2
+[    2.767891] PPP BSD Compression module registered
+[    2.767892] PPP Deflate Compression module registered
+[    2.767911] PPP MPPE Compression module registered
+[    2.767913] NET: Registered protocol family 24
+[    2.767998] usbcore: registered new interface driver ath9k_htc
+[    2.768066] Loaded prism54 driver, version 1.2
+[    2.772656] usbcore: registered new interface driver zd1211rw
+[    2.866349] usbcore: registered new interface driver zd1201
+[    2.871926] VMware vmxnet3 virtual NIC driver - version 1.4.16.0-k-NAPI
+[    2.878600] usbcore: registered new interface driver catc
+[    2.884033] usbcore: registered new interface driver kaweth
+[    2.889614] pegasus: v0.9.3 (2013/04/25), Pegasus/Pegasus II USB Ethernet driver
+[    2.897037] usbcore: registered new interface driver pegasus
+[    2.902724] usbcore: registered new interface driver rtl8150
+[    2.908419] usbcore: registered new interface driver r8152
+[    2.913932] usbcore: registered new interface driver lan78xx
+[    2.919625] usbcore: registered new interface driver cdc_subset
+[    2.925854] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.932518] ehci-pci: EHCI PCI platform driver
+[    2.934628] ata6: SATA link up 1.5 Gbps (SStatus 113 SControl 300)
+[    2.936992] ehci-platform: EHCI generic platform driver
+[    2.944198] ata6.00: CFA: SDCFXS-032G, HDX12.03, max UDMA7
+[    2.949401] ehci-fsl: Freescale EHCI Host controller driver
+[    2.953862] ata6.00: 62537328 sectors, multi 0: LBA48 
+[    2.953867] ata6.00: applying bridge limits
+[    2.959524] fsl-ehci fsl-ehci.0: Freescale On-Chip EHCI Host Controller
+[    2.965122] ata6.00: configured for UDMA/100
+[    2.968775] fsl-ehci fsl-ehci.0: new USB bus registered, assigned bus number 1
+[    2.996791] fsl-ehci fsl-ehci.0: irq 44, io mem 0xffe210000
+[    3.008621] fsl-ehci fsl-ehci.0: USB 2.0 started, EHCI 1.00
+[    3.014301] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.18
+[    3.022577] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.029807] usb usb1: Product: Freescale On-Chip EHCI Host Controller
+[    3.036254] usb usb1: Manufacturer: Linux 4.18.10 ehci_hcd
+[    3.041746] usb usb1: SerialNumber: fsl-ehci.0
+[    3.046416] hub 1-0:1.0: USB hub found
+[    3.050183] hub 1-0:1.0: 1 port detected
+[    3.054303] fsl-ehci fsl-ehci.1: Freescale On-Chip EHCI Host Controller
+[    3.060931] fsl-ehci fsl-ehci.1: new USB bus registered, assigned bus number 2
+[    3.078063] fsl-ehci fsl-ehci.1: irq 45, io mem 0xffe211000
+[    3.090625] fsl-ehci fsl-ehci.1: USB 2.0 started, EHCI 1.00
+[    3.096288] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.18
+[    3.104562] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    3.111792] usb usb2: Product: Freescale On-Chip EHCI Host Controller
+[    3.118238] usb usb2: Manufacturer: Linux 4.18.10 ehci_hcd
+[    3.123729] usb usb2: SerialNumber: fsl-ehci.1
+[    3.128361] hub 2-0:1.0: USB hub found
+[    3.132129] hub 2-0:1.0: 1 port detected
+[    3.136300] usbcore: registered new interface driver usb-storage
+[    3.142835] mousedev: PS/2 mouse device common for all mice
+[    3.148827] i2c /dev entries driver
+[    3.152556] mpc-i2c ffe118000.i2c: timeout 1000000 us
+[    3.158548] rtc-ds1307 0-0068: SET TIME!
+[    3.168863] rtc-ds1307 0-0068: registered as rtc0
+[    3.174323] at24 0-0050: 32768 byte 24c256 EEPROM, writable, 1 bytes/write
+[    3.181284] mpc-i2c ffe118100.i2c: timeout 1000000 us
+[    3.186753] mpc-i2c ffe119000.i2c: timeout 1000000 us
+[    3.191980] mpc-i2c ffe119100.i2c: timeout 1000000 us
+[    3.198016] i2c i2c-1: Added multiplexed i2c bus 4
+[    3.202928] i2c i2c-1: Added multiplexed i2c bus 5
+[    3.207842] i2c i2c-1: Added multiplexed i2c bus 6
+[    3.212754] i2c i2c-1: Added multiplexed i2c bus 7
+[    3.217552] pca954x 1-0077: registered 4 multiplexed busses for I2C switch pca9546
+[    3.226308] booke_wdt: powerpc book-e watchdog driver loaded
+[    3.232458] device-mapper: uevent: version 1.0.3
+[    3.237217] device-mapper: ioctl: 4.39.0-ioctl (2018-04-03) initialised: dm-devel@redhat.com
+[    3.245671] Freescale(R) MPC85xx EDAC driver, (C) 2006 Montavista Software
+[    3.253957] EDAC MC0: Giving out device to module fsl_ddr_edac controller fsl_mc_err: DEV fsl_mc_err (INTERRUPT)
+[    3.264170] fsl_ddr_edac acquired irq 490 for MC
+[    3.268791] fsl_ddr_edac MC err registered
+[    3.274046] EDAC PCI0: Giving out device to module MPC85xx_edac controller mpc85xx_pci_err: DEV mpc85xx-pci-edac.0.auto (INTERRUPT)
+[    3.285898] MPC85xx_edac acquired irq 21 for PCI Err
+[    3.290867] MPC85xx_edac PCI err registered
+[    3.295096] EDAC PCI1: Giving out device to module MPC85xx_edac controller mpc85xx_pci_err: DEV mpc85xx-pci-edac.1.auto (INTERRUPT)
+[    3.306945] MPC85xx_edac acquired irq 23 for PCI Err
+[    3.311912] MPC85xx_edac PCI err registered
+[    3.317006] sdhci: Secure Digital Host Controller Interface driver
+[    3.323191] sdhci: Copyright(c) Pierre Ossman
+[    3.327617] sdhci-pltfm: SDHCI platform and OF driver helper
+[    3.359289] mmc0: SDHCI controller on ffe114000.sdhc [ffe114000.sdhc] using ADMA 64-bit
+[    3.367603] ledtrig-cpu: registered to indicate activity on CPUs
+[    3.374053] iommu: Adding device ffe301000.jr to group 39
+[    3.379749] iommu: Adding device ffe302000.jr to group 41
+[    3.385376] iommu: Adding device ffe303000.jr to group 42
+[    3.391005] iommu: Adding device ffe304000.jr to group 43
+[    3.396957] platform caam_qi: Linux CAAM Queue I/F driver initialised
+[    3.403411] caam ffe300000.crypto: Instantiated RNG4 SH1
+[    3.408732] caam ffe300000.crypto: device ID = 0x0a13020000000000 (Era 6)
+[    3.415528] caam ffe300000.crypto: job rings = 4, qi = 1
+[    3.425087] caam algorithms registered in /proc/crypto
+[    3.433250] platform caam_qi: algorithms registered in /proc/crypto
+[    3.433814] mmc0: new high speed SDHC card at address e624
+[    3.441062] caam_jr ffe301000.jr: registering rng-caam
+[    3.445454] mmcblk0: mmc0:e624 SU16G 14.8 GiB 
+[    3.450495] caam ffe300000.crypto: caam pkc algorithms registered in /proc/crypto
+[    3.457511]  mmcblk0: p1
+[    3.462138] hidraw: raw HID events driver (C) Jiri Kosina
+[    3.470142] usbcore: registered new interface driver usbhid
+[    3.475718] usbhid: USB HID core driver
+[    3.479778] NET: Registered protocol family 40
+[    3.484278] Freescale hypervisor management driver
+[    3.489087] fsl-hv: no hypervisor found
+[    3.493562] ipip: IPv4 and MPLS over IPv4 tunneling driver
+[    3.499302] gre: GRE over IPv4 demultiplexor driver
+[    3.504185] ip_gre: GRE over IPv4 tunneling driver
+[    3.509527] Initializing XFRM netlink socket
+[    3.514100] NET: Registered protocol family 10
+[    3.519164] Segment Routing with IPv6
+[    3.522868] mip6: Mobile IPv6
+[    3.526102] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    3.532504] NET: Registered protocol family 17
+[    3.536966] NET: Registered protocol family 15
+[    3.541439] lec:lane_module_init: lec.c: initialized
+[    3.546409] mpoa:atm_mpoa_init: mpc.c: initialized
+[    3.551215] l2tp_core: L2TP core driver, V2.0
+[    3.555574] l2tp_netlink: L2TP netlink interface
+[    3.560229] sctp: Hash tables configured (bind 256/256)
+[    3.565816] NET: Registered protocol family 21
+[    3.570361] Registered RDS/tcp transport
+[    3.574285] lib80211: common routines for IEEE802.11 drivers
+[    3.579954] tipc: Activated (version 2.0.0)
+[    3.584171] NET: Registered protocol family 30
+[    3.588660] tipc: Started in single node mode
+[    3.593030] Key type dns_resolver registered
+[    3.597486] batman_adv: B.A.T.M.A.N. advanced 2018.2 (compatibility version 15) loaded
+[    3.605415] mpls_gso: MPLS GSO support
+[    3.609359] drmem: No dynamic reconfiguration memory found
+[    3.615140] registered taskstats version 1
+[    3.619239] Loading compiled-in X.509 certificates
+[    3.624095] zswap: loaded using pool lzo/zbud
+[    3.629048] Btrfs loaded, crc32c=crc32c-generic
+[    3.633914] Key type encrypted registered
+[    3.638630] gtp: GTP module loaded (pdp ctx size 104 bytes)
+[    3.645349] rtc-ds1307 0-0068: setting system clock to 2000-01-01 00:01:40 UTC (946684900)
+[    3.653876] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    3.662201] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    3.668789] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    3.677417] cfg80211: failed to load regulatory.db
+[    3.682497] Waiting 5 sec before mounting root device...
+[    3.904626] usb 2-1: new high-speed USB device number 2 using fsl-ehci
+[    4.039443] usb 2-1: New USB device found, idVendor=0586, idProduct=3401, bcdDevice=48.10
+[    4.047631] usb 2-1: New USB device strings: Mfr=16, Product=32, SerialNumber=0
+[    4.054954] usb 2-1: Product: ZyAIR G-220
+[    4.058967] usb 2-1: Manufacturer: ZyXEL
+[    4.178624] usb 2-1: reset high-speed USB device number 2 using fsl-ehci
+[    4.313700] zd1211rw 2-1:1.0: phy0
+[    7.742640] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[    8.036485] ata1.00: ATA-8: ST9320325AS, 0001SDM1, max UDMA/133
+[    8.042414] ata1.00: 625142448 sectors, multi 16: LBA48 NCQ (depth 32)
+[    8.092816] ata1.00: configured for UDMA/133
+[    8.097363] scsi 0:0:0:0: Direct-Access     ATA      ST9320325AS      SDM1 PQ: 0 ANSI: 5
+[    8.105968] sd 0:0:0:0: [sda] 625142448 512-byte logical blocks: (320 GB/298 GiB)
+[    8.106115] scsi 5:0:0:0: Direct-Access     ATA      SDCFXS-032G      2.03 PQ: 0 ANSI: 5
+[    8.113484] sd 0:0:0:0: [sda] Write Protect is off
+[    8.121991] sd 5:0:0:0: [sdb] 62537328 512-byte logical blocks: (32.0 GB/29.8 GiB)
+[    8.126396] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    8.133969] sd 5:0:0:0: [sdb] Write Protect is off
+[    8.147824] sd 5:0:0:0: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[    8.158149]  sdb: [mac] sdb1 sdb2 sdb3 sdb4 sdb5
+[    8.163513] sd 5:0:0:0: [sdb] Attached SCSI removable disk
+[    8.168255]  sda: sda1 sda2 sda3
+[    8.172798] sd 0:0:0:0: [sda] Attached SCSI removable disk
+[    9.094641] md: Waiting for all devices to be available before autodetect
+[    9.101440] md: If you don't use raid, use raid=noautodetect
+[    9.107368] md: Autodetecting RAID arrays.
+[    9.111470] md: autorun ...
+[    9.114263] md: ... autorun DONE.
+[    9.119102] EXT4-fs (sdb3): mounting ext3 file system using the ext4 subsystem
+[    9.174596] EXT4-fs (sdb3): mounted filesystem with ordered data mode. Opts: (null)
+[    9.182273] VFS: Mounted root (ext3 filesystem) on device 8:19.
+[    9.189423] devtmpfs: mounted
+[    9.192972] Freeing unused kernel memory: 888K
+[    9.197420] This architecture does not have kernel memory protection.
+[    9.447650] systemd[1]: System time before build time, advancing clock.
+[    9.526002] systemd[1]: systemd 239 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+[    9.548827] systemd[1]: Detected architecture ppc64.
+
+Welcome to Debian GNU/Linux buster/sid!
+
+[    9.566827] systemd[1]: Set hostname to <T2080RDB>.
+[    9.878327] random: systemd: uninitialized urandom read (16 bytes read)
+[    9.885127] systemd[1]: Listening on udev Kernel Socket.
+[ OK ] Listening on udev Kernel Socket.
+[    9.897768] random: systemd: uninitialized urandom read (16 bytes read)
+[    9.904501] systemd[1]: Listening on Journal Audit Socket.
+[ OK ] Listening on Journal Audit Socket.
+[    9.917655] random: systemd: uninitialized urandom read (16 bytes read)
+[    9.924374] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[ OK ] Started Forward Password Requests to Wall Directory Watch.
+[    9.941812] systemd[1]: Listening on Journal Socket (/dev/log).
+[ OK ] Listening on Journal Socket (/dev/log).
+[    9.955822] systemd[1]: Listening on Journal Socket.
+[ OK ] Listening on Journal Socket.
+[    9.970132] systemd[1]: Starting Create list of required static device nodes for the current kernel...
+         Starting Create list of required st…ce nodes for the current kernel...
+[    9.989892] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[ OK ] Listening on initctl Compatibility Named Pipe.
+         Mounting Kernel Debug File System...
+[ OK ] Started Dispatch Password Requests to Console Directory Watch.
+         Mounting POSIX Message Queue File System...
+[ OK ] Reached target Local Encrypted Volumes.
+         Starting Set the console keyboard layout...
+[   10.048640] random: crng init done
+[   10.052048] random: 7 urandom warning(s) missed due to ratelimiting
+[ OK ] Reached target Remote File Systems.
+[ OK ] Created slice system-getty.slice.
+[ OK ] Set up automount Arbitrary Executab…rmats File System Automount Point.
+         Starting Load Kernel Modules...
+[ OK ] Created slice User and Session Slice.
+[ OK ] Reached target Slices.
+[ OK ] Created slice system-serial\x2dgetty.slice.
+[ OK ] Listening on fsck to fsckd communication Socket.
+         Starting Remount Root and Kernel File Systems...
+[ OK ] Listening on Syslog Socket.
+         Starting Journal Service...
+[ OK ] Reached target User and Group Name Lookups.
+         Mounting Huge Pages File System...
+[ OK ] Listening on udev Control Socket.
+         Starting udev Coldplug all Devices...
+[ OK ] Started Create list of required sta…vice nodes for the current kernel.
+[ OK ] Mounted Kernel Debug File System.
+[ OK ] Mounted POSIX Message Queue File System.
+[ FAILED ] Failed to start Load Kernel Modules.
+See 'systemctl status systemd-modules-load.service' for details.
+[ OK ] Mounted Huge Pages File System.
+         Mounting Kernel Configuration File System...
+         Starting Apply Kernel Variables...
+[ OK ] Mounted Kernel Configuration File System.
+[ OK ] Started Set the console keyboard layout.
+[ OK ] Started Apply Kernel Variables.
+[ OK ] Started Journal Service.
+[ OK ] Started udev Coldplug all Devices.
+         Starting Helper to synchronize boot up for ifupdown...
+[ OK ] Started Helper to synchronize boot up for ifupdown.
+[   11.865640] ata1.00: exception Emask 0x10 SAct 0x4000 SErr 0x380000 action 0x6 frozen
+[   11.873486] ata1.00: irq_stat 0x08000000, interface fatal error
+[   11.879421] ata1: SError: { 10B8B Dispar BadCRC }
+[   11.884135] ata1.00: failed command: READ FPDMA QUEUED
+[   11.889287] ata1.00: cmd 60/08:70:80:c7:aa/00:00:18:00:00/40 tag 14 ncq dma 4096 in
+[   11.889287]          res 40/00:70:80:c7:aa/00:00:18:00:00/40 Emask 0x10 (ATA bus error)
+[   11.904954] ata1.00: status: { DRDY }
+[   11.908626] ata1: hard resetting link
+[   12.374633] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[   12.428757] ata1.00: configured for UDMA/133
+[   12.433042] ata1: EH complete
+[   12.471627] ata1.00: exception Emask 0x10 SAct 0x10000 SErr 0x380000 action 0x6 frozen
+[   12.479552] ata1.00: irq_stat 0x08000000, interface fatal error
+[   12.485482] ata1: SError: { 10B8B Dispar BadCRC }
+[   12.490195] ata1.00: failed command: READ FPDMA QUEUED
+[   12.495345] ata1.00: cmd 60/08:80:80:c7:aa/00:00:18:00:00/40 tag 16 ncq dma 4096 in
+[   12.495345]          res 40/00:80:80:c7:aa/00:00:18:00:00/40 Emask 0x10 (ATA bus error)
+[   12.511012] ata1.00: status: { DRDY }
+[   12.514680] ata1: hard resetting link
+[   12.982632] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[   13.034530] ata1.00: configured for UDMA/133
+[   13.038811] ata1: EH complete
+[   13.076627] ata1.00: exception Emask 0x10 SAct 0x2 SErr 0x380000 action 0x6 frozen
+[   13.084205] ata1.00: irq_stat 0x08000000, interface fatal error
+[   13.090135] ata1: SError: { 10B8B Dispar BadCRC }
+[   13.094846] ata1.00: failed command: READ FPDMA QUEUED
+[   13.099995] ata1.00: cmd 60/08:08:80:c7:aa/00:00:18:00:00/40 tag 1 ncq dma 4096 in
+[   13.099995]          res 40/00:08:80:c7:aa/00:00:18:00:00/40 Emask 0x10 (ATA bus error)
+[   13.115575] ata1.00: status: { DRDY }
+[   13.119246] ata1: hard resetting link
+[   13.582632] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+[   13.639499] ata1.00: configured for UDMA/133
+[   13.643782] ata1: EH complete
+[     [0m] (1 of 3) A start job is running for…ernel File Systems (6s / no limit)
+[K[[0;1;31m*    [0m] (1 of 3) A start job is running for…ernel File Systems (6s / no limit)
+[K[[0;31m*[0;1;31m*   [0m] (1 of 3) A start job is running for…ernel File Systems (7s / no limit)
+[K[ [0;31m*[0;1;31m*  [0m] (2 of 3) A start job is running for dev-ttyS0.device (7s / 1min 30s)
+[K[  [0;31m*[0;1;31m* [0m] (2 of 3) A start job is running for dev-ttyS0.device (8s / 1min 30s)
+[K[   [0;31m*[0;1;31m*[0m] (2 of 3) A start job is running for dev-ttyS0.device (9s / 1min 30s)
+[K[    [0;31m*[0;1;31m*[0m] (3 of 3) A start job is running for…23518ec566f.device (9s / 1min 30s)
+[K[     [0;31m*[0m] (3 of 3) A start job is running for…3518ec566f.device (10s / 1min 30s)
+[K[    [0;31m*[0;1;31m*[0m] (3 of 3) A start job is running for…3518ec566f.device (10s / 1min 30s)
+[K[   [0;31m*[0;1;31m*[0m] (1 of 3) A start job is running for…rnel File Systems (11s / no limit)
+[K[  [0;31m*[0;1;31m* [0m] (1 of 3) A start job is running for…rnel File Systems (12s / no limit)
+[K[ [0;31m*[0;1;31m*  [0m] (1 of 3) A start job is running for…rnel File Systems (12s / no limit)
+[K[[0;31m*[0;1;31m*   [0m] (2 of 3) A start job is running for dev-ttyS0.device (13s / 1min 30s)
+[K[[0;1;31m*    [0m] (2 of 3) A start job is running for dev-ttyS0.device (13s / 1min 30s)
+[K[     [0m] (2 of 3) A start job is running for dev-ttyS0.device (14s / 1min 30s)
+[K[[0;1;31m*    [0m] (3 of 3) A start job is running for…3518ec566f.device (14s / 1min 30s)
+[K[[0;31m*[0;1;31m*   [0m] (3 of 3) A start job is running for…3518ec566f.device (15s / 1min 30s)
+[K[ [0;31m*[0;1;31m*  [0m] (3 of 3) A start job is running for…3518ec566f.device (16s / 1min 30s)
+[K[  [0;31m*[0;1;31m* [0m] (1 of 3) A start job is running for…rnel File Systems (16s / no limit)
+[K[   [0;31m*[0;1;31m*[0m] (1 of 3) A start job is running for…rnel File Systems (17s / no limit)
+[K[    [0;31m*[0;1;31m*[0m] (1 of 3) A start job is running for…rnel File Systems (17s / no limit)
+[K[     [0;31m*[0m] (2 of 3) A start job is running for dev-ttyS0.device (18s / 1min 30s)
+[K[    [0;31m*[0;1;31m*[0m] (2 of 3) A start job is running for dev-ttyS0.device (19s / 1min 30s)
+[K[   [0;31m*[0;1;31m*[0m] (2 of 3) A start job is running for dev-ttyS0.device (19s / 1min 30s)
+[K[  [0;31m*[0;1;31m* [0m] (3 of 3) A start job is running for…3518ec566f.device (20s / 1min 30s)
+[K[ [0;31m*[0;1;31m*  [0m] (3 of 3) A start job is running for…3518ec566f.device (20s / 1min 30s)
+[K[[0;31m*[0;1;31m*   [0m] (3 of 3) A start job is running for…3518ec566f.device (21s / 1min 30s)
+[K[[0;1;31m*    [0m] (1 of 3) A start job is running for…rnel File Systems (22s / no limit)
+[K[     [0m] (1 of 3) A start job is running for…rnel File Systems (22s / no limit)
+[K[[0;1;31m*    [0m] (1 of 3) A start job is running for…rnel File Systems (23s / no limit)
+[K[[0;31m*[0;1;31m*   [0m] (2 of 3) A start job is running for dev-ttyS0.device (23s / 1min 30s)
+[K[ [0;31m*[0;1;31m*  [0m] (2 of 3) A start job is running for dev-ttyS0.device (24s / 1min 30s)
+[K[  [0;31m*[0;1;31m* [0m] (2 of 3) A start job is running for dev-ttyS0.device (25s / 1min 30s)
+[K[   [0;31m*[0;1;31m*[0m] (3 of 3) A start job is running for…3518ec566f.device (25s / 1min 30s)
+[K[    [0;31m*[0;1;31m*[0m] (3 of 3) A start job is running for…3518ec566f.device (26s / 1min 30s)
+[K[     [0;31m*[0m] (3 of 3) A start job is running for…3518ec566f.device (26s / 1min 30s)
+[K[    [0;31m*[0;1;31m*[0m] (1 of 3) A start job is running for…rnel File Systems (27s / no limit)
+[K[   [0;31m*[0;1;31m*[0m] (1 of 3) A start job is running for…rnel File Systems (28s / no limit)
+[K[  [0;31m*[0;1;31m* [0m] (1 of 3) A start job is running for…rnel File Systems (28s / no limit)
+[K[ [0;31m*[0;1;31m*  [0m] (2 of 3) A start job is running for dev-ttyS0.device (29s / 1min 30s)
+[K[[0;31m*[0;1;31m*   [0m] (2 of 3) A start job is running for dev-ttyS0.device (29s / 1min 30s)
+[K[[0;1;31m*    [0m] (2 of 3) A start job is running for dev-ttyS0.device (30s / 1min 30s)
+[K[     [0m] (3 of 3) A start job is running for…3518ec566f.device (31s / 1min 30s)
+[K[[0;1;31m*    [0m] (3 of 3) A start job is running for…3518ec566f.device (31s / 1min 30s)
+[K[[0;31m*[0;1;31m*   [0m] (3 of 3) A start job is running for…3518ec566f.device (32s / 1min 30s)
+[K[ [0;31m*[0;1;31m*  [0m] (1 of 3) A start job is running for…rnel File Systems (32s / no limit)
+[K[  [0;31m*[0;1;31m* [0m] (1 of 3) A start job is running for…rnel File Systems (33s / no limit)
+[K[   [0;31m*[0;1;31m*[0m] (1 of 3) A start job is running for…rnel File Systems (34s / no limit)
+[K[    [0;31m*[0;1;31m*[0m] (2 of 3) A start job is running for dev-ttyS0.device (34s / 1min 30s)[   44.951633] ata1: limiting SATA link speed to 1.5 Gbps
+[   44.956788] ata1.00: exception Emask 0x0 SAct 0x4 SErr 0x180000 action 0x6 frozen
+[   44.964284] ata1: SError: { 10B8B Dispar }
+[   44.968388] ata1.00: failed command: READ FPDMA QUEUED
+[   44.973540] ata1.00: cmd 60/08:10:f0:c7:aa/00:00:18:00:00/40 tag 2 ncq dma 4096 in
+[   44.973540]          res 40/00:00:00:00:00/00:00:00:00:00/00 Emask 0x4 (timeout)
+[   44.988512] ata1.00: status: { DRDY }
+[   44.992183] ata1: hard resetting link
+
+[K[     [0;31m*[0m] (2 of 3) A start job is running for dev-ttyS0.device (35s / 1min 30s)[   45.454632] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 310)
+[   45.512572] ata1.00: configured for UDMA/133
+[   45.516849] ata1.00: device reported invalid CHS sector 0
+[   45.522261] ata1: EH complete
+[   45.615628] ata1.00: exception Emask 0x10 SAct 0x80000000 SErr 0x380000 action 0x6 frozen
+[   45.623816] ata1.00: irq_stat 0x08000000, interface fatal error
+[   45.629746] ata1: SError: { 10B8B Dispar BadCRC }
+[   45.634459] ata1.00: failed command: READ FPDMA QUEUED
+[   45.639609] ata1.00: cmd 60/80:f8:80:08:00/01:00:00:00:00/40 tag 31 ncq dma 196608 in
+[   45.639609]          res 40/00:f8:80:08:00/00:00:00:00:00/40 Emask 0x10 (ATA bus error)
+[   45.655452] ata1.00: status: { DRDY }
+[   45.659123] ata1: hard resetting link
+
+(2 of 3) A start job is running for dev-ttyS0.device (35s / 1min 30s)[   46.126632] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 310)
+[   46.183576] ata1.00: failed to IDENTIFY (I/O error, err_mask=0x100)
+[   46.189851] ata1.00: revalidation failed (errno=-5)
+
+(3 of 3) A start job is running for…3518ec566f.device (36s / 1min 30s)
+(3 of 3) A start job is running for…3518ec566f.device (37s / 1min 30s)
+(3 of 3) A start job is running for…3518ec566f.device (37s / 1min 30s)
+(1 of 3) A start job is running for…rnel File Systems (38s / no limit)
+(1 of 3) A start job is running for…rnel File Systems (38s / no limit)
+(1 of 3) A start job is running for…rnel File Systems (39s / no limit)
+(2 of 3) A start job is running for dev-ttyS0.device (40s / 1min 30s)
+(2 of 3) A start job is running for dev-ttyS0.device (40s / 1min 30s)
+(2 of 3) A start job is running for dev-ttyS0.device (41s / 1min 30s)
+[   51.590624] ata1: hard resetting link
+(3 of 3) A start job is running for…3518ec566f.device (41s / 1min 30s)
+[   52.054632] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 310)
+[   52.107008] ata1.00: configured for UDMA/133
+[   52.111290] ata1: EH complete
+(3 of 3) A start job is running for…3518ec566f.device (42s / 1min 30s)
+[   52.507991] EXT4-fs (sdb3): re-mounted. Opts: errors=remount-ro
+[ OK ] Started Remount Root and Kernel File Systems.
+         Starting Flush Journal to Persistent Storage...
+         Starting Load/Save Random Seed...
+         Starting Create System Users...
+[   52.560973] systemd-journald[2761]: Received request to flush runtime journal from PID 1
+[   52.578303] systemd-journald[2761]: File /var/log/journal/cc70563e9bb04926b54b0c9f2f3716d0/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[ OK ] Started Load/Save Random Seed.
+[ OK ] Started Create System Users.
+         Starting Create Static Device Nodes in /dev...
+[ OK ] Started Create Static Device Nodes in /dev.
+[ OK ] Reached target Local File Systems (Pre).
+[ OK ] Reached target Local File Systems.
+         Starting Set console font and keymap...
+         Starting Raise network interfaces...
+         Starting udev Kernel Device Manager...
+[ OK ] Started Set console font and keymap.
+[ OK ] Started Flush Journal to Persistent Storage.
+         Starting Create Volatile Files and Directories...
+[ OK ] Started udev Kernel Device Manager.
+[ OK ] Started Create Volatile Files and Directories.
+[ OK ] Started Entropy daemon using the HAVEGE algorithm.
+         Starting Network Time Synchronization...
+         Starting Update UTMP about System Boot/Shutdown...
+[ OK ] Found device /dev/ttyS0.
+[ OK ] Started Update UTMP about System Boot/Shutdown.
+[ OK ] Started Network Time Synchronization.
+[   54.016166] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[   54.023305] sd 5:0:0:0: Attached scsi generic sg1 type 0
+[ OK ] Started Raise network interfaces.
+[   54.338655] ata1.00: exception Emask 0x10 SAct 0x200000 SErr 0x380000 action 0x6 frozen
+[   54.346699] ata1.00: irq_stat 0x08000000, interface fatal error
+[   54.352643] ata1: SError: { 10B8B Dispar BadCRC }
+[   54.357369] ata1.00: failed command: READ FPDMA QUEUED
+[   54.362537] ata1.00: cmd 60/00:a8:00:02:00/02:00:00:00:00/40 tag 21 ncq dma 262144 in
+[   54.362537]          res 40/00:a8:00:02:00/00:00:00:00:00/40 Emask 0x10 (ATA bus error)
+[   54.378398] ata1.00: status: { DRDY }
+[   54.382076] ata1: hard resetting link
+[   54.846645] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 310)
+[   54.856406] ata1.00: configured for UDMA/133
+[   54.860703] ata1: EH complete
+[   56.019640] ata1.00: exception Emask 0x10 SAct 0x1 SErr 0x380000 action 0x6 frozen
+[   56.027232] ata1.00: irq_stat 0x08000000, interface fatal error
+[   56.033162] ata1: SError: { 10B8B Dispar BadCRC }
+[   56.037872] ata1.00: failed command: READ FPDMA QUEUED
+[   56.043018] ata1.00: cmd 60/00:00:00:c4:aa/02:00:18:00:00/40 tag 0 ncq dma 262144 in
+[   56.043018]          res 40/00:00:00:c4:aa/00:00:18:00:00/40 Emask 0x10 (ATA bus error)
+[   56.058773] ata1.00: status: { DRDY }
+[   56.062445] ata1: hard resetting link
+[ OK ] Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+[ OK ] Reached target System Time Synchronized.
+         Starting Load/Save RF Kill Switch Status...
+[   56.526649] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 310)
+[   56.536427] ata1.00: configured for UDMA/133
+[   56.540738] ata1: EH complete
+[ OK ] Started Load/Save RF Kill Switch Status.
+[ OK ] Found device SDCFXS-032G swap.
+         Activating swap /dev/disk/by-uuid/2…3be-2517-44f4-b90f-423518ec566f...
+[   56.946491] Unable to find swap-space signature
+[ FAILED ] Failed to activate swap /dev/disk/b…823be-2517-44f4-b90f-423518ec566f.
+See 'systemctl status "dev-disk-by\\x2d…0f\\x2d423518ec566f.swap"' for details.
+[ DEPEND ] Dependency failed for Swap.
+[ OK ] Reached target System Initialization.
+[ OK ] Started Daily apt download activities.
+[ OK ] Listening on CUPS Scheduler.
+[ OK ] Listening on D-Bus System Message Bus Socket.
+[ OK ] Started Daily rotation of log files.
+[ OK ] Started Trigger anacron every hour.
+[ OK ] Started Daily Cleanup of Temporary Directories.
+[ OK ] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[ OK ] Reached target Sockets.
+[ OK ] Started Daily apt upgrade and clean activities.
+[ OK ] Reached target Timers.
+[ OK ] Started CUPS Scheduler.
+[ OK ] Reached target Paths.
+[ OK ] Reached target Basic System.
+         Starting Disk Manager...
+         Starting Login Service...
+[ OK ] Started Run anacron jobs.
+         Starting LSB: handle special hotkeys of Apple computers...
+         Starting Avahi mDNS/DNS-SD Stack...
+[ OK ] Started Regular background program processing daemon.
+         Starting Modem Manager...
+         Starting System Logging Service...
+         Starting Initialize hardware monitoring sensors...
+         Starting Wicd a wireless and wired network manager for Linux...
+         Starting Accounts Service...
+[ OK ] Started irqbalance daemon.
+         Starting Restore /etc/resolv.conf i…fore the ppp link was shut down...
+[ OK ] Started D-Bus System Message Bus.
+         Starting Network Manager...
+         Starting WPA supplicant...
+[ OK ] Started CUPS Scheduler.
+[ OK ] Started LSB: handle special hotkeys of Apple computers.
+[ OK ] Started Login Service.
+[ OK ] Started System Logging Service.
+[ OK ] Started Restore /etc/resolv.conf if…before the ppp link was shut down.
+[ OK ] Started Initialize hardware monitoring sensors.
+[ OK ] Started Avahi mDNS/DNS-SD Stack.
+[ OK ] Started WPA supplicant.
+[ OK ] Started Network Manager.
+         Starting Hostname Service...
+         Starting Authorization Manager...
+         Starting Network Manager Wait Online...
+[ OK ] Started Make remote CUPS printers available locally.
+[ OK ] Started Hostname Service.
+         Starting Network Manager Script Dispatcher Service...
+[ OK ] Started Authorization Manager.
+[ OK ] Started Accounts Service.
+[ OK ] Started Network Manager Script Dispatcher Service.
+[ OK ] Started Modem Manager.
+[   58.578984] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   58.589250] usb 2-1: firmware version 0x4330 and device bootcode version 0x4810 differ
+[ OK ] Started Wicd a wireless and wired network manager for Linux.
+[ OK ] Reached target Network.
+         Starting OpenBSD Secure Shell server...
+         Starting Permit User Sessions...
+[ OK ] Started Permit User Sessions.
+[   58.682748] zd1211rw 2-1:1.0: firmware version 4605
+[ OK ] Started Getty on tty1.
+         Starting Light Display Manager...
+[ OK ] Started Serial Getty on ttyS0.
+[ OK ] Reached target Login Prompts.
+[   58.727760] zd1211rw 2-1:1.0: zd1211 chip 0586:3401 v4810 high 00-a0-c5 AL2230_RF pa0 -----
+[   58.749666] ata1.00: limiting speed to UDMA/100:PIO4
+[   58.754721] ata1.00: exception Emask 0x10 SAct 0x8000 SErr 0x180000 action 0x6 frozen
+[   58.762621] ata1.00: irq_stat 0x08000000, interface fatal error
+[   58.768583] ata1: SError: { 10B8B Dispar }
+[   58.772738] ata1.00: failed command: READ FPDMA QUEUED
+[   58.777904] ata1.00: cmd 60/00:78:e0:08:00/01:00:00:00:00/40 tag 15 ncq dma 131072 in
+[   58.777904]          res 40/00:78:e0:08:00/00:00:00:00:00/40 Emask 0x10 (ATA bus error)
+[   58.793806] ata1.00: status: { DRDY }
+[   58.797522] ata1: hard resetting link
+[   58.812153] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   58.871092] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[ OK ] Started Light Display Manager.
+[ OK ] Started OpenBSD Secure Shell server.
+[   59.074565] NET: Registered protocol family 3
+[   59.139803] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[   59.262644] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 310)
+[   59.272443] ata1.00: configured for UDMA/100
+[   59.276776] ata1: EH complete
+[   59.309147] NET: Registered protocol family 5
+[ OK ] Stopped Light Display Manager.
+         Starting Light Display Manager...
+[ OK ] Started Light Display Manager.
+[ OK ] Stopped Light Display Manager.
+         Starting Light Display Manager...
+[ OK ] Started Light Display Manager.
+[ OK ] Started Network Manager Wait Online.
+[ OK ] Stopped Light Display Manager.
+         Starting Light Display Manager...
+[ OK ] Reached target Network is Online.
+         Starting Samba NMB Daemon...
+         Starting LSB: Ample MP3 server...
+         Starting LSB: exim Mail Transport Agent...
+[ OK ] Started Light Display Manager.
+[ OK ] Stopped Light Display Manager.
+         Starting Light Display Manager...
+[ OK ] Started LSB: Ample MP3 server.
+[ OK ] Started Light Display Manager.
+[ OK ] Started Disk Manager.
+[ OK ] Stopped Light Display Manager.
+[ FAILED ] Failed to start Light Display Manager.
+See 'systemctl status lightdm.service' for details.
+[ OK ] Started LSB: exim Mail Transport Agent.
+
+
+Debian GNU/Linux buster/sid T2080RDB ttyS0
+
+T2080RDB login: ppc64
+
+Password: 
+Last login: Thu Sep 27 09:30:02 CEST 2018 on ttyS0
+Linux T2080RDB 4.18.10 #2 SMP Wed Sep 26 21:24:01 CEST 2018 ppc64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+You have mail.
+[   70.830119] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+ppc64@T2080RDB:~$ [   71.819205] wlan0: authenticate with 90:35:6e:41:19:78
+[   71.856052] wlan0: send auth to 90:35:6e:41:19:78 (try 1/3)
+[   71.863178] wlan0: authenticated
+[   71.867633] wlan0: associate with 90:35:6e:41:19:78 (try 1/3)
+[   71.876930] wlan0: RX AssocResp from 90:35:6e:41:19:78 (capab=0x411 status=0 aid=1)
+[   71.884649] wlan0: associated
+[   71.916286] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+[  535.380611] fuse init (API version 7.27)
+[  835.715804] neverball[8432]: unhandled signal 4 at 00003fff962f3020 nip 00003fff962f3020 lr 00003fff939ba0ec code 1
+[  885.352769] ata1.00: exception Emask 0x10 SAct 0x2 SErr 0x380000 action 0x6 frozen
+[  885.360384] ata1.00: irq_stat 0x08000000, interface fatal error
+[  885.366339] ata1: SError: { 10B8B Dispar BadCRC }
+[  885.371064] ata1.00: failed command: READ FPDMA QUEUED
+[  885.376237] ata1.00: cmd 60/80:08:80:00:00/01:00:00:00:00/40 tag 1 ncq dma 196608 in
+[  885.376237]          res 40/00:08:80:00:00/00:00:00:00:00/40 Emask 0x10 (ATA bus error)
+[  885.392021] ata1.00: status: { DRDY }
+[  885.395727] ata1: hard resetting link
+[  885.858761] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 310)
+[  885.868542] ata1.00: configured for UDMA/100
+[  885.872836] ata1: EH complete
+[  886.068753] ata1.00: exception Emask 0x10 SAct 0x18000000 SErr 0x380000 action 0x6 frozen
+[  886.077002] ata1.00: irq_stat 0x08000000, interface fatal error
+[  886.082963] ata1: SError: { 10B8B Dispar BadCRC }
+[  886.087680] ata1.00: failed command: READ FPDMA QUEUED
+[  886.092833] ata1.00: cmd 60/38:d8:40:08:00/00:00:00:00:00/40 tag 27 ncq dma 28672 in
+[  886.092833]          res 40/00:e0:80:08:00/00:00:00:00:00/40 Emask 0x10 (ATA bus error)
+[  886.108594] ata1.00: status: { DRDY }
+[  886.112265] ata1.00: failed command: READ FPDMA QUEUED
+[  886.117415] ata1.00: cmd 60/80:e0:80:08:00/01:00:00:00:00/40 tag 28 ncq dma 196608 in
+[  886.117415]          res 40/00:e0:80:08:00/00:00:00:00:00/40 Emask 0x10 (ATA bus error)
+[  886.133258] ata1.00: status: { DRDY }
+[  886.136930] ata1: hard resetting link
+[  886.602759] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 310)
+[  886.612488] ata1.00: configured for UDMA/100
+[  886.616781] ata1: EH complete
+[  886.795757] ata1.00: exception Emask 0x10 SAct 0x8000002 SErr 0x300000 action 0x6 frozen
+[  886.803865] ata1.00: irq_stat 0x08000000, interface fatal error
+[  886.809804] ata1: SError: { Dispar BadCRC }
+[  886.814003] ata1.00: failed command: READ FPDMA QUEUED
+[  886.819159] ata1.00: cmd 60/80:08:80:f0:c1/01:00:24:00:00/40 tag 1 ncq dma 196608 in
+[  886.819159]          res 40/00:08:80:f0:c1/00:00:24:00:00/40 Emask 0x10 (ATA bus error)
+[  886.834914] ata1.00: status: { DRDY }
+[  886.838585] ata1.00: failed command: READ FPDMA QUEUED
+[  886.843739] ata1.00: cmd 60/00:d8:00:c4:aa/02:00:18:00:00/40 tag 27 ncq dma 262144 in
+[  886.843739]          res 40/00:08:80:f0:c1/00:00:24:00:00/40 Emask 0x10 (ATA bus error)
+[  886.859583] ata1.00: status: { DRDY }
+[  886.863255] ata1: hard resetting link
+[  887.330767] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 310)
+[  887.340486] ata1.00: configured for UDMA/100
+[  887.344777] ata1: EH complete
+[  887.568765] ata1.00: limiting speed to UDMA/33:PIO4
+[  887.573661] ata1.00: exception Emask 0x10 SAct 0x800 SErr 0x300000 action 0x6 frozen
+[  887.581423] ata1.00: irq_stat 0x08000000, interface fatal error
+[  887.587357] ata1: SError: { Dispar BadCRC }
+[  887.591555] ata1.00: failed command: READ FPDMA QUEUED
+[  887.596710] ata1.00: cmd 60/68:58:88:e7:42/00:00:25:00:00/40 tag 11 ncq dma 53248 in
+[  887.596710]          res 40/00:58:88:e7:42/00:00:25:00:00/40 Emask 0x10 (ATA bus error)
+[  887.612471] ata1.00: status: { DRDY }
+[  887.616144] ata1: hard resetting link
+[  888.082758] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 310)
+[  888.092506] ata1.00: configured for UDMA/33
+[  888.096705] ata1: EH complete
+[  888.518766] ata1.00: exception Emask 0x10 SAct 0x3c0 SErr 0x300000 action 0x6 frozen
+[  888.526528] ata1.00: irq_stat 0x08000000, interface fatal error
+[  888.532467] ata1: SError: { Dispar BadCRC }
+[  888.536663] ata1.00: failed command: READ FPDMA QUEUED
+[  888.541817] ata1.00: cmd 60/50:30:10:e8:42/00:00:25:00:00/40 tag 6 ncq dma 40960 in
+[  888.541817]          res 40/00:48:b8:e9:42/00:00:25:00:00/40 Emask 0x10 (ATA bus error)
+[  888.557487] ata1.00: status: { DRDY }
+[  888.561158] ata1.00: failed command: READ FPDMA QUEUED
+[  888.566321] ata1.00: cmd 60/b8:38:68:e8:42/00:00:25:00:00/40 tag 7 ncq dma 94208 in
+[  888.566321]          res 40/00:48:b8:e9:42/00:00:25:00:00/40 Emask 0x10 (ATA bus error)
+[  888.581993] ata1.00: status: { DRDY }
+[  888.585663] ata1.00: failed command: READ FPDMA QUEUED
+[  888.590817] ata1.00: cmd 60/80:40:28:e9:42/00:00:25:00:00/40 tag 8 ncq dma 65536 in
+[  888.590817]          res 40/00:48:b8:e9:42/00:00:25:00:00/40 Emask 0x10 (ATA bus error)
+[  888.606489] ata1.00: status: { DRDY }
+[  888.610160] ata1.00: failed command: READ FPDMA QUEUED
+[  888.615312] ata1.00: cmd 60/48:48:b8:e9:42/00:00:25:00:00/40 tag 9 ncq dma 36864 in
+[  888.615312]          res 40/00:48:b8:e9:42/00:00:25:00:00/40 Emask 0x10 (ATA bus error)
+[  888.631002] ata1.00: status: { DRDY }
+[  888.634692] ata1: hard resetting link
+[  889.098764] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 310)
+[  889.108482] ata1.00: configured for UDMA/33
+[  889.112691] ata1: EH complete
+[  910.466889] ata1.00: exception Emask 0x10 SAct 0x1800000 SErr 0x380000 action 0x6 frozen
+[  910.475004] ata1.00: irq_stat 0x08000000, interface fatal error
+[  910.480950] ata1: SError: { 10B8B Dispar BadCRC }
+[  910.485673] ata1.00: failed command: READ FPDMA QUEUED
+[  910.490822] ata1.00: cmd 60/00:b8:00:c4:aa/02:00:18:00:00/40 tag 23 ncq dma 262144 in
+[  910.490822]          res 40/00:c0:80:ef:c1/00:00:24:00:00/40 Emask 0x10 (ATA bus error)
+[  910.506667] ata1.00: status: { DRDY }
+[  910.510338] ata1.00: failed command: READ FPDMA QUEUED
+[  910.515492] ata1.00: cmd 60/08:c0:80:ef:c1/00:00:24:00:00/40 tag 24 ncq dma 4096 in
+[  910.515492]          res 40/00:c0:80:ef:c1/00:00:24:00:00/40 Emask 0x10 (ATA bus error)
+[  910.531161] ata1.00: status: { DRDY }
+[  910.534839] ata1: hard resetting link
+[  911.002888] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 310)
+[  911.012643] ata1.00: configured for UDMA/33
+[  911.016875] ata1: EH complete
+[  988.161239] ata1.00: exception Emask 0x10 SAct 0x8000000 SErr 0x380000 action 0x6 frozen
+[  988.169352] ata1.00: irq_stat 0x08000000, interface fatal error
+[  988.175294] ata1: SError: { 10B8B Dispar BadCRC }
+[  988.180019] ata1.00: failed command: READ FPDMA QUEUED
+[  988.185173] ata1.00: cmd 60/00:d8:00:c4:aa/02:00:18:00:00/40 tag 27 ncq dma 262144 in
+[  988.185173]          res 40/00:d8:00:c4:aa/00:00:18:00:00/40 Emask 0x10 (ATA bus error)
+[  988.201027] ata1.00: status: { DRDY }
+[  988.204704] ata1: hard resetting link
+[  988.667247] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 310)
+[  988.676963] ata1.00: configured for UDMA/33
+[  988.681169] ata1: EH complete
+[  990.102427]  mmcblk0: p1
+[  990.114299]  sda: sda1 sda2 sda3
+[  991.698266] ata1.00: exception Emask 0x10 SAct 0x400000 SErr 0x380000 action 0x6 frozen
+[  991.706378] ata1.00: irq_stat 0x08000000, interface fatal error
+[  991.712334] ata1: SError: { 10B8B Dispar BadCRC }
+[  991.717069] ata1.00: failed command: READ FPDMA QUEUED
+[  991.722243] ata1.00: cmd 60/00:b0:00:0a:00/02:00:00:00:00/40 tag 22 ncq dma 262144 in
+[  991.722243]          res 40/00:b0:00:0a:00/00:00:00:00:00/40 Emask 0x10 (ATA bus error)
+[  991.738124] ata1.00: status: { DRDY }
+[  991.741834] ata1: hard resetting link
+[  992.211264] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 310)
+[  992.220984] ata1.00: configured for UDMA/33
+[  992.225189] ata1: EH complete
+[  992.278261] ata1.00: exception Emask 0x10 SAct 0xc000400 SErr 0x300000 action 0x6 frozen
+[  992.286372] ata1.00: irq_stat 0x08000000, interface fatal error
+[  992.292311] ata1: SError: { Dispar BadCRC }
+[  992.296506] ata1.00: failed command: READ FPDMA QUEUED
+[  992.301660] ata1.00: cmd 60/00:50:00:c4:aa/02:00:18:00:00/40 tag 10 ncq dma 262144 in
+[  992.301660]          res 40/00:50:00:c4:aa/00:00:18:00:00/40 Emask 0x10 (ATA bus error)
+[  992.317504] ata1.00: status: { DRDY }
+[  992.321175] ata1.00: failed command: READ FPDMA QUEUED
+[  992.326329] ata1.00: cmd 60/08:d0:80:e7:42/00:00:25:00:00/40 tag 26 ncq dma 4096 in
+[  992.326329]          res 40/00:50:00:c4:aa/00:00:18:00:00/40 Emask 0x10 (ATA bus error)
+[  992.341997] ata1.00: status: { DRDY }
+[  992.345669] ata1.00: failed command: READ FPDMA QUEUED
+[  992.350825] ata1.00: cmd 60/08:d8:80:ef:c1/00:00:24:00:00/40 tag 27 ncq dma 4096 in
+[  992.350825]          res 40/00:50:00:c4:aa/00:00:18:00:00/40 Emask 0x10 (ATA bus error)
+[  992.366506] ata1.00: status: { DRDY }
+[  992.370183] ata1: hard resetting link
+[  992.835276] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 310)
+[  992.845017] ata1.00: configured for UDMA/33
+[  992.849224] ata1: EH complete
+[  994.056266] ata1.00: exception Emask 0x10 SAct 0xe000000 SErr 0x380000 action 0x6 frozen
+[  994.064388] ata1.00: irq_stat 0x08000000, interface fatal error
+[  994.070339] ata1: SError: { 10B8B Dispar BadCRC }
+[  994.075063] ata1.00: failed command: READ FPDMA QUEUED
+[  994.080212] ata1.00: cmd 60/08:c8:f0:c7:aa/00:00:18:00:00/40 tag 25 ncq dma 4096 in
+[  994.080212]          res 40/00:d8:78:f0:c1/00:00:24:00:00/40 Emask 0x10 (ATA bus error)
+[  994.095896] ata1.00: status: { DRDY }
+[  994.099573] ata1.00: failed command: READ FPDMA QUEUED
+[  994.104730] ata1.00: cmd 60/08:d0:08:c8:aa/00:00:18:00:00/40 tag 26 ncq dma 4096 in
+[  994.104730]          res 40/00:d8:78:f0:c1/00:00:24:00:00/40 Emask 0x10 (ATA bus error)
+[  994.120404] ata1.00: status: { DRDY }
+[  994.124077] ata1.00: failed command: READ FPDMA QUEUED
+[  994.129230] ata1.00: cmd 60/08:d8:78:f0:c1/00:00:24:00:00/40 tag 27 ncq dma 4096 in
+[  994.129230]          res 40/00:d8:78:f0:c1/00:00:24:00:00/40 Emask 0x10 (ATA bus error)
+[  994.144903] ata1.00: status: { DRDY }
+[  994.148591] ata1: hard resetting link
+[  994.611277] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 310)
+[  994.621042] ata1.00: configured for UDMA/33
+[  994.625266] ata1: EH complete
+[ 1017.834386] ata1.00: exception Emask 0x10 SAct 0x2000 SErr 0x380000 action 0x6 frozen
+[ 1017.842243] ata1.00: irq_stat 0x08000000, interface fatal error
+[ 1017.848187] ata1: SError: { 10B8B Dispar BadCRC }
+[ 1017.852912] ata1.00: failed command: READ FPDMA QUEUED
+[ 1017.852920] ata1.00: cmd 60/00:68:00:ec:c1/02:00:24:00:00/40 tag 13 ncq dma 262144 in
+[ 1017.852920]          res 40/00:68:00:ec:c1/00:00:24:00:00/40 Emask 0x10 (ATA bus error)
+[ 1017.873903] ata1.00: status: { DRDY }
+[ 1017.873913] ata1: hard resetting link
+[ 1018.339380] ata1: SATA link up 1.5 Gbps (SStatus 113 SControl 310)
+[ 1018.349098] ata1.00: configured for UDMA/33
+[ 1018.353302] ata1: EH complete
+logout
+               Stopping Session 6 of user ppc64.
+[ OK ] Closed Load/Save RF Kill Switch Status /dev/rfkill Watch.
+         Stopping Session 7 of user ppc64.
+         Stopping RealtimeKit Scheduling Policy Service...
+         Stopping User Manager for UID 1000...
+[ OK ] Stopped target Graphical Interface.
+[ OK ] Stopped target Multi-User System.
+         Stopping Make remote CUPS printers available locally...
+         Stopping Samba SMB Daemon...
+         Stopping Modem Manager...
+         Stopping System Logging Service...
+[ OK ] Stopped target Login Prompts.
+         Stopping Getty on tty1...
+         Stopping Regular background program processing daemon...
+         Stopping irqbalance daemon...
+         Stopping LSB: handle special hotkeys of Apple computers...
+         Stopping Accounts Service...
+         Stopping LSB: exim Mail Transport Agent...
+         Stopping Serial Getty on ttyS0...
+         Stopping Disk Manager...
+[ OK ] Stopped target Timers.
+[ OK ] Stopped Daily Cleanup of Temporary Directories.
+[ OK ] Stopped Trigger anacron every hour.
+[ OK ] Stopped Daily rotation of log files.
+[ OK ] Stopped Daily apt upgrade and clean activities.
+[ OK ] Stopped Daily apt download activities.
+         Stopping LSB: Ample MP3 server...
+[ OK ] Stopped Initialize hardware monitoring sensors.
+         Stopping OpenBSD Secure Shell server...
+[ OK ] Unmounted /run/user/1000/gvfs.
+[ OK ] Stopped Disk Manager.
+[ OK ] Stopped Regular background program processing daemon.
+[ OK ] Stopped Modem Manager.
+[ OK ] Stopped Accounts Service.
+[ OK ] Stopped irqbalance daemon.
+[ OK ] Stopped Authorization Manager.
+[ OK ] Stopped Make remote CUPS printers available locally.
+[ OK ] Stopped Getty on tty1.
+[ OK ] Stopped System Logging Service.
+[ OK ] Stopped Serial Getty on ttyS0.
+[ OK ] Stopped OpenBSD Secure Shell server.
+[ OK ] Stopped User Manager for UID 1000.
+[ OK ] Stopped Samba SMB Daemon.
+[ OK ] Stopped RealtimeKit Scheduling Policy Service.
+[ OK ] Stopped LSB: handle special hotkeys of Apple computers.
+[ OK ] Stopped LSB: Ample MP3 server.
+[ OK ] Stopped Session 1 of user ppc64.
+         Stopping Samba NMB Daemon...
+         Stopping /run/user/1000 mount wrapper...
+[ OK ] Removed slice system-serial\x2dgetty.slice.
+[ OK ] Removed slice system-getty.slice.
+         Stopping Avahi mDNS/DNS-SD Stack...
+         Stopping CUPS Scheduler...
+[ OK ] Unmounted /run/user/1000.
+[ OK ] Stopped Avahi mDNS/DNS-SD Stack.
+[ OK ] Stopped Samba NMB Daemon.
+[ OK ] Stopped /run/user/1000 mount wrapper.
+[ OK ] Stopped Session 7 of user ppc64.
+[ OK ] Stopped Session 6 of user ppc64.
+[ OK ] Stopped LSB: exim Mail Transport Agent.
+[ OK ] Stopped target System Time Synchronized.
+         Stopping Login Service...
+[ OK ] Removed slice User Slice of UID 1000.
+         Stopping Permit User Sessions...
+[ OK ] Removed slice system-user\x2druntime\x2ddir.slice.
+[ OK ] Stopped target Network is Online.
+[ OK ] Stopped Network Manager Wait Online.
+[ OK ] Reached target Unmount All Filesystems.
+[ OK ] Stopped Permit User Sessions.
+[ OK ] Stopped CUPS Scheduler.
+[ OK ] Stopped target Network.
+         Stopping Raise network interfaces...
+         Stopping Network Manager...
+[ 1073.033870] wlan0: deauthenticating from 90:35:6e:41:19:78 by local choice (Reason: 3=DEAUTH_LEAVING)
+         Stopping WPA supplicant...
+         Stopping Wicd a wireless and wired network manager for Linux...
+[ OK ] Stopped target Remote File Systems.
+[ OK ] Stopped Login Service.
+[ OK ] Stopped target User and Group Name Lookups.
+[ OK ] Stopped WPA supplicant.
+[ OK ] Stopped Raise network interfaces.
+[ OK ] Stopped Wicd a wireless and wired network manager for Linux.
+[ OK ] Stopped Network Manager.
+         Stopping D-Bus System Message Bus...
+[ OK ] Stopped D-Bus System Message Bus.
+[ OK ] Stopped target Basic System.
+[ OK ] Stopped target Slices.
+[ OK ] Removed slice User and Session Slice.
+[ OK ] Stopped target Sockets.
+[ OK ] Closed Syslog Socket.
+[ OK ] Closed Avahi mDNS/DNS-SD Stack Activation Socket.
+[ OK ] Closed CUPS Scheduler.
+[ OK ] Stopped target Paths.
+[ OK ] Stopped CUPS Scheduler.
+[ OK ] Closed D-Bus System Message Bus Socket.
+[ OK ] Stopped target System Initialization.
+         Stopping Network Time Synchronization...
+[ OK ] Stopped Apply Kernel Variables.
+[ OK ] Stopped target Local Encrypted Volumes.
+[ OK ] Stopped Dispatch Password Requests to Console Directory Watch.
+[ OK ] Stopped Forward Password Requests to Wall Directory Watch.
+         Stopping Load/Save Random Seed...
+         Stopping Update UTMP about System Boot/Shutdown...
+[ OK ] Stopped Network Time Synchronization.
+[ OK ] Stopped Load/Save Random Seed.
+[ OK ] Stopped Update UTMP about System Boot/Shutdown.
+[ OK ] Stopped Create Volatile Files and Directories.
+[ OK ] Stopped target Local File Systems.
+         Starting Unattended Upgrades Shutdown...
+[ OK ] Stopped target Local File Systems (Pre).
+[ OK ] Stopped Create Static Device Nodes in /dev.
+[ OK ] Stopped Create System Users.
+[ OK ] Stopped Remount Root and Kernel File Systems.
+[ OK ] Started Unattended Upgrades Shutdown.
+[ OK ] Reached target Shutdown.
+[ OK ] Reached target Final Step.
+         Starting Power-Off...
+[ 1073.740328] systemd-shutdow: 34 output lines suppressed due to ratelimiting
+[ 1073.777228] systemd-shutdown[1]: Syncing filesystems and block devices.
+[ 1075.535599] systemd-shutdown[1]: Sending SIGTERM to remaining processes...
+[ 1075.554865] systemd-journald[2761]: Received SIGTERM from PID 1 (systemd-shutdow).
+[ 1075.755887] systemd-shutdown[1]: Sending SIGKILL to remaining processes...
+[ 1075.774425] systemd-shutdown[1]: Unmounting file systems.
+[ 1075.781660] [10753]: Remounting '/' read-only in with options 'errors=remount-ro'.
+[ 1075.836501] EXT4-fs (sdb3): re-mounted. Opts: errors=remount-ro
+[ 1075.847729] systemd-shutdown[1]: All filesystems unmounted.
+[ 1075.853316] systemd-shutdown[1]: Deactivating swaps.
+[ 1075.858388] systemd-shutdown[1]: All swaps deactivated.
+[ 1075.863630] systemd-shutdown[1]: Detaching loop devices.
+[ 1075.870915] systemd-shutdown[1]: All loop devices detached.
+[ 1075.876499] systemd-shutdown[1]: Detaching DM devices.
+[ 1076.874446] kvm: exiting hardware virtualization
+[ 1076.879249] sd 5:0:0:0: [sdb] Stopping disk
+[ 1076.883713] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[ 1076.889189] sd 0:0:0:0: [sda] Stopping disk
+[ 1077.265620] reboot: System halted
+[ 1077.268955] System Halted, OK to turn off power
