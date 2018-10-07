@@ -1059,11 +1059,10 @@ The programs included with the Debian GNU/Linux system are free software;
 the exact distribution terms for each program are described in the
 individual files in /usr/share/doc/*/copyright.
 
-Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
-permitted by applicable law.
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.
 You have mail.
 [   70.830119] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
-ppc64@T2080RDB:~$ [   71.819205] wlan0: authenticate with 90:35:6e:41:19:78
+[   71.819205] wlan0: authenticate with 90:35:6e:41:19:78
 [   71.856052] wlan0: send auth to 90:35:6e:41:19:78 (try 1/3)
 [   71.863178] wlan0: authenticated
 [   71.867633] wlan0: associate with 90:35:6e:41:19:78 (try 1/3)
@@ -1071,7 +1070,6 @@ ppc64@T2080RDB:~$ [   71.819205] wlan0: authenticate with 90:35:6e:41:19:78
 [   71.884649] wlan0: associated
 [   71.916286] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
 [  535.380611] fuse init (API version 7.27)
-[  835.715804] neverball[8432]: unhandled signal 4 at 00003fff962f3020 nip 00003fff962f3020 lr 00003fff939ba0ec code 1
 [  885.352769] ata1.00: exception Emask 0x10 SAct 0x2 SErr 0x380000 action 0x6 frozen
 [  885.360384] ata1.00: irq_stat 0x08000000, interface fatal error
 [  885.366339] ata1: SError: { 10B8B Dispar BadCRC }
