@@ -1,7 +1,7 @@
 You may download the already compiled 4.18.10 kernel for PPC64 book3e e6500 and related modules from my Google Drive here
 
 
-https://drive.google.com/file/d/1vOYV2JMGHpdx6i_8A-mrCe5u7kEw7VuI/view?usp=sharing
+https://drive.google.com/file/d/1ZWOuETT16Tq8GaMsTcv66OgVIcc3UbD7/view?usp=sharing
 
 
 To cross-compile a kernel using the provided .config file follow this procedure (tested on Ubuntu 18.04 amd64).
