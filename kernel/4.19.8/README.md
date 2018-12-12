@@ -1,4 +1,4 @@
-You may download the already compiled 4.18.10 kernel for PPC64 book3e e6500 and related modules from my Google Drive here
+You may download the already compiled 4.19.8 kernel for PPC64 book3e e6500 and related modules from my Google Drive here
 
 
 https://drive.google.com/file/d/1ZWOuETT16Tq8GaMsTcv66OgVIcc3UbD7/view?usp=sharing
