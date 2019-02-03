@@ -4,6 +4,7 @@ You may download the already compiled 4.20.4 kernel for PPC64 book3e e6500 and r
 https://drive.google.com/file/d/1lUeQ0HygvrL7n2sCzwUvm1zcpfa1TNHQ/view?usp=sharing
 
 
+-----
 
 To cross-compile a kernel using the provided .config file follow this procedure (tested on Ubuntu 18.10 amd64).
 
