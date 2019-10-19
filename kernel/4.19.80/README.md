@@ -1,7 +1,7 @@
 You may download the already compiled 4.19.80 kernel for PPC64 book3e e6500 and related modules from
 
 
-xxxxx
+https://drive.google.com/file/d/1fxXq--y3Cgv3nReAY7KxgH6XreAL6MDF/view?usp=sharing
 
 
 -----
