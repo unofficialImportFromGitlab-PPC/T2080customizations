@@ -1,4 +1,4 @@
-You may download the already compiled 5.4.8 kernel for PPC64 book3e e6500 and related kernel modules from
+You may download the already compiled 5.4.8 kernel for PPC64 book3e e6500 and related kernel modules from (876MB compressed, 2.5GB extracted)
 
 
 https://drive.google.com/file/d/1kM8jHaCUV0yOl3EAtZYTC-Hf3YAbW34B/view?usp=sharing
