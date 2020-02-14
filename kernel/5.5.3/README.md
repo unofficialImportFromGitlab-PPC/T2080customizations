@@ -1,7 +1,7 @@
 You may download the already compiled 5.5.3 kernel for PPC64 book3e e6500 and related kernel modules from (892MB compressed, 2.5GB extracted)
 
 
-xxxx
+https://drive.google.com/file/d/1dtfT__M0Nsd-qsF6iNW9PmIQye1miwMl/view?usp=sharing
 
 
 -----
