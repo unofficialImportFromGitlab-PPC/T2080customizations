@@ -1,4 +1,3 @@
-
 These are the microcode families of the Frame Manager hardware block in QorIQ
 products. Specific platforms require specific binaries, and those also have to
 further match specific software versions (Frame Manager Driver -- FMD).
@@ -63,7 +62,7 @@ Third number:
 
 
 List of platforms and their appropriate latest ucode version:
-
+<pre>
 b4860_r2.2	fsl_fman_ucode_b4860_r2.2_106_4_18.bin (*)
 		fsl_fman_ucode_b4860_r2.2_108_4_9.bin
 ls1043_r1.1	fsl_fman_ucode_ls1043_r1.1_106_4_18.bin (*)
@@ -85,5 +84,5 @@ t2080_r1.1	fsl_fman_ucode_t2080_r1.1_106_4_18.bin (*)
 		fsl_fman_ucode_t2080_r1.1_108_4_9.bin
 t4240_r2.0	fsl_fman_ucode_t4240_r2.0_106_4_18.bin (*)
 		fsl_fman_ucode_t4240_r2.0_108_4_9.bin
-
+</pre>
 (*) denotes which is the default version
