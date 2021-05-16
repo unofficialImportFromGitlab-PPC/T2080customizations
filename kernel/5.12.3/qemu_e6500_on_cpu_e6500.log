@@ -1,0 +1,957 @@
+$ sudo qemu-system-ppc64 -M ppce500 -cpu e6500 -enable-kvm -m 256M -vga none -nographic -kernel book3e_e6500_ppc64_kernel_5.12.3 -append "rw root=/dev/vda" -drive format=raw,file=hdd_debian_sid_ppc64.img,index=0,if=virtio
+[sudo] password for ppc64: 
+
+MMU: Supported page sizes
+         4 KB as direct
+      2048 KB as direct
+      4096 KB as direct
+     16384 KB as direct
+     65536 KB as direct
+    262144 KB as direct
+   1048576 KB as direct
+MMU: Book3E HW tablewalk not supported
+Linux version 5.12.3_E6500 (ppc64@t2080rdb) (gcc (Debian 10.2.1-6) 10.2.1 20210110, GNU ld (GNU Binutils for Debian) 2.35.2) #2 SMP PREEMPT Sat May 15 10:29:59 CEST 2021
+Using QEMU e500 machine description
+ioremap() called early from .find_legacy_serial_ports+0x1b4/0x700. Use early_ioremap() instead
+printk: bootconsole [udbg0] enabled
+CPU maps initialized for 1 thread per core
+-----------------------------------------------------
+phys_mem_size     = 0x10000000
+dcache_bsize      = 0x20
+icache_bsize      = 0x20
+cpu_features      = 0x0000000300800196
+  possible        = 0x0000000300900396
+  always          = 0x0000000300800394
+cpu_user_features = 0xdc008000 0x08000000
+mmu_features      = 0x000a0010
+firmware_features = 0x0000000000000000
+-----------------------------------------------------
+qemu_e500_setup_arch()
+barrier-nospec: using isync; sync as speculation barrier
+Zone ranges:
+  DMA      [mem 0x0000000000000000-0x000000000fffffff]
+  Normal   empty
+Movable zone start for each node
+Early memory node ranges
+  node   0: [mem 0x0000000000000000-0x000000000fffffff]
+Initmem setup node 0 [mem 0x0000000000000000-0x000000000fffffff]
+MMU: Allocated 2112 bytes of context maps for 255 contexts
+percpu: Embedded 21 pages/cpu s46544 r0 d39472 u1048576
+Built 1 zonelists, mobility grouping on.  Total pages: 64640
+Kernel command line: rw root=/dev/vda
+Dentry cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Inode-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+mem auto-init: stack:off, heap alloc:off, heap free:off
+Memory: 162992K/262144K available (13052K kernel code, 2736K rwdata, 10820K rodata, 440K init, 718K bss, 99152K reserved, 0K cma-reserved)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+rcu: Preemptible hierarchical RCU implementation.
+rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=1.
+	Trampoline variant of Tasks RCU enabled.
+rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+NR_IRQS: 512, nr_irqs: 512, preallocated irqs: 16
+mpic: Setting up MPIC " OpenPIC  " version 1.2 at fe0040000, max 1 CPUs
+mpic: ISU size: 256, shift: 8, mask: ff
+mpic: Initializing for 256 sources
+random: get_random_u64 called from .start_kernel+0x734/0x978 with crng_init=0
+clocksource: timebase: mask: 0xffffffffffffffff max_cycles: 0x8a5d528ca, max_idle_ns: 440795203517 ns
+clocksource: timebase mult[1aab5972] shift[24] registered
+Console: colour dummy device 80x25
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512 (order: 0, 4096 bytes, linear)
+Mountpoint-cache hash table entries: 512 (order: 0, 4096 bytes, linear)
+e6500 family performance monitor hardware support registered
+rcu: Hierarchical SRCU implementation.
+smp: Bringing up secondary CPUs ...
+smp: Brought up 1 node, 1 CPU
+devtmpfs: initialized
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+NET: Registered protocol family 16
+thermal_sys: Registered thermal governor 'step_wise'
+cpuidle: using governor ladder
+cpuidle: using governor menu
+Found FSL PCI host bridge at 0x0000000fe0008000. Firmware bus number: 0->255
+PCI host bridge /pci@fe0008000 (primary) ranges:
+ MEM 0x0000000c00000000..0x0000000c1fffffff -> 0x00000000e0000000 
+  IO 0x0000000fe1000000..0x0000000fe100ffff -> 0x0000000000000000
+/pci@fe0008000: PCICSRBAR @ 0xdff00000
+setup_pci_atmu: end of DRAM 10000000
+Machine: QEMU ppce500
+SoC family: QorIQ
+SoC ID: svr:0x00000000, Revision: 0.0
+fsl-pamu: fsl_pamu_init: could not find a PAMU node
+PCI: Probing PCI hardware
+fsl-pci fe0008000.pci: PCI host bridge to bus 8000:00
+pci_bus 8000:00: root bus resource [io  0x8000080000010000-0x800008000001ffff] (bus address [0x0000-0xffff])
+pci_bus 8000:00: root bus resource [mem 0xc00000000-0xc1fffffff] (bus address [0xe0000000-0xffffffff])
+pci_bus 8000:00: root bus resource [bus 00-ff]
+pci_bus 8000:00: busn_res: [bus 00-ff] end is updated to ff
+pci 8000:00:00.0: [1957:0030] type 00 class 0x0b2000
+pci 8000:00:00.0: reg 0x10: [mem 0xdff00000-0xdfffffff]
+pci 8000:00:01.0: [1af4:1000] type 00 class 0x020000
+pci 8000:00:01.0: reg 0x10: [io  0x8000080000010000-0x800008000001001f]
+pci 8000:00:01.0: reg 0x14: [mem 0x00000000-0x00000fff]
+pci 8000:00:01.0: reg 0x20: [mem 0x00000000-0x00003fff 64bit pref]
+pci 8000:00:01.0: reg 0x30: [mem 0x00000000-0x0003ffff pref]
+pci 8000:00:02.0: [1af4:1001] type 00 class 0x010000
+pci 8000:00:02.0: reg 0x10: [io  0x8000080000010000-0x800008000001007f]
+pci 8000:00:02.0: reg 0x14: [mem 0x00000000-0x00000fff]
+pci 8000:00:02.0: reg 0x20: [mem 0x00000000-0x00003fff 64bit pref]
+pci_bus 8000:00: busn_res: [bus 00-ff] end is updated to 00
+pci 8000:00:01.0: BAR 6: assigned [mem 0xc00000000-0xc0003ffff pref]
+pci 8000:00:01.0: BAR 4: assigned [mem 0xc00040000-0xc00043fff 64bit pref]
+pci 8000:00:02.0: BAR 4: assigned [mem 0xc00044000-0xc00047fff 64bit pref]
+pci 8000:00:01.0: BAR 1: assigned [mem 0xc00048000-0xc00048fff]
+pci 8000:00:02.0: BAR 1: assigned [mem 0xc00049000-0xc00049fff]
+pci 8000:00:02.0: BAR 0: assigned [io  0x8000080000010000-0x800008000001007f]
+pci 8000:00:01.0: BAR 0: assigned [io  0x8000080000010080-0x800008000001009f]
+pci_bus 8000:00: resource 4 [io  0x8000080000010000-0x800008000001ffff]
+pci_bus 8000:00: resource 5 [mem 0xc00000000-0xc1fffffff]
+raid6: altivecx8 gen()  4267 MB/s
+raid6: altivecx4 gen()  4453 MB/s
+raid6: altivecx2 gen()  4062 MB/s
+raid6: altivecx1 gen()  3164 MB/s
+raid6: int64x8  gen()   851 MB/s
+raid6: int64x8  xor()   618 MB/s
+raid6: int64x4  gen()  1075 MB/s
+raid6: int64x4  xor()   659 MB/s
+raid6: int64x2  gen()  1838 MB/s
+raid6: int64x2  xor()   932 MB/s
+raid6: int64x1  gen()  1313 MB/s
+raid6: int64x1  xor()   739 MB/s
+raid6: using algorithm altivecx4 gen() 4453 MB/s
+raid6: using intx1 recovery algorithm
+Freescale Elo series DMA driver
+iommu: Default domain type: Passthrough 
+vgaarb: loaded
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+pps_core: LinuxPPS API ver. 1 registered
+pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+PTP clock support registered
+EDAC MC: Ver: 3.0.0
+Advanced Linux Sound Architecture Driver Initialized.
+NET: Registered protocol family 8
+NET: Registered protocol family 20
+clocksource: Switched to clocksource timebase
+FS-Cache: Loaded
+CacheFiles: Loaded
+NET: Registered protocol family 2
+tcp_listen_portaddr_hash hash table entries: 256 (order: 0, 4096 bytes, linear)
+TCP established hash table entries: 2048 (order: 2, 16384 bytes, linear)
+TCP bind hash table entries: 2048 (order: 3, 32768 bytes, linear)
+TCP: Hash tables configured (established 2048 bind 2048)
+UDP hash table entries: 256 (order: 1, 8192 bytes, linear)
+UDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+PCI: CLS 0 bytes, default 64
+Initialise system trusted keyrings
+workingset: timestamp_bits=62 max_order=16 bucket_order=0
+zbud: loaded
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Key type cifs.idmap registered
+ntfs: driver 2.1.32 [Flags: R/W].
+jffs2: version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+fuse: init (API version 7.33)
+NET: Registered protocol family 38
+xor: measuring software checksum speed
+   8regs           :  3926 MB/sec
+   8regs_prefetch  :  3080 MB/sec
+   32regs          :  3919 MB/sec
+   32regs_prefetch :  3158 MB/sec
+   altivec         :  6260 MB/sec
+xor: using function: altivec (6260 MB/sec)
+Key type asymmetric registered
+Asymmetric key parser 'x509' registered
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 248)
+io scheduler mq-deadline registered
+io scheduler kyber registered
+crc32: CRC_LE_BITS = 64, CRC_BE BITS = 64
+crc32: self tests passed, processed 225944 bytes in 406974 nsec
+crc32c: CRC_LE_BITS = 64
+crc32c: self tests passed, processed 225944 bytes in 208394 nsec
+crc32_combine: 8373 self tests passed
+crc32c_combine: 8373 self tests passed
+virtio-pci 8000:00:01.0: enabling device (0000 -> 0003)
+virtio-pci 8000:00:02.0: enabling device (0000 -> 0003)
+------------[ cut here ]------------
+WARNING: CPU: 1 PID: 14208 at .enable_kernel_fp+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 1 PID: 14208 Comm: qemu-system-ppc Not tainted 5.12.3_E6500 #2
+NIP:  c000000000003ec8 LR: c00000000004f850 CTR: 0000000000000000
+REGS: c0000000ca18b440 TRAP: 0700   Not tainted  (5.12.3_E6500)
+MSR:  0000000080021002 <CE,ME>  CR: 24842204  XER: 00000000
+IRQMASK: 0 
+GPR00: c00000000004f850 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000000000010 0000000080000003 0000000000000000 0000000000000000 
+GPR08: 00000000fe66d000 0000000000000001 0000000000000000 0000000000000000 
+GPR12: 0000000024842204 c00000003ffff8c0 c0000000c3708000 c000000001887b10 
+GPR16: 0000000022222222 0000000000000000 c000000001888e80 c000000001887b40 
+GPR20: c000000001887b50 c000000001887980 c000000001887f90 0000000000000002 
+GPR24: c00000000fce7d80 c000000001887b10 0000000000000801 0000000000000000 
+GPR28: c0000000026d2000 00000000026d2000 0000000000000000 c0000000c3708380 
+NIP [c000000000003ec8] .enable_kernel_fp+0x30/0x78
+LR [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+Call Trace:
+[c0000000ca18b6e0] [c00000000fce7d80] 0xc00000000fce7d80 (unreliable)
+[c0000000ca18b750] [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+[c0000000ca18b7d0] [c000000000050c80] .kvmppc_handle_exit+0x5cc/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 38602000 4bfffe7d e86d0658 
+---[ end trace 4078844d543df3e0 ]---
+------------[ cut here ]------------
+WARNING: CPU: 1 PID: 14208 at .enable_kernel_altivec+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 1 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+NIP:  c000000000003fb4 LR: c00000000004fa98 CTR: 0000000000000000
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+MSR:  0000000080023002 <CE,FP,ME>  CR: 24842204  XER: 00000000
+IRQMASK: 0 
+GPR00: c00000000004fa98 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000000000010 0000000080000003 0000000000000000 0000000000000000 
+GPR08: 00000000fe66d000 0000000000000001 0000000000000000 0000000000000000 
+GPR12: 0000000024842204 c00000003ffff8c0 c0000000c3708000 c000000001887b10 
+GPR16: 0000000022222222 0000000000000000 c000000001888e80 c000000001887b40 
+GPR20: c000000001887b50 c000000001887980 c000000001887f90 0000000000000002 
+GPR24: c00000000fce7d80 c000000001887b10 0000000000000801 0000000000000000 
+GPR28: c0000000026d2000 00000000026d2000 0000000000000000 c0000000c3708490 
+NIP [c000000000003fb4] .enable_kernel_altivec+0x30/0x78
+LR [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+Call Trace:
+[c0000000ca18b6e0] [c000000000003ed4] .enable_kernel_fp+0x3c/0x78 (unreliable)
+[c0000000ca18b750] [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+[c0000000ca18b7d0] [c000000000050c88] .kvmppc_handle_exit+0x5d4/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 3c600200 4bfffd91 e86d0658 
+---[ end trace 4078844d543df3e1 ]---
+Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+printk: console [ttyS0] disabled
+serial8250.0: ttyS0 at MMIO 0xfe0004500 (irq = 42, base_baud = 25000000) is a 16550A
+printk: console [ttyS0] enabled
+printk: console [ttyS0] enabled
+printk: bootconsole [udbg0] disabled
+printk: bootconsole [udbg0] disabled
+ePAPR hypervisor byte channel driver
+[drm] radeon kernel modesetting enabled.
+brd: module loaded
+loop: module loaded
+virtio_blk virtio1: [vda] 41943040 512-byte logical blocks (21.5 GB/20.0 GiB)
+------------[ cut here ]------------
+WARNING: CPU: 2 PID: 14208 at .enable_kernel_fp+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 2 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+NIP:  c000000000003ec8 LR: c00000000004f850 CTR: 0000000000000004
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+MSR:  0000000082023002 <VEC,CE,FP,ME>  CR: 24422008  XER: 00000000
+IRQMASK: 0 
+GPR00: c00000000004f850 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000000000010 0000000080000002 0000000000000000 0000000000000000 
+GPR08: 00000000fe68d000 0000000000000001 0000000000000000 c0000000800e3600 
+GPR12: 0000000024422008 c00000003ffff1c0 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 c00000000fb0c750 c000000001888e80 000000000e34d000 
+GPR20: 0000000022222222 c000000001887980 0000000000000010 0000000000000000 
+GPR24: c00000000fcec818 c00000000fb0c740 0000000000000801 c000000000140264 
+GPR28: 0000000000000000 0000000000140264 0000000000000000 c0000000c3708380 
+NIP [c000000000003ec8] .enable_kernel_fp+0x30/0x78
+LR [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+Call Trace:
+[c0000000ca18b6e0] [c00000000fcec818] 0xc00000000fcec818 (unreliable)
+[c0000000ca18b750] [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+[c0000000ca18b7d0] [c000000000050c80] .kvmppc_handle_exit+0x5cc/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 38602000 4bfffe7d e86d0658 
+---[ end trace 4078844d543df3e2 ]---
+------------[ cut here ]------------
+WARNING: CPU: 2 PID: 14208 at .enable_kernel_altivec+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 2 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+NIP:  c000000000003fb4 LR: c00000000004fa98 CTR: 0000000000000004
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+MSR:  0000000082023002 <VEC,CE,FP,ME>  CR: 24422008  XER: 00000000
+IRQMASK: 0 
+GPR00: c00000000004fa98 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000000000010 0000000080000002 0000000000000000 0000000000000000 
+GPR08: 00000000fe68d000 0000000000000001 0000000000000000 c0000000800e3600 
+GPR12: 0000000024422008 c00000003ffff1c0 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 c00000000fb0c750 c000000001888e80 000000000e34d000 
+GPR20: 0000000022222222 c000000001887980 0000000000000010 0000000000000000 
+GPR24: c00000000fcec818 c00000000fb0c740 0000000000000801 c000000000140264 
+GPR28: 0000000000000000 0000000000140264 0000000000000000 c0000000c3708490 
+NIP [c000000000003fb4] .enable_kernel_altivec+0x30/0x78
+LR [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+Call Trace:
+[c0000000ca18b6e0] [c000000000003ed4] .enable_kernel_fp+0x3c/0x78 (unreliable)
+[c0000000ca18b750] [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+[c0000000ca18b7d0] [c000000000050c88] .kvmppc_handle_exit+0x5d4/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 3c600200 4bfffd91 e86d0658 
+---[ end trace 4078844d543df3e3 ]---
+------------[ cut here ]------------
+WARNING: CPU: 2 PID: 14208 at .enable_kernel_fp+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 2 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+NIP:  c000000000003ec8 LR: c00000000004f850 CTR: 0000000000000004
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+MSR:  0000000082023002 <VEC,CE,FP,ME>  CR: 24022208  XER: 00000000
+IRQMASK: 0 
+GPR00: c00000000004f850 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000000000010 0000000080000002 0000000000000000 0000000000000000 
+GPR08: 00000000fe68d000 0000000000000001 0000000000000000 c0000000c3708000 
+GPR12: 0000000024022208 c00000003ffff1c0 c0000000c3708000 c000000002114680 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: c0000000022dbb00 c000000002283600 0000000000000000 0000000000000000 
+GPR24: 0000000000000001 c00000000005e398 00000000000039c0 0000000000000000 
+GPR28: c00000000215d260 000000000215d260 0000000000000000 c0000000c3708380 
+NIP [c000000000003ec8] .enable_kernel_fp+0x30/0x78
+LR [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+Call Trace:
+[c0000000ca18b6e0] [0000000000000001] 0x1 (unreliable)
+[c0000000ca18b750] [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+[c0000000ca18b7d0] [c000000000050c80] .kvmppc_handle_exit+0x5cc/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 38602000 4bfffe7d e86d0658 
+---[ end trace 4078844d543df3e4 ]---
+------------[ cut here ]------------
+WARNING: CPU: 2 PID: 14208 at .enable_kernel_altivec+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 2 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+NIP:  c000000000003fb4 LR: c00000000004fa98 CTR: 0000000000000004
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+MSR:  0000000082023002 <VEC,CE,FP,ME>  CR: 24022208  XER: 00000000
+IRQMASK: 0 
+GPR00: c00000000004fa98 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000000000010 0000000080000002 0000000000000000 0000000000000000 
+GPR08: 00000000fe68d000 0000000000000001 0000000000000000 c0000000c3708000 
+GPR12: 0000000024022208 c00000003ffff1c0 c0000000c3708000 c000000002114680 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: c0000000022dbb00 c000000002283600 0000000000000000 0000000000000000 
+GPR24: 0000000000000001 c00000000005e398 00000000000039c0 0000000000000000 
+GPR28: c00000000215d260 000000000215d260 0000000000000000 c0000000c3708490 
+NIP [c000000000003fb4] .enable_kernel_altivec+0x30/0x78
+LR [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+Call Trace:
+[c0000000ca18b6e0] [c000000000003ed4] .enable_kernel_fp+0x3c/0x78 (unreliable)
+[c0000000ca18b750] [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+[c0000000ca18b7d0] [c000000000050c88] .kvmppc_handle_exit+0x5d4/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 3c600200 4bfffd91 e86d0658 
+---[ end trace 4078844d543df3e5 ]---
+zram: Added device: zram0
+libphy: Fixed MDIO Bus: probed
+tun: Universal TUN/TAP device driver, 1.6
+e1000: Intel(R) PRO/1000 Network Driver
+e1000: Copyright (c) 1999-2006 Intel Corporation.
+e1000e: Intel(R) PRO/1000 Network Driver
+e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+PPP generic driver version 2.4.2
+PPP BSD Compression module registered
+PPP Deflate Compression module registered
+PPP MPPE Compression module registered
+NET: Registered protocol family 24
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-pci: EHCI PCI platform driver
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+ohci-pci: OHCI PCI platform driver
+ehci-fsl: Freescale EHCI Host controller driver
+usbcore: registered new interface driver usblp
+usbcore: registered new interface driver usb-storage
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial support registered for generic
+usbcore: registered new interface driver ftdi_sio
+usbserial: USB Serial support registered for FTDI USB Serial Device
+mousedev: PS/2 mouse device common for all mice
+i2c /dev entries driver
+mpc-i2c fe0003000.i2c: timeout 1000000 us
+rtc-ds1307 0-0068: registered as rtc0
+rtc-ds1307 0-0068: setting system clock to 2021-05-15T14:45:30 UTC (1621089930)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+ledtrig-cpu: registered to indicate activity on CPUs
+hid: raw HID events driver (C) Jiri Kosina
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+Freescale hypervisor management driver
+fsl-hv: no hypervisor found
+usbcore: registered new interface driver snd-usb-audio
+usbcore: registered new interface driver snd-ua101
+usbcore: registered new interface driver snd-usb-usx2y
+ipip: IPv4 and MPLS over IPv4 tunneling driver
+IPv4 over------------[ cut here ]------------
+ IPsec tunnelingWARNING: CPU: 4 PID: 14208 at .enable_kernel_fp+0x30/0x78
+ driver
+InitiaModules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+lizing XFRM netlCPU: 4 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+ink socket
+NETNIP:  c000000000003ec8 LR: c00000000004f850 CTR: 0000000000000004
+: Registered proREGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+tocol family 10
+MSR:  0000000082023002 <VEC,CE,FP,ME>  CR: 24000288  XER: 00000000
+Segment RoutinIRQMASK: 0 
+GPR00: c00000000004f850 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000000000018 0000000080000002 0000000000000000 0000000000000000 
+GPR08: 00000000fe6cd000 0000000000000001 0000000000000000 c0000000800e5100 
+GPR12: 0000000024000288 c00000003fffe3c0 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: 0000000000000000 0000000000000000 0000000000000001 c000000001a4dac8 
+GPR24: 0000000000000001 c000000001889580 c000000001a72000 c0000000000d0afc 
+GPR28: 0000000000000001 00000000000d0afc 0000000000000000 c0000000c3708380 
+g with IPv6
+miNIP [c000000000003ec8] .enable_kernel_fp+0x30/0x78
+p6: Mobile IPv6
+LR [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+sit: IPv6, IPvCall Trace:
+4 and MPLS over [c0000000ca18b6e0] [0000000000000001] 0x1 (unreliable)
+IPv4 tunneling d[c0000000ca18b750] [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+river
+NET: Reg[c0000000ca18b7d0] [c000000000050c80] .kvmppc_handle_exit+0x5cc/0x5d8
+istered protocol[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+ family 17
+NETInstruction dump:
+: Registered pro7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+tocol family 15
+892d067a 552907fe 7d290034 5529d97e <0b090000> 38602000 4bfffe7d e86d0658 
+lec:lane_modul---[ end trace 4078844d543df3e6 ]---
+e_init: lec.c: i------------[ cut here ]------------
+nitialized
+mpoWARNING: CPU: 4 PID: 14208 at .enable_kernel_altivec+0x30/0x78
+a:atm_mpoa_init:Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+ mpc.c: initialiCPU: 4 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+zed
+l2tp_core:NIP:  c000000000003fb4 LR: c00000000004fa98 CTR: 0000000000000004
+ L2TP core driveREGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+r, V2.0
+DCCP: MSR:  0000000082023002 <VEC,CE,FP,ME>  CR: 24000288  XER: 00000000
+Activated CCID 2IRQMASK: 0 
+GPR00: c00000000004fa98 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000000000018 0000000080000002 0000000000000000 0000000000000000 
+GPR08: 00000000fe6cd000 0000000000000001 0000000000000000 c0000000800e5100 
+GPR12: 0000000024000288 c00000003fffe3c0 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: 0000000000000000 0000000000000000 0000000000000001 c000000001a4dac8 
+GPR24: 0000000000000001 c000000001889580 c000000001a72000 c0000000000d0afc 
+GPR28: 0000000000000001 00000000000d0afc 0000000000000000 c0000000c3708490 
+ (TCP-like)
+DCNIP [c000000000003fb4] .enable_kernel_altivec+0x30/0x78
+CP: Activated CCLR [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+ID 3 (TCP-FriendCall Trace:
+ly Rate Control)[c0000000ca18b6e0] [c000000000003ed4] .enable_kernel_fp+0x3c/0x78 (unreliable)
+sctp: Hash ta[c0000000ca18b750] [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+bles configured [c0000000ca18b7d0] [c000000000050c88] .kvmppc_handle_exit+0x5d4/0x5d8
+(bind 256/256)
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+NET: RegisteredInstruction dump:
+ protocol family7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+ 21
+Registered892d067a 552907fe 7d290034 5529d97e <0b090000> 3c600200 4bfffd91 e86d0658 
+ RDS/tcp transpo---[ end trace 4078844d543df3e7 ]---
+rt
+tipc: Activated (version 2.------------[ cut here ]------------
+0.0)
+NET: RegiWARNING: CPU: 4 PID: 14208 at .enable_kernel_fp+0x30/0x78
+stered protocol Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+family 30
+tipcCPU: 4 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+: Started in sinNIP:  c000000000003ec8 LR: c00000000004f850 CTR: c00000000000780c
+gle node mode
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+Key type dns_resMSR:  0000000082023002 <VEC,CE,FP,ME>  CR: 24000882  XER: 00000000
+olver registeredIRQMASK: 0 
+GPR00: c00000000004f850 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000090029000 0000000000000108 0000000000000000 00000000408800e0 
+GPR08: 00000000fe6cd000 0000000000000001 0000000000000000 c0000000c374a1d8 
+GPR12: 0000000024000882 c00000003fffe3c0 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: 0000000000000000 0000000000000000 0000000000000001 c000000001a4dac8 
+GPR24: 0000000000000001 c000000001889580 c000000001a72000 c0000000ca2fd000 
+GPR28: 00000000ffffffff 0000000000000000 0000000000000000 c0000000c3708380 
+batman_adv: BNIP [c000000000003ec8] .enable_kernel_fp+0x30/0x78
+.A.T.M.A.N. advaLR [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+nced 2021.1 (comCall Trace:
+patibility versi[c0000000ca18b6e0] [0000000000000001] 0x1 (unreliable)
+on 15) loaded
+[c0000000ca18b750] [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+drmem: No dynami[c0000000ca18b7d0] [c000000000050c80] .kvmppc_handle_exit+0x5cc/0x5d8
+c reconfiguratio[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+n memory found
+Instruction dump:
+Loading compile7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+d-in X.509 certi892d067a 552907fe 7d290034 5529d97e <0b090000> 38602000 4bfffe7d e86d0658 
+ficates
+zswap:---[ end trace 4078844d543df3e8 ]---
+ loaded using po------------[ cut here ]------------
+ol lzo/zbud
+KeWARNING: CPU: 4 PID: 14208 at .enable_kernel_altivec+0x30/0x78
+y type ._fscryptModules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+ registered
+KeCPU: 4 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+y type .fscrypt NIP:  c000000000003fb4 LR: c00000000004fa98 CTR: c00000000000780c
+registered
+KeyREGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+ type fscrypt-prMSR:  0000000082023002 <VEC,CE,FP,ME>  CR: 24000882  XER: 00000000
+ovisioning regisIRQMASK: 0 
+GPR00: c00000000004fa98 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000090029000 0000000000000108 0000000000000000 00000000408800e0 
+GPR08: 00000000fe6cd000 0000000000000001 0000000000000000 c0000000c374a1d8 
+GPR12: 0000000024000882 c00000003fffe3c0 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: 0000000000000000 0000000000000000 0000000000000001 c000000001a4dac8 
+GPR24: 0000000000000001 c000000001889580 c000000001a72000 c0000000ca2fd000 
+GPR28: 00000000ffffffff 0000000000000000 0000000000000000 c0000000c3708490 
+tered
+Btrfs loNIP [c000000000003fb4] .enable_kernel_altivec+0x30/0x78
+aded, crc32c=crcLR [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+32c-generic, zonCall Trace:
+ed=no
+Key type[c0000000ca18b6e0] [c000000000003ed4] .enable_kernel_fp+0x3c/0x78 (unreliable)
+ encrypted regis[c0000000ca18b750] [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+tered
+ALSA dev[c0000000ca18b7d0] [c000000000050c88] .kvmppc_handle_exit+0x5d4/0x5d8
+ice list:
+  #0[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+: Virtual MIDI CInstruction dump:
+ard 1
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 3c600200 4bfffd91 e86d0658 
+---[ end trace 4078844d543df3e9 ]---
+------------[ cut here ]------------
+WARNING: CPU: 4 PID: 14208 at .enable_kernel_fp+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 4 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+NIP:  c000000000003ec8 LR: c00000000004f850 CTR: c000000000050174
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+MSR:  0000000080021002 <CE,ME>  CR: 24000282  XER: 20000000
+IRQMASK: 0 
+GPR00: c00000000004f850 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000000000000 0000000000000013 0000000000000040 0000000000000000 
+GPR08: 00000000fe6cd000 0000000000000001 0000000000000000 c0000000c3708a28 
+GPR12: 0000000024000282 c00000003fffe3c0 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: 0000000000000000 0000000000000000 0000000000000001 c000000001a4dac8 
+GPR24: 0000000000000001 c000000001889580 c000000001a72000 c0000000ca2fd000 
+GPR28: 00000000ffffffff 0000000000000000 0000000000000000 c0000000c3708380 
+NIP [c000000000003ec8] .enable_kernel_fp+0x30/0x78
+LR [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+Call Trace:
+[c0000000ca18b6e0] [0000000000000001] 0x1 (unreliable)
+[c0000000ca18b750] [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+[c0000000ca18b7d0] [c000000000050c80] .kvmppc_handle_exit+0x5cc/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 38602000 4bfffe7d e86d0658 
+---[ end trace 4078844d543df3ea ]---
+------------[ cut here ]------------
+WARNING: CPU: 4 PID: 14208 at .enable_kernel_altivec+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 4 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+NIP:  c000000000003fb4 LR: c00000000004fa98 CTR: c000000000050174
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+MSR:  0000000080023002 <CE,FP,ME>  CR: 24000282  XER: 20000000
+IRQMASK: 0 
+GPR00: c00000000004fa98 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000000000000 0000000000000013 0000000000000040 0000000000000000 
+GPR08: 00000000fe6cd000 0000000000000001 0000000000000000 c0000000c3708a28 
+GPR12: 0000000024000282 c00000003fffe3c0 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: 0000000000000000 0000000000000000 0000000000000001 c000000001a4dac8 
+GPR24: 0000000000000001 c000000001889580 c000000001a72000 c0000000ca2fd000 
+GPR28: 00000000ffffffff 0000000000000000 0000000000000000 c0000000c3708490 
+NIP [c000000000003fb4] .enable_kernel_altivec+0x30/0x78
+LR [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+Call Trace:
+[c0000000ca18b6e0] [c000000000003ed4] .enable_kernel_fp+0x3c/0x78 (unreliable)
+[c0000000ca18b750] [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+[c0000000ca18b7d0] [c000000000050c88] .kvmppc_handle_exit+0x5d4/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 3c600200 4bfffd91 e86d0658 
+---[ end trace 4078844d543df3eb ]---
+------------[ cut here ]------------
+WARNING: CPU: 4 PID: 14208 at .enable_kernel_fp+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 4 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+NIP:  c000000000003ec8 LR: c00000000004f850 CTR: c000000000050174
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+MSR:  0000000080021002 <CE,ME>  CR: 24000282  XER: 20000000
+IRQMASK: 0 
+GPR00: c00000000004f850 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000000000000 0000000000000013 0000000000000040 0000000000000000 
+GPR08: 00000000fe6cd000 0000000000000001 0000000000000000 c0000000c3708a28 
+GPR12: 0000000024000282 c00000003fffe3c0 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: 0000000000000000 0000000000000000 0000000000000001 c000000001a4dac8 
+GPR24: 0000000000000001 c000000001889580 c000000001a72000 c0000000000110a0 
+GPR28: 0000000000000001 00000000000110a0 0000000000000000 c0000000c3708380 
+NIP [c000000000003ec8] .enable_kernel_fp+0x30/0x78
+LR [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+Call Trace:
+[c0000000ca18b6e0] [0000000000000001] 0x1 (unreliable)
+[c0000000ca18b750] [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+[c0000000ca18b7d0] [c000000000050c80] .kvmppc_handle_exit+0x5cc/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 38602000 4bfffe7d e86d0658 
+---[ end trace 4078844d543df3ec ]---
+------------[ cut here ]------------
+WARNING: CPU: 0 PID: 14208 at .enable_kernel_fp+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 0 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+NIP:  c000000000003ec8 LR: c00000000004f850 CTR: c000000000050174
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+MSR:  0000000080021002 <CE,ME>  CR: 24000282  XER: 20000000
+IRQMASK: 0 
+GPR00: c00000000004f850 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000000000000 0000000000000013 0000000000000040 0000000000000000 
+GPR08: 00000000fe64d000 0000000000000001 0000000000000000 c0000000c3708a28 
+GPR12: 0000000024000282 c000000001b1f000 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: 0000000000000000 0000000000000000 0000000000000001 c000000001a4dac8 
+GPR24: 0000000000000001 c000000001889580 c000000001a72000 c0000000ca2fd000 
+GPR28: 00000000ffffffff 0000000000000000 0000000000000000 c0000000c3708380 
+NIP [c000000000003ec8] .enable_kernel_fp+0x30/0x78
+LR [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+Call Trace:
+[c0000000ca18b6e0] [0000000000000001] 0x1 (unreliable)
+[c0000000ca18b750] [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+[c0000000ca18b7d0] [c000000000050c80] .kvmppc_handle_exit+0x5cc/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 38602000 4bfffe7d e86d0658 
+---[ end trace 4078844d543df3ed ]---
+------------[ cut here ]------------
+WARNING: CPU: 0 PID: 14208 at .enable_kernel_altivec+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 0 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+NIP:  c000000000003fb4 LR: c00000000004fa98 CTR: c000000000050174
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+MSR:  0000000080023002 <CE,FP,ME>  CR: 24000282  XER: 20000000
+IRQMASK: 0 
+GPR00: c00000000004fa98 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000000000000 0000000000000013 0000000000000040 0000000000000000 
+GPR08: 00000000fe64d000 0000000000000001 0000000000000000 c0000000c3708a28 
+GPR12: 0000000024000282 c000000001b1f000 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: 0000000000000000 0000000000000000 0000000000000001 c000000001a4dac8 
+GPR24: 0000000000000001 c000000001889580 c000000001a72000 c0000000ca2fd000 
+GPR28: 00000000ffffffff 0000000000000000 0000000000000000 c0000000c3708490 
+NIP [c000000000003fb4] .enable_kernel_altivec+0x30/0x78
+LR [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+Call Trace:
+[c0000000ca18b6e0] [c000000000003ed4] .enable_kernel_fp+0x3c/0x78 (unreliable)
+[c0000000ca18b750] [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+[c0000000ca18b7d0] [c000000000050c88] .kvmppc_handle_exit+0x5d4/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 3c600200 4bfffd91 e86d0658 
+---[ end trace 4078844d543df3ee ]---
+------------[ cut here ]------------
+WARNING: CPU: 0 PID: 14208 at .enable_kernel_fp+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 0 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+NIP:  c000000000003ec8 LR: c00000000004f850 CTR: c000000000050174
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+MSR:  0000000080021002 <CE,ME>  CR: 24000282  XER: 20000000
+IRQMASK: 0 
+GPR00: c00000000004f850 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000000000000 0000000000000013 0000000000000040 0000000000000000 
+GPR08: 00000000fe64d000 0000000000000001 0000000000000000 c0000000c3708a28 
+GPR12: 0000000024000282 c000000001b1f000 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: 0000000000000000 0000000000000000 0000000000000001 c000000001a4dac8 
+GPR24: 0000000000000001 c000000001889580 c000000001a72000 c0000000ca2fd000 
+GPR28: 00000000ffffffff 0000000000000000 0000000000000000 c0000000c3708380 
+NIP [c000000000003ec8] .enable_kernel_fp+0x30/0x78
+LR [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+Call Trace:
+[c0000000ca18b6e0] [0000000000000001] 0x1 (unreliable)
+[c0000000ca18b750] [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+[c0000000ca18b7d0] [c000000000050c80] .kvmppc_handle_exit+0x5cc/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 38602000 4bfffe7d e86d0658 
+---[ end trace 4078844d543df3ef ]---
+------------[ cut here ]------------
+WARNING: CPU: 3 PID: 14208 at .enable_kernel_altivec+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 3 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+NIP:  c000000000003fb4 LR: c00000000004fa98 CTR: c000000000050174
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+MSR:  0000000080023002 <CE,FP,ME>  CR: 24000282  XER: 20000000
+IRQMASK: 0 
+GPR00: c00000000004fa98 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000000000000 0000000000000013 0000000000000040 0000000000000000 
+GPR08: 00000000fe64d000 0000000000000001 0000000000000000 c0000000c3708a28 
+GPR12: 0000000024000282 c00000003fffeac0 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: 0000000000000000 0000000000000000 0000000000000001 c000000001a4dac8 
+GPR24: 0000000000000001 c000000001889580 c000000001a72000 c0000000ca2fd000 
+GPR28: 00000000ffffffff 0000000000000000 0000000000000000 c0000000c3708490 
+NIP [c000000000003fb4] .enable_kernel_altivec+0x30/0x78
+LR [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+Call Trace:
+[c0000000ca18b6e0] [c000000000003ed4] .enable_kernel_fp+0x3c/0x78 (unreliable)
+[c0000000ca18b750] [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+[c0000000ca18b7d0] [c000000000050c88] .kvmppc_handle_exit+0x5d4/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 3c600200 4bfffd91 e86d0658 
+---[ end trace 4078844d543df3f0 ]---
+------------[ cut here ]------------
+WARNING: CPU: 3 PID: 14208 at .enable_kernel_fp+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 3 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+NIP:  c000000000003ec8 LR: c00000000004f850 CTR: c00000000000780c
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+MSR:  0000000082023002 <VEC,CE,FP,ME>  CR: 24000882  XER: 00000000
+IRQMASK: 0 
+GPR00: c00000000004f850 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000090029000 0000000000000108 0000000000000000 00000000408800e0 
+GPR08: 00000000fe6ad000 0000000000000001 0000000000000000 c0000000c374a1d8 
+GPR12: 0000000024000882 c00000003fffeac0 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: 0000000000000000 0000000000000000 0000000000000001 c000000001a4dac8 
+GPR24: 0000000000000001 c000000001889580 c000000001a72000 c0000000ca2fd000 
+GPR28: 00000000ffffffff 0000000000000000 0000000000000000 c0000000c3708380 
+NIP [c000000000003ec8] .enable_kernel_fp+0x30/0x78
+LR [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+Call Trace:
+[c0000000ca18b6e0] [0000000000000001] 0x1 (unreliable)
+[c0000000ca18b750] [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+[c0000000ca18b7d0] [c000000000050c80] .kvmppc_handle_exit+0x5cc/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 38602000 4bfffe7d e86d0658 
+---[ end trace 4078844d543df3f1 ]---
+------------[ cut here ]------------
+WARNING: CPU: 3 PID: 14208 at .enable_kernel_altivec+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 3 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+NIP:  c000000000003fb4 LR: c00000000004fa98 CTR: c00000000000780c
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+MSR:  0000000082023002 <VEC,CE,FP,ME>  CR: 24000882  XER: 00000000
+IRQMASK: 0 
+GPR00: c00000000004fa98 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000090029000 0000000000000108 0000000000000000 00000000408800e0 
+GPR08: 00000000fe6ad000 0000000000000001 0000000000000000 c0000000c374a1d8 
+GPR12: 0000000024000882 c00000003fffeac0 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: 0000000000000000 0000000000000000 0000000000000001 c000000001a4dac8 
+GPR24: 0000000000000001 c000000001889580 c000000001a72000 c0000000ca2fd000 
+GPR28: 00000000ffffffff 0000000000000000 0000000000000000 c0000000c3708490 
+NIP [c000000000003fb4] .enable_kernel_altivec+0x30/0x78
+LR [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+Call Trace:
+[c0000000ca18b6e0] [c000000000003ed4] .enable_kernel_fp+0x3c/0x78 (unreliable)
+[c0000000ca18b750] [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+[c0000000ca18b7d0] [c000000000050c88] .kvmppc_handle_exit+0x5d4/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 3c600200 4bfffd91 e86d0658 
+---[ end trace 4078844d543df3f2 ]---
+------------[ cut here ]------------
+WARNING: CPU: 3 PID: 14208 at .enable_kernel_fp+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 3 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+NIP:  c000000000003ec8 LR: c00000000004f850 CTR: c000000000050174
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+MSR:  0000000080021002 <CE,ME>  CR: 24000282  XER: 20000000
+IRQMASK: 0 
+GPR00: c00000000004f850 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000000000000 0000000000000013 0000000000000040 0000000000000000 
+GPR08: 00000000fe6ad000 0000000000000001 0000000000000000 c0000000c3708a28 
+GPR12: 0000000024000282 c00000003fffeac0 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: 0000000000000000 0000000000000000 0000000000000001 c000000001a4dac8 
+GPR24: 0000000000000001 c000000001889580 c000000001a72000 c0000000ca2fd000 
+GPR28: 00000000ffffffff 0000000000000000 0000000000000000 c0000000c3708380 
+NIP [c000000000003ec8] .enable_kernel_fp+0x30/0x78
+LR [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+Call Trace:
+[c0000000ca18b6e0] [0000000000000001] 0x1 (unreliable)
+[c0000000ca18b750] [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+[c0000000ca18b7d0] [c000000000050c80] .kvmppc_handle_exit+0x5cc/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 38602000 4bfffe7d e86d0658 
+---[ end trace 4078844d543df3f3 ]---
+------------[ cut here ]------------
+WARNING: CPU: 3 PID: 14208 at .enable_kernel_altivec+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 3 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+NIP:  c000000000003fb4 LR: c00000000004fa98 CTR: c000000000050174
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+MSR:  0000000080023002 <CE,FP,ME>  CR: 24000282  XER: 20000000
+IRQMASK: 0 
+GPR00: c00000000004fa98 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000000000000 0000000000000013 0000000000000040 0000000000000000 
+GPR08: 00000000fe6ad000 0000000000000001 0000000000000000 c0000000c3708a28 
+GPR12: 0000000024000282 c00000003fffeac0 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: 0000000000000000 0000000000000000 0000000000000001 c000000001a4dac8 
+GPR24: 0000000000000001 c000000001889580 c000000001a72000 c0000000ca2fd000 
+GPR28: 00000000ffffffff 0000000000000000 0000000000000000 c0000000c3708490 
+NIP [c000000000003fb4] .enable_kernel_altivec+0x30/0x78
+LR [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+Call Trace:
+[c0000000ca18b6e0] [c000000000003ed4] .enable_kernel_fp+0x3c/0x78 (unreliable)
+[c0000000ca18b750] [c00000000004fa98] .kvmppc_load_guest_altivec+0x48/0x98
+[c0000000ca18b7d0] [c000000000050c88] .kvmppc_handle_exit+0x5d4/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 3c600200 4bfffd91 e86d0658 
+---[ end trace 4078844d543df3f4 ]---
+------------[ cut here ]------------
+WARNING: CPU: 3 PID: 14208 at .enable_kernel_fp+0x30/0x78
+Modules linked in: r8153_ecm cdc_ether usbnet r8152 uio_pdrv_genirq uio
+CPU: 3 PID: 14208 Comm: qemu-system-ppc Tainted: G        W         5.12.3_E6500 #2
+NIP:  c000000000003ec8 LR: c00000000004f850 CTR: c00000000000780c
+REGS: c0000000ca18b440 TRAP: 0700   Tainted: G        W          (5.12.3_E6500)
+MSR:  0000000082023002 <VEC,CE,FP,ME>  CR: 24000882  XER: 00000000
+IRQMASK: 0 
+GPR00: c00000000004f850 c0000000ca18b6e0 c000000001a44500 c0000000c3708000 
+GPR04: 0000000090029000 0000000000000108 0000000000000000 00000000408800e0 
+GPR08: 00000000fe6ad000 0000000000000001 0000000000000000 c0000000c374a1d8 
+GPR12: 0000000024000882 c00000003fffeac0 c0000000c3708000 0000000000000000 
+GPR16: 0000000000000000 0000000000000000 0000000000000000 0000000000000000 
+GPR20: 0000000000000000 0000000000000000 0000000000000001 c000000001a4dac8 
+GPR24: 0000000000000001 c000000001889580 c000000001a72000 c0000000ca2fd000 
+GPR28: 00000000ffffffff 0000000000000000 0000000000000000 c0000000c3708380 
+NIP [c000000000003ec8] .enable_kernel_fp+0x30/0x78
+LR [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+Call Trace:
+[c0000000ca18b6e0] [0000000000000001] 0x1 (unreliable)
+[c0000000ca18b750] [c00000000004f850] .kvmppc_load_guest_fp+0x30/0x80
+[c0000000ca18b7d0] [c000000000050c80] .kvmppc_handle_exit+0x5cc/0x5d8
+[c0000000ca18b870] [c000000000053b64] .kvmppc_resume_host+0xcc/0x120
+Instruction dump:
+7c0802a6 f8010010 f821ff91 e92d0658 e9490002 39200000 2c2a0000 40c20014 
+892d067a 552907fe 7d290034 5529d97e <0b090000> 38602000 4bfffe7d e86d0658 
+---[ end trace 4078844d543df3f5 ]---
+
+[ OK ] Started Show Plymouth Power Off Screen.
+[ OK ] Stopped LSB: Adaptive readahead daemon.
+[ OK ] Stopped target System Time Synchronized.
+[ OK ] Stopped target System Time Set.
+[ OK ] Stopped Session c3 of user ppc64.
+         Stopping User Login Management...
+         Stopping User Manager for UID 1000...
+[ OK ] Unmounted /run/user/1000/doc.
+[ OK ] Stopped User Login Management.
+[ OK ] Stopped User Manager for UID 1000.
+         Stopping User Runtime Directory /run/user/1000...
+[ OK ] Unmounted /run/user/1000.
+[ OK ] Stopped User Runtime Directory /run/user/1000.
+[ OK ] Removed slice User Slice of UID 1000.
+         Stopping Permit User Sessions...
+[ OK ] Stopped Permit User Sessions.
+[ OK ] Stopped target Network.
+[ OK ] Stopped target User and Group Name Lookups.
+[ OK ] Stopped target Remote File Systems.
+         Stopping Network Manager...
+         Stopping Raise network interfaces...
+         Stopping WPA supplicant...
+[ OK ] Stopped WPA supplicant.
+[ OK ] Stopped Raise network interfaces.
+[ OK ] Stopped Network Manager.
+         Stopping D-Bus System Message Bus...
+[ OK ] Stopped D-Bus System Message Bus.
+[ OK ] Stopped target Basic System.
+[ OK ] Stopped Forward Password R…s to Plymouth Directory Watch.
+[ OK ] Stopped target Paths.
+[ OK ] Stopped ACPI Events Check.
+[ OK ] Stopped CUPS Scheduler.
+[ OK ] Stopped target Slices.
+[ OK ] Removed slice User and Session Slice.
+[ OK ] Stopped target Sockets.
+[ OK ] Closed ACPID Listen Socket.
+[ OK ] Closed Avahi mDNS/DNS-SD Stack Activation Socket.
+[ OK ] Closed CUPS Scheduler.
+[ OK ] Closed D-Bus System Message Bus Socket.
+[ OK ] Closed Erlang Port Mapper Daemon Activation Socket.
+[ OK ] Closed Activation socket for spice guest agent daemon.
+[ OK ] Stopped target System Initialization.
+[ OK ] Stopped target Local Encrypted Volumes.
+[ OK ] Stopped Forward Password R…uests to Wall Directory Watch.
+[ OK ] Stopped target Swap.
+[ OK ] Closed Syslog Socket.
+         Deactivating swap /dev/dis…512GB_S39FNWAH921721V-part2...
+[ OK ] Stopped Apply Kernel Variables.
+[ OK ] Stopped Load Kernel Modules.
+         Stopping Network Time Synchronization...
+         Stopping Update UTMP about System Boot/Shutsystemd-shutdown[1]: Syncing filesystems and block devices.
+down...
+[ OK ] Stopped Network Time Synchronization.
+[ OK ] Deactivated swap /dev/disk…/wwn-0x5002538d703965c3-part2.
+[ OK ] Deactivated swap /dev/disk…O_512GB_S39FNWAH921721V-part2.
+[ OK ] Deactivated swap /dev/disk…-ffe220000.sata-ata-1.0-part2.
+[ OK ] Deactivated swap /dev/disk…rm-ffe220000.sata-ata-1-part2.
+[ OK ] Deactivated swap /dev/disk/by-partuuid/83bd1d8c-02.
+[ OK ] Deactivated swap /dev/sda2.
+[ OK ] Deactivated swap /dev/disk…4-1a9c-410e-9f89-faac9fbb2501.
+[ OK ] Stopped Update UTMP about System Boot/Shutdown.
+[ OK ] Stopped Create Volatile Files and Directories.
+[ OK ] Stopped target Local File Systems.
+         Unmounting /media/ppc64/a0…fa4-4495-b23b-229d59fda3d71...
+[ OK ] Unmounted /media/ppc64/a0f…-3fa4-4495-b23b-229d59fda3d71.
+[ OK ] Stopped target Local File Systems (Pre).
+[ OK ] Reached target Unsystemd-shutdown[1]: Sending SIGTERM to remaining processes...
+mount All Filesystems.
+[ OK ] Stopped Create Static Device Nodes in /dev.
+systemd-journald[2331]: Received SIGTERM from PID 1 (systemd-shutdow).
+[ OK ] Stopped Create System Users.
+[ OK ] Stopped Remount Root and Kernel File Systems.
+[ OK ] Reached target Shutdown.
+[ OK ] Reached target Final Step
+systemd-shutdown[1]: Sending SIGKILL to remaining processes...
+[ OK ] Finished Power-Off.
+[ OK ] Reached target Power-systemd-shutdown[1]: Unmounting file systems.
+Off.
+[14625]: Remounting '/' read-only in with options 'errors=remount-ro,stripe=8191'.
+EXT4-fs (sda1): re-mounted. Opts: errors=remount-ro,stripe=8191. Quota mode: disabled.
+systemd-shutdown[1]: All filesystems unmounted.
+systemd-shutdown[1]: Deactivating swaps.
+systemd-shutdown[1]: All swaps deactivated.
+systemd-shutdown[1]: Detaching loop devices.
+systemd-shutdown[1]: All loop devices detached.
+systemd-shutdown[1]: Stopping MD devices.
+systemd-shutdown[1]: All MD devices stopped.
+systemd-shutdown[1]: Detaching DM devices.
+systemd-shutdown[1]: All DM devices detached.
+systemd-shutdown[1]: All filesystems, swaps, loop devices, MD devices and DM devices detached.
+systemd-shutdown[1]: Syncing filesystems and block devices.
+systemd-shutdown[1]: Powering off.
+kvm: exiting hardware virtualization
+sd 0:0:0:0: [sda] Synchronizing SCSI cache
+sd 0:0:0:0: [sda] Stopping disk
+reboot: System halted
+System Halted, OK to turn off power
