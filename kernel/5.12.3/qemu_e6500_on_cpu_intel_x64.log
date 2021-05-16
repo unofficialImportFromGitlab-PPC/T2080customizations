@@ -1,4 +1,4 @@
-$ qemu-system-ppc64 -M ppce500 -cpu e6500 -m 256M -vga none -nographic -kernel book3e_e6500_ppc64_kernel_5.12.3 -append "rw root=/dev/vda" -drive format=raw,file=hdd_debian_sid_ppc64.img,index=0,if=virtio
+$ qemu-system-ppc64 -M ppce500 -cpu e6500 -m 256M -vga none -nographic -kernel uImage -append "rw root=/dev/vda" -drive format=raw,file=hdd_debian_sid_ppc64.img,index=0,if=virtio
 
 MMU: Supported page sizes                                                                                          
          4 KB as direct                                                                                            
